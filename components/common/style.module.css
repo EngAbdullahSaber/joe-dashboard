@@ -1,0 +1,10 @@
+.btnOpenModelDetails{
+    font-weight: bold;
+    text-decoration: underline;
+    font-size:11px;
+    cursor: pointer;
+  }
+
+  .wordWrap{
+    word-wrap:anywhere
+  }

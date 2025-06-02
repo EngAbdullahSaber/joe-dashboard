@@ -1,0 +1,2155 @@
+{
+  "Partners": "شركاء",
+  "Offers": "عروض",
+  "Team Members": "أعضاء الفريق",
+  "Departments": "أقسام",
+  "meta keywords": "الكلمات الرئيسية",
+  "meta description": "وصف ميتا",
+  "meta title": "عنوان ميتا",
+  "department": "قسم",
+  "Images Alternative": "نص بديل للصور",
+  "Images": "صور",
+  "Project Data": "بيانات المشروع",
+  "Project Info": "معلومات المشروع",
+  "Date Of Create Project": "تاريخ إنشاء المشروع",
+  "Date Of Create Career": "تاريخ إنشاء الوظيفة",
+  "Career Info": "معلومات الوظيفة",
+  "Image Alternative": "نص بديل للصورة",
+  "Blog Details": "تفاصيل المدونة",
+  "Blog Info": "معلومات المدونة",
+  "Partner": "شريك",
+  "Favicon": "الأيقونة",
+  "Site Logo": "شعار الموقع",
+  "Are You Sure For Delete This Blog?": "هل أنت متأكد أنك تريد حذف هذه المدونة؟",
+  "Deleting Blog": "يتم حذف المدونة",
+  "Blog deleted successfully": "تم حذف المدونة بنجاح",
+  "Blog Content": "محتوى المدونة",
+  "Blog Slug": "رابط المدونة",
+  "Blog Type": "نوع المدونة",
+  "Blog Title": "عنوان المدونة",
+  "Blog Image": "صورة المدونة",
+  "Blog Meta Keywords": "الكلمات الرئيسية للمدونة",
+  "Blog Meta Description": "وصف ميتا للمدونة",
+  "Blog Meta Title": "عنوان ميتا للمدونة",
+  "Blog Management": "إدارة المدونات",
+  "Create a New Blog": "إنشاء مدونة جديدة",
+  "Create Blog": "إنشاء مدونة",
+  "Blog Meta Keywords must be at least 10 characters": "يجب أن تتكون الكلمات الرئيسية للمدونة من 10 أحرف على الأقل",
+  "Blog Meta Description must be at least 10 characters": "يجب أن يتكون وصف ميتا للمدونة من 10 أحرف على الأقل",
+  "Blog Meta Title must be at least 10 characters": "يجب أن يتكون عنوان ميتا للمدونة من 10 أحرف على الأقل",
+  "Blog Content must be at least 10 characters": "يجب أن يتكون محتوى المدونة من 10 أحرف على الأقل",
+  "Blog Slug must be at least 3 characters": "يجب أن يتكون رابط المدونة من 3 أحرف على الأقل",
+  "Blog Type must be at least 3 characters": "يجب أن يتكون نوع المدونة من 3 أحرف على الأقل",
+  "Blog Title must be at least 2 characters": "يجب أن يتكون عنوان المدونة من حرفين على الأقل",
+  "Update Partner": "تحديث الشريك",
+  "Update Career": "تحديث الوظيفة",
+  "Update Department": "تحديث القسم",
+  "Drop image here or click to upload": "اسحب الصورة هنا أو انقر لتحميلها.",
+  "(upload blog image here)": "(ارفع صورة المدونة هنا)",
+  "Career Meta Keywords must be at least 10 characters": "يجب أن تتكون الكلمات الرئيسية للوظيفة من 10 أحرف على الأقل",
+  "Career Meta Description must be at least 10 characters": "يجب أن يتكون وصف ميتا للوظيفة من 10 أحرف على الأقل",
+  "Career Meta Title must be at least 10 characters": "يجب أن يتكون عنوان ميتا للوظيفة من 10 أحرف على الأقل",
+  "Career Requirements must be at least 10 characters": "يجب أن تتكون متطلبات الوظيفة من 10 أحرف على الأقل",
+  "Career Description must be at least 10 characters": "يجب أن يتكون وصف الوظيفة من 10 أحرف على الأقل",
+  "Career Title must be at least 2 characters": "يجب أن يتكون عنوان الوظيفة من حرفين على الأقل",
+  "custom_head_script": "نص رأس مخصص",
+  "custom_body_script": "نص جسم مخصص",
+  "og_tags type": "نوع علامة og",
+  "og_tags image": "صورة علامة og",
+  "og_tags url": "رابط علامة og",
+  "og_tags description": "وصف علامة og",
+  "og_tags titles": "عناوين علامة og",
+  "page meta": "بيانات ميتا الصفحة",
+  "Page Meta": "بيانات ميتا الصفحة",
+  "Team Member Details": "تفاصيل أعضاء الفريق",
+  "Team Member Section": "قسم أعضاء الفريق",
+  "Update Page Meta": "تحديث بيانات ميتا الصفحة",
+  "keywords ": "الكلمات الرئيسية",
+  "Career Section": "قسم الوظائف",
+  "Departments Section": "قسم الأقسام",
+  "ContactUs Section": "قسم الاتصال بنا",
+  "ContactUs Details": "تفاصيل الاتصال بنا",
+  "Offer Section": "قسم العروض",
+  "Offer Price": "سعر العرض",
+  "Offer Name": "اسم العرض",
+  "Offer Image": "صورة العرض",
+  "Create a New Offer": "إنشاء عرض جديد",
+  "Create Offer": "إنشاء عرض",
+  "Blog Section": "قسم المدونات",
+  "Offer Info": "معلومات العرض",
+  "price after offers": "السعر بعد العروض",
+  "Offer Management": "إدارة العروض",
+  "Offer Details": "تفاصيل العرض",
+  "Price After Offers": "السعر بعد العروض",
+  "Are You Sure For Delete This Offer?": "هل أنت متأكد أنك تريد حذف هذا العرض؟",
+  "Deleting Offer": "يتم حذف العرض",
+  "Offer deleted successfully": "تم حذف العرض بنجاح",
+  "Partner Section": "قسم الشركاء",
+  "Update Offer": "تحديث العرض",
+  "visible": "مرئي",
+  "object Data": "بيانات الكائن",
+  "Arabic list": "قائمة بالعربية",
+  "English list": "قائمة بالإنجليزية",
+  "Arabic Content": "محتوى بالعربية",
+  "English Content": "محتوى بالإنجليزية",
+  "No changes detected": "لم يتم اكتشاف تغييرات",
+  "Updated": "تم التحديث",
+  "keywords": "الكلمات الرئيسية",
+  "Update Blog": "تحديث المدونة",
+  "canonical URL": "رابط قانوني",
+  "body script": "نص الجسم",
+  "head script": "نص الرأس",
+  "structured data": "بيانات منظمة",
+  "og_tags title": "عنوان علامات og",
+  "Updating": "جاري التحديث...",
+  "og_tags image alternative": "نص بديل لصورة علامات og",
+  "Project deleted successfully": "تم حذف المشروع بنجاح",
+  "Project Section": "قسم المشروع",
+  "Project Management": "إدارة المشروع",
+  "Project Meta Keywords": "الكلمات الرئيسية لمشروع",
+  "Project Meta Description": "وصف ميتا للمشروع",
+  "Project Meta Title": "عنوان ميتا للمشروع",
+  "page sections": "أقسام الصفحة",
+  "Update Section": "تحديث القسم",
+  "Visible": "مرئي",
+  "Arabic List Items": "عناصر القائمة بالعربية",
+  "English List Items": "عناصر القائمة بالإنجليزية",
+  "Image Alt Text": "نص بديل للصورة",
+  "Create New Section": "إنشاء قسم جديد",
+  "Create Section": "إنشاء قسم",
+  "Are You Sure For Delete This Section?": "هل أنت متأكد أنك تريد حذف هذا القسم؟",
+  "Deleting Section": "يتم حذف القسم",
+  "Arabic Content is required": "محتوى بالعربية مطلوب",
+  "Arabic Title is required": "عنوان بالعربية مطلوب",
+  "image is required": "الصورة مطلوبة",
+  "English Content is required": "محتوى بالإنجليزية مطلوب",
+  "English Title is required": "عنوان بالإنجليزية مطلوب",
+  "Project Slug": "رابط المشروع",
+  "Project Meta Description is required": "وصف ميتا للمشروع مطلوب",
+  "Project Meta Title is required": "عنوان ميتا للمشروع مطلوب",
+  "Project Slug is required": "رابط المشروع مطلوب",
+  "Project Description is required": "وصف المشروع مطلوب",
+  "Project Name is required": "اسم المشروع مطلوب",
+  "(upload multiple images here)": "(قم بتحميل صور متعددة هنا)",
+  "Image alternative text": "نص بديل للصورة",
+  "(upload additional images here)": "(قم بتحميل صور إضافية هنا)",
+  "Add more images or click to upload": "أضف مزيدًا من الصور أو انقر لتحميلها",
+  "Project Meta Description must be at least 10 characters": "يجب أن يتكون وصف ميتا للمشروع من 10 أحرف على الأقل",
+  "Project Meta Title must be at least 10 characters": "يجب أن يتكون عنوان ميتا للمشروع من 10 أحرف على الأقل",
+  "Project Description must be at least 10 characters": "يجب أن يتكون وصف المشروع من 10 أحرف على الأقل",
+  "Project Name must be at least 2 characters": "يجب أن يتكون اسم المشروع من حرفين على الأقل",
+  "At most 5 images are allowed": "يسمح بحد أقصى 5 صور",
+  "Home Page Section": "قسم الصفحة الرئيسية",
+  "Home Page Meta": "ميتا الصفحة الرئيسية",
+  "Alternative text is required": "النص البديل مطلوب",
+  "At least 1 images are required": "مطلوب على الأقل صورة واحدة",
+  "Project Images": "صور المشروع",
+  "Something Went Wrong": "حدث خطأ ما",
+  "Image Deleted From Project": "تم حذف الصورة من المشروع",
+  "Join Us": "انضم إلينا",
+  "Join Us Page Meta": "ميتا صفحة انضم إلينا",
+  "Join Us Page Section": "قسم انضم إلينا",
+  "Password": "كلمة المرور",
+  "Sign In": "تسجيل الدخول",
+  "English List Items is required": "عناصر القائمة بالإنجليزية مطلوبة",
+  "Image Alt Text is required": "نص بديل للصورة مطلوب",
+  "structured data is required": "بيانات منظمة مطلوبة",
+  "Position must be greater than 0": "يجب أن تكون القيمة أكبر من 0",
+  "Arabic List Items is required": "عناصر القائمة بالعربية مطلوبة",
+  "Offer Image Is Required": "صورة العرض مطلوبة",
+  "Offer Meta Keywords": "الكلمات الرئيسية للعرض",
+  "Offer Meta Description": "وصف ميتا للعرض",
+  "Offer Meta Title": "عنوان ميتا للعرض",
+  "Offer Name must be at least 2 characters": "يجب أن يتكون اسم العرض من حرفين على الأقل",
+  "Offer Meta Title must be at least 10 characters": "يجب أن يتكون عنوان ميتا للعرض من 10 أحرف على الأقل",
+  "Offer Meta Description must be at least 10 characters": "يجب أن يتكون وصف ميتا للعرض من 10 أحرف على الأقل",
+  "Offer Meta Keywords must be at least 10 characters": "يجب أن تتكون الكلمات الرئيسية للعرض من 10 أحرف على الأقل",
+  "Offer Meta Keywords is required": "الكلمات الرئيسية للعرض مطلوبة",
+  "Offer Meta Description is required": "وصف ميتا للعرض مطلوب",
+  "Offer Meta Title is required": "عنوان ميتا للعرض مطلوب",
+  "Department Description must be at least 10 characters": "يجب أن يتكون وصف القسم من 10 أحرف على الأقل",
+  "Department Name must be at least 2 characters": "يجب أن يتكون اسم القسم من حرفين على الأقل",
+  "Offer Name is required": "اسم العرض مطلوب",
+  "Price After Offers must be a valid number greater than 0": "يجب أن يكون السعر بعد العروض رقمًا صالحًا أكبر من 0",
+  "Offer Price must be a valid number greater than 0": "يجب أن يكون سعر العرض رقمًا صالحًا أكبر من 0",
+  "Blog Meta Keywords is required": "الكلمات الرئيسية للمدونة مطلوبة",
+  "Blog Meta Description is required": "وصف ميتا للمدونة مطلوب",
+  "Blog Meta Title is required": "عنوان ميتا للمدونة مطلوب",
+  "Blog Content is required": "محتوى المدونة مطلوب",
+  "Blog Slug is required": "رابط المدونة مطلوب",
+  "Blog Type is required": "نوع المدونة مطلوب",
+  "Blog Title is required": "عنوان المدونة مطلوب",
+  "Blog Image Is Required": "صورة المدونة مطلوبة",
+  "Career Benefits must be at least 10 characters": "يجب أن تكون مزايا الوظيفة من 10 أحرف على الأقل",
+  "ID": "رقم التعريف",
+  "Blogs Details": "Blogs Details",
+"content": "content",
+  "Drop images here or click to upload": "Drop images here or click to upload",
+
+  "type blog": "type blog",
+    "Blogs Page": " المدونات",
+  "Projects Page": " المشاريع",
+  "Join Us Page": " انضم إلينا",
+  "About Us Page": " عنّا",
+  "slug": "الرابط",
+  "No image uploaded": "لم يتم رفع أي صورة",
+  "Additional Data": "بيانات إضافية",
+  "Alt": "بديل",
+  "Alt Text": "نص بديل",
+  "List": "قائمة",
+  "Content": "محتوى",
+  "About Us Page Section": "قسم صفحة عنّا",
+  "About Us Page Meta": "ميتا صفحة عنّا",
+  "image alternative description": "وصف بديل للصورة",
+  "No results": "لا توجد نتائج",
+  "Team Member": "عضو الفريق",
+  "Department": "قسم",
+  "Contact Us User Details": "تفاصيل مستخدم الاتصال بنا",
+  "Contact Us User Message": "رسالة مستخدم الاتصال بنا",
+  "Contact Us Users Management": "إدارة مستخدمي الاتصال بنا",
+  "Contact Us User Management": "إدارة مستخدم الاتصال بنا",
+  "Contact Us Career Details": "تفاصيل وظائف الاتصال بنا",
+  "Contact Us Careers Management": "إدارة وظائف الاتصال بنا",
+  "Contact Us Career Management": "إدارة وظائف الاتصال بنا",
+  "Contact Us Career Message": "رسالة وظيفة الاتصال بنا",
+  "Contact Us Offer Details": "تفاصيل عروض الاتصال بنا",
+  "Contact Us Offer Message": "رسالة عرض الاتصال بنا",
+  "Contact Us Offers Message": "رسالة عروض الاتصال بنا",
+  "Contact Us Offers Management": "إدارة عروض الاتصال بنا",
+  "Contact Us Offer Management": "إدارة عرض الاتصال بنا",
+  "offers price": "سعر العروض",
+  "Date Of Send Message": "تاريخ إرسال الرسالة",
+  "offers name": "اسم العروض",
+  "career file": "ملف الوظيفة",
+  "Contact Us User Message Details": "تفاصيل رسالة مستخدم الاتصال بنا",
+  "Deleting Contact Us Message": "يتم حذف رسالة الاتصال بنا",
+  "Are You Sure For Delete This Contact Us Message?": "هل أنت متأكد أنك تريد حذف رسالة الاتصال بنا؟",
+  "Save": "حفظ",
+  "product image": "صورة المنتج",
+  "product title": "اسم المنتج",
+  "product description": "وصف المنتج",
+  "Service Management": "إدارة الخدمات",
+  "Deleting Product": "حذف المنتج",
+  "Are You Sure For Delete This Product?": "هل أنت متأكد من حذف هذا المنتج؟",
+  "Create Product": "إنشاء منتج",
+  "Services Details": "تفاصيل الخدمات",
+  "Product Title": "اسم المنتج",
+  "Enter Product Title": "أدخل اسم المنتج",
+  "Product Description": "وصف المنتج",
+  "Enter Product Description": "أدخل وصف المنتج",
+  "Product Image": "صورة المنتج",
+  "Services Management": "إدارة الخدمات",
+  "Update Product": "تحديث المنتج",
+  "Blogs": "المدونات",
+  "Don't Show": "لا تعرض",
+  "Show": "عرض",
+  "Show in Home Page": "عرض في الصفحة الرئيسية",
+  "About Us": "معلومات عنا",
+  "Services": "الخدمات",
+  "Clients": "العملاء",
+  "Client Title": "عنوان العميل",
+  "Client Image": "صورة العميل",
+  "Client": "عميل",
+  "Client Management": "إدارة العملاء",
+  "Deleting Client": "حذف العميل",
+  "Are You Sure For Delete This Client?": "هل أنت متأكد من حذف هذا العميل؟",
+  "Clients Management": "إدارة العملاء",
+  "Clients Details": "تفاصيل العملاء",
+  "client title": "عنوان العميل",
+  "client image": "صورة العميل",
+  "Create a New Client": "إنشاء عميل جديد",
+  "Create Client": "إنشاء عميل",
+  "Enter Client Title": "أدخل عنوان العميل",
+  "Update Client": "تحديث العميل",
+  "Client Details": "تفاصيل العميل",
+  "Products Details": "تفاصيل المنتجات",
+  "Products Management": "إدارة المنتجات",
+  "Services Image": "صورة الخدمات",
+  "Services Title": "اسم الخدمات",
+  "Services Description": "وصف الخدمات",
+  "Services Paragraph": "فقرة الخدمات",
+  "Deleting Services": "حذف الخدمات",
+  "Are You Sure For Delete This Services?": "هل أنت متأكد من حذف هذه الخدمات؟",
+  "services paragraph": "فقرة الخدمات",
+  "services description": "وصف الخدمات",
+  "services title": "اسم الخدمات",
+  "services image": "صورة الخدمات",
+  "Service Title": "اسم الخدمة",
+  "Enter Service Title": "أدخل اسم الخدمة",
+  "Service Paragraph": "فقرة الخدمة",
+  "Service Image": "صورة الخدمة",
+  "Create a New Service": "إنشاء خدمة جديدة",
+  "Create Service": "إنشاء خدمة",
+  "Service Description": "وصف الخدمة",
+  "Update Services": "تحديث الخدمات",
+  "Create Team Member": "إنشاء عضو في الفريق",
+  "Create a New Team Member Name": "إنشاء اسم عضو جديد في الفريق",
+  "Team Member Name Image": "صورة عضو الفريق",
+  "Enter Team Member Name": "أدخل اسم عضو الفريق",
+  "Team Member Name": "اسم عضو الفريق",
+  "Update Team Member": "تحديث عضو الفريق",
+  "Enter Team Member Position": "أدخل وظيفة عضو الفريق",
+  "Team Member Position": "وظيفة عضو الفريق",
+  "Brands Details": "تفاصيل العلامات التجارية",
+  "Brand Management": "إدارة العلامات التجارية",
+  "Brands Image": "صورة العلامات التجارية",
+  "brands image": "صورة العلامات التجارية",
+  "brands title": "اسم العلامات التجارية",
+  "Brands Title": "اسم العلامات التجارية",
+  "Update Brands": "تحديث العلامات التجارية",
+  "Enter Brands Title": "أدخل اسم العلامات التجارية",
+  "Are You Sure For Delete This Brands?": "هل أنت متأكد من حذف هذه العلامات التجارية؟",
+  "Deleting Brands": "حذف العلامات التجارية",
+  "Brand Image": "صورة العلامة التجارية",
+  "Create Brand": "إنشاء علامة تجارية",
+  "Enter Brand Title": "أدخل اسم العلامة التجارية",
+  "Brand Title": "اسم العلامة التجارية",
+  "Brands Management": "إدارة العلامات التجارية",
+  "Our Clients": "عملاؤنا",
+  "Contact Us Details": "تفاصيل اتصل بنا",
+  "Enter Client Name": "أدخل اسم العميل",
+  "Contact Us Management": "إدارة اتصل بنا",
+  "Show Website": "عرض الموقع",
+  "partner url": "رابط الشريك",
+  "Create Department": "إنشاء قسم",
+  "Department Image": "صورة القسم",
+  "Create a New Department": "إنشاء قسم جديد",
+  "Department Description": "وصف القسم",
+  "Image Alternative Text": "نص بديل للصورة",
+  "Enter Department Name": "أدخل اسم القسم",
+  "Enter Image Alternative Text": "أدخل نص بديل للصورة",
+  "Department Name": "اسم القسم",
+  "Auto-translate to Arabic": "ترجمة تلقائية إلى العربية",
+  "Are You Sure For Delete This Department?": "هل أنت متأكد أنك تريد حذف هذا القسم؟",
+  "Deleting Department": "يتم حذف القسم",
+  "Departments Management": "إدارة الأقسام",
+  "Processing": "جاري المعالجة",
+  "Partner Management": "إدارة الشركاء",
+  "Partner Details": "تفاصيل الشريك",
+  "Website URL": "رابط الموقع",
+  "Partner Name": "اسم الشريك",
+  "Logo Alternative Text": "نص بديل للشعار",
+  "Partner Image": "صورة الشريك",
+  "Create a New Partner": "إنشاء شريك جديد",
+  "Create Partner": "إنشاء شريك",
+  "Are You Sure For Delete This Partner?": "هل أنت متأكد أنك تريد حذف هذا الشريك؟",
+  "Deleting Partner": "يتم حذف الشريك",
+  "Contact Us Message deleted successfully": "تم حذف رسالة الاتصال بنا بنجاح",
+  "Please enter a valid URL": "يرجى إدخال رابط صالح",
+  "Partner Name is required": "اسم الشريك مطلوب",
+  "Logo Alternative Text is required": "نص بديل للشعار مطلوب",
+  "Partner Logo Is Required": "شعار الشريك مطلوب",
+  "Department Description is required": "وصف القسم مطلوب",
+  "Department Name is required": "اسم القسم مطلوب",
+  "Image Alternative Text must be at least 3 characters": "يجب أن يتكون نص بديل للصورة من 3 أحرف على الأقل",
+  "Department Logo Is Required": "شعار القسم مطلوب",
+  "Team Members Details": "تفاصيل أعضاء الفريق",
+  "Team Member Management": "إدارة أعضاء الفريق",
+  "Team Member deleted successfully": "تم حذف عضو الفريق بنجاح",
+  "bio": "السيرة الذاتية",
+  "Team Member position": "وظيفة عضو الفريق",
+  "Team Member Bio": "سيرة عضو الفريق",
+  "Team Member Image Is Required": "صورة عضو الفريق مطلوبة",
+  "Team Member Bio is required": "السيرة الذاتية لعضو الفريق مطلوبة",
+  "Team Member position is required": "وظيفة عضو الفريق مطلوبة",
+  "Team Member Name is required": "اسم عضو الفريق مطلوب",
+  "Team Member Name must be at least 2 characters": "يجب أن يتكون اسم عضو الفريق من حرفين على الأقل",
+  "Team Member Bio must be at least 5 characters": "يجب أن تتكون سيرة عضو الفريق من 5 أحرف على الأقل",
+  "Team Member position must be at least 5 characters": "يجب أن تتكون وظيفة عضو الفريق من 5 أحرف على الأقل",
+  "Career deleted successfully": "تم حذف الوظيفة بنجاح",
+  "Are You Sure For Delete This Career?": "هل أنت متأكد أنك تريد حذف هذه الوظيفة؟",
+  "Deleting Career": "يتم حذف الوظيفة",
+  "working hours": "ساعات العمل",
+  "Phone": "الهاتف",
+  "Working Hours": "ساعات العمل",
+  "Save Changes": "حفظ التغييرات",
+  "Failed to update settings": "فشل في تحديث الإعدادات",
+  "Settings updated successfully": "تم تحديث الإعدادات بنجاح",
+  "Enter Facebook URL": "أدخل رابط فيسبوك",
+  "Enter Instagram URL": "أدخل رابط إنستغرام",
+  "Enter phone number": "أدخل رقم الهاتف",
+  "Enter working hours": "أدخل ساعات العمل",
+  "Enter LinkedIn URL": "أدخل رابط لينكد إن",
+  "Enter email": "أدخل البريد الإلكتروني",
+  "Enter Twitter URL": "أدخل رابط تويتر",
+  "Twitter": "تويتر",
+  "Website Setting": "إعدادات الموقع",
+  "Favicon Alt": "نص بديل للأيقونة",
+  "Favicon URL": "رابط الأيقونة",
+  "Site Logo Alt": "نص بديل لشعار الموقع",
+  "Site Name": "اسم الموقع",
+  "About Us Footer": "تذييل عنّا",
+  "Site Logo URL": "رابط شعار الموقع",
+  "Website Setting Section": "قسم إعدادات الموقع",
+  "Enter address": "أدخل العنوان",
+  "Enter footer description": "أدخل وصف التذييل",
+  "Enter Logo Alternative Text": "أدخل نص بديل للشعار",
+  "Favicon Alternative Text": "نص بديل للأيقونة",
+  "Enter favicon Alternative Text": "أدخل نص بديل للأيقونة",
+  "Site Logo Alternative Text": "نص بديل لشعار الموقع",
+  "Enter Site Name": "أدخل اسم الموقع",
+  "Message Reply": "رد الرسالة",
+  "Reply": "رد",
+  "Reply To Client Message": "رد على رسالة العميل",
+  "Name": "الاسم",
+  "Update Certifcate": "تحديث الشهادة",
+  "Certifcate Image": "صورة الشهادة",
+  "Enter Certifcate Descripition": "أدخل وصف الشهادة",
+  "Certifcate Descripition": "وصف الشهادة",
+  "Enter Certifcate Title": "أدخل عنوان الشهادة",
+  "Certifcate Title": "عنوان الشهادة",
+  "Create New Certifcate": "إنشاء شهادة جديدة",
+  "Create Certifcate": "إنشاء شهادة",
+  "Projects": "المشاريع",
+  "Deleting Certificate": "حذف الشهادة",
+  "Are You Sure For Delete This Certificate?": "هل أنت متأكد من حذف هذه الشهادة؟",
+  "Deleting Team Member": "حذف عضو الفريق",
+  "Are You Sure For Delete This Team Member?": "هل أنت متأكد من حذف هذا العضو؟",
+  "Projects Details": "تفاصيل المشاريع",
+  "Projects Management": "إدارة المشاريع",
+  "Projects Title": "عنوان المشروع",
+  "Projects Image": "صورة المشروع",
+  "Project Description": "وصف المشروع",
+  "Projects Company Location": "موقع الشركة للمشاريع",
+  "Project Company Logo": "شعار الشركة للمشاريع",
+  "Deleting Project": "حذف المشروع",
+  "Are You Sure For Delete This Project?": "هل أنت متأكد من حذف هذا المشروع؟",
+  "Create Project": "إنشاء مشروع",
+  "Create a New Project": "إنشاء مشروع جديد",
+  "Enter Project Name": "أدخل اسم المشروع",
+  "Project Name": "اسم المشروع",
+  "Project Location": "موقع المشروع",
+  "Enter Project Location": "أدخل موقع المشروع",
+  "Product Company Logo": "شعار الشركة للمنتج",
+  "projects company location": "موقع الشركة للمشاريع",
+  "project description": "وصف المشروع",
+  "projects title": "عنوان المشاريع",
+  "projects company logo": "شعار الشركة للمشاريع",
+  "projects image": "صورة المشاريع",
+  "Project Image": "صورة المشروع",
+  "Project Details": "تفاصيل المشروع",
+  "Update Project": "تحديث المشروع",
+  "Create New Client Feedback": "إنشاء ملاحظات جديدة من العملاء",
+  "Enter Short Title": "أدخل عنوانًا قصيرًا",
+  "Short Title": "عنوان قصير",
+  "Update Client Feedback": "تحديث ملاحظات العملاء",
+  "Create Client Feedback": "إنشاء ملاحظات العملاء",
+  "Enter Client Feedback": "أدخل ملاحظات العملاء",
+  "Rating": "تقييم",
+  "created at": "تاريخ الإنشاء",
+  "Deleting Partener": "حذف الشريك",
+  "Are You Sure For Delete This Partener?": "هل أنت متأكد من حذف هذا الشريك؟",
+  "partener image": "صورة الشريك",
+  "English BreadCrumb Title": "عنوان فتات الخبز بالإنجليزية",
+  "English BreadCrumb Description": "وصف فتات الخبز بالإنجليزية",
+  "Arabic BreadCrumb Title": "عنوان فتات الخبز بالعربية",
+  "Arabic BreadCrumb Description": "وصف فتات الخبز بالعربية",
+  "News": "الأخبار",
+  "News Details": "تفاصيل الأخبار",
+  "created_at": "تاريخ الإنشاء",
+  "Short Description": "وصف قصير",
+  "News Title": "عنوان الأخبار",
+  "Id": "المعرف",
+  "news title": "عنوان الأخبار",
+  "news image": "صورة الأخبار",
+  "short description": "وصف قصير",
+  "News Management": "إدارة الأخبار",
+  "Are You Sure For Delete This News?": "هل أنت متأكد من حذف هذه الأخبار؟",
+  "Deleting News": "حذف الأخبار",
+  "News BreadCrumb": "فتات الخبز للأخبار",
+  "Projects BreadCrumb": "فتات الخبز للمشاريع",
+  "Project Title": "عنوان المشروع",
+  "project title": "عنوان المشروع",
+  "project image": "صورة المشروع",
+  "News Description": "وصف الأخبار",
+  "Type Here": "اكتب هنا...",
+  "News Short Description": "وصف قصير للأخبار",
+  "Enter News Title": "أدخل عنوان الأخبار",
+  "Create a New News": "إنشاء أخبار جديدة",
+  "News Image": "صورة الأخبار",
+  "Create News": "إنشاء أخبار",
+  "Update News": "تحديث الأخبار",
+  "project logo": "شعار المشروع",
+  "Project Logo": "شعار المشروع",
+  "Enter Project Title": "أدخل عنوان المشروع",
+  "service image": "صورة الخدمة",
+  "service title": "عنوان الخدمة",
+  "service short title": "عنوان الخدمة القصير",
+  "Service Short Title": "عنوان الخدمة القصير",
+  "Service Icon": "أيقونة الخدمة",
+  "Service Main Image": "الصورة الرئيسية للخدمة",
+  "service main image": "الصورة الرئيسية للخدمة",
+  "What We Do Section": "قسم ما نقوم به",
+  "Arabic Description": "وصف باللغة العربية",
+  "Arabic Title": "عنوان باللغة العربية",
+  "English Description": "وصف باللغة الإنجليزية",
+  "English Title": "عنوان باللغة الإنجليزية",
+  "category": "فئة",
+  "Products BreadCrumb": "فتات الخبز للمنتجات",
+  "product short description": "وصف قصير للمنتج",
+  "product price": "سعر المنتج",
+  "Are You Sure For Delete This Products?": "هل أنت متأكد من حذف هذه المنتجات؟",
+  "Deleting Products": "حذف المنتجات",
+  "Deleting Service": "حذف الخدمة",
+  "Are You Sure For Delete This Service?": "هل أنت متأكد من حذف هذه الخدمة؟",
+  "Price": "السعر",
+  "Product PDF": "منتج PDF",
+  "Product Video": "فيديو المنتج",
+  "Show File": "عرض الملف",
+  "Enter Category Title": "أدخل عنوان الفئة",
+  "Create Category": "إنشاء فئة",
+  "Are You Sure For Delete This Category?": "هل أنت متأكد من حذف هذه الفئة؟",
+  "Deleting Category": "حذف الفئة",
+  "Create a New Category": "إنشاء فئة جديدة",
+  "Category Title": "عنوان الفئة",
+  "Category Management": "إدارة الفئات",
+  "Category Details": "تفاصيل الفئة",
+  "Update Category": "تحديث الفئة",
+  "Enter Product Price": "أدخل سعر المنتج",
+  "Product Price": "سعر المنتج",
+  "Product File": "ملف المنتج",
+  "Enter Arabic Mission Description of Section": "أدخل وصف المهمة بالعربية للقسم",
+  "Arabic Mission Description": "وصف المهمة بالعربية",
+  "Arabic Mission Title": "عنوان المهمة بالعربية",
+  "Enter Arabic Mission Title": "أدخل عنوان المهمة بالعربية",
+  "Enter English Mission Description of Section": "أدخل وصف المهمة بالإنجليزية للقسم",
+  "English Mission Description": "وصف المهمة بالإنجليزية",
+  "Enter English Mission Title": "أدخل عنوان المهمة بالإنجليزية",
+  "Enter Arabic Vision Description of Section": "أدخل وصف الرؤية بالعربية للقسم",
+  "Arabic Vision Description": "وصف الرؤية بالعربية",
+  "Arabic Vision Title": "عنوان الرؤية بالعربية",
+  "Enter Arabic Vision Title": "أدخل عنوان الرؤية بالعربية",
+  "Enter English Vision Description of Section": "أدخل وصف الرؤية بالإنجليزية للقسم",
+  "English Vision Description": "وصف الرؤية بالإنجليزية",
+  "Enter English Vision Title": "أدخل عنوان الرؤية بالإنجليزية",
+  "Enter Arabic Value Description of Section": "أدخل وصف القيمة بالعربية للقسم",
+  "Arabic Value Description": "وصف القيمة بالعربية",
+  "Arabic Value Title": "عنوان القيمة بالعربية",
+  "Enter Arabic Value Title": "أدخل عنوان القيمة بالعربية",
+  "Enter English Value Description of Section": "أدخل وصف القيمة بالإنجليزية للقسم",
+  "English Value Description": "وصف القيمة بالإنجليزية",
+  "Enter English Value Title": "أدخل عنوان القيمة بالإنجليزية",
+  "English Value Title": "عنوان القيمة بالإنجليزية",
+  "Value Section": "قسم القيمة",
+  "English Vision Title": "عنوان الرؤية بالإنجليزية",
+  "English Mission Title": "عنوان المهمة بالإنجليزية",
+  "Enter Arabic About Us Section Description of Section": "أدخل وصف قسم من نحن بالعربية",
+  "Arabic About Us Section Description": "وصف قسم من نحن بالعربية",
+  "Arabic About Us Section Title": "عنوان قسم من نحن بالعربية",
+  "Enter Arabic About Us Section Title": "أدخل عنوان قسم من نحن بالعربية",
+  "Enter English About Us Section Description of Section": "أدخل وصف قسم من نحن بالإنجليزية",
+  "English About Us Section Description": "وصف قسم من نحن بالإنجليزية",
+  "Enter English About Us Section Title": "أدخل عنوان قسم من نحن بالإنجليزية",
+  "English About Us Section Title": "عنوان قسم من نحن بالإنجليزية",
+  "Experience": "الخبرة",
+  "Enter Number of Years Experience": "أدخل عدد سنوات الخبرة",
+  "Number of Years Experience": "عدد سنوات الخبرة",
+  "Team Member Image": "صورة عضو الفريق",
+  "Create a New Team Member": "إنشاء عضو فريق جديد",
+  "Create Certificate": "إنشاء شهادة",
+  "Certificate Description": "وصف الشهادة",
+  "Enter Certificate Title": "أدخل عنوان الشهادة",
+  "Certificate Title": "عنوان الشهادة",
+  "Certificate Image": "صورة الشهادة",
+  "Create a New Certificate": "إنشاء شهادة جديدة",
+  "Are You Sure For Delete This Certification?": "هل أنت متأكد من حذف هذه الشهادة؟",
+  "Deleting Certification": "حذف الشهادة",
+  "Home Page": "الصفحة الرئيسية",
+  "Home Page BreadCrumb": "فتات الخبز للصفحة الرئيسية",
+  "Arabic Idea Description": "وصف الفكرة بالعربية",
+  "Enter Arabic Idea Description of Section": "أدخل وصف الفكرة بالعربية للقسم",
+  "Enter Arabic Idea Title": "أدخل عنوان الفكرة بالعربية",
+  "Enter English Idea Description of Section": "أدخل وصف الفكرة بالإنجليزية للقسم",
+  "English Idea Description": "وصف الفكرة بالإنجليزية",
+  "Enter English Idea Title": "أدخل عنوان الفكرة بالإنجليزية",
+  "English Idea Title": "عنوان الفكرة بالإنجليزية",
+  "Idea Section": "قسم الفكرة",
+  "Arabic Idea Title": "عنوان الفكرة بالعربية",
+  "Services icon": "أيقونة الخدمات",
+  "Services Main Image": "الصورة الرئيسية للخدمات",
+  "Hey, Hello 👋": "مرحبًا، أهلاً 👋",
+  "Enter the information you entered while registering": "أدخل المعلومات التي أدخلتها أثناء التسجيل",
+  "Project Main Image": "الصورة الرئيسية للمشروع",
+  "project main image": "الصورة الرئيسية للمشروع",
+  "Footer Section": "قسم التذييل",
+  "Enter Arabic Footer Section Description of Section": "أدخل وصف قسم التذييل باللغة العربية",
+  "Arabic Footer Section Description": "وصف قسم التذييل باللغة العربية",
+  "Enter Arabic Footer Section Title": "أدخل عنوان قسم التذييل باللغة العربية",
+  "Arabic Footer Section Title": "عنوان قسم التذييل باللغة العربية",
+  "English Footer Section Description": "وصف قسم التذييل باللغة الإنجليزية",
+  "Enter English Footer Section Description of Section": "أدخل وصف قسم التذييل باللغة الإنجليزية",
+  "Enter English Footer Section Title": "أدخل عنوان قسم التذييل باللغة الإنجليزية",
+  "English Footer Section Title": "عنوان قسم التذييل باللغة الإنجليزية",
+  "Uploading Files BreadCrumb": "مسار رفع الملفات",
+  "Files BreadCrumb": "مسار الملفات",
+  "Files": "ملفات",
+  "Uploading Files": "رفع الملفات",
+  "Whatsapp": "واتساب",
+  "Social Media Section": "قسم وسائل التواصل الاجتماعي",
+  "Enter English BreadCrumb Description of Section": "أدخل وصف مسار القسم باللغة الإنجليزية",
+  "Enter Arabic BreadCrumb Description of Section": "أدخل وصف مسار القسم باللغة العربية",
+  "Career Details": "تفاصيل الوظيفة",
+  "Career": "وظيفة",
+  "Career BreadCrumb": "مسار الوظيفة",
+  "Career Management": "إدارة الوظائف",
+  "Are You Sure For Delete This Career Message": "هل أنت متأكد من حذف رسالة الوظيفة هذه؟",
+  "Deleting Career Message": "يتم حذف رسالة الوظيفة",
+  "career cv": "السيرة الذاتية للوظيفة",
+  "Are You Sure For Delete This Career Message?": "هل أنت متأكد من حذف رسالة الوظيفة هذه؟",
+  "position": "المسمى الوظيفي",
+  "Products Orders Management": "إدارة طلبات المنتجات",
+  "Products Orders": "طلبات المنتجات",
+  "Products Orders Details": "تفاصيل طلبات المنتجات",
+  "Are You Sure For Delete This Order?": "هل أنت متأكد من حذف هذا الطلب؟",
+  "Deleting Order": "يتم حذف الطلب",
+  "services": "الخدمة",
+  "Loading": "جارٍ التحميل...",
+  "Update Service": "تحديث الخدمة",
+  "Files ": "الملفات",
+  "filename": "اسم الملف",
+  "file": "ملف",
+  "fullname": "الاسم",
+  "companyname": "اسم الشركة",
+  "Are You Sure For Delete This Files?": "هل أنت متأكد من حذف هذه الملفات؟",
+  "Deleting Files": "جارٍ حذف الملفات",
+  "Are You Sure For Delete This User?": "هل أنت متأكد من حذف هذا المستخدم؟",
+  "Deleting User": "جارٍ حذف المستخدم",
+  "Enter English Video Url": "أدخل رابط الفيديو باللغة الإنجليزية",
+  "English Video Url": "رابط الفيديو باللغة الإنجليزية",
+  "Enter Arabic Video Url": "أدخل رابط الفيديو باللغة العربية",
+  "Arabic Video Url": "رابط الفيديو باللغة العربية",
+  "Admin Files": "ملفات الإدارة",
+  "Upload File": "رفع ملف",
+  "Admin File": "ملف الإدارة",
+  "Upload New File": "رفع ملف جديد",
+  "Create a New Slider": "إنشاء شريحة جديدة",
+  "Slider Image": "صورة الشريحة",
+  "Create Slider": "إنشاء شريحة",
+  "Enter Slider Title": "أدخل عنوان الشريحة",
+  "Slider Description": "وصف الشريحة",
+  "Slider Title": "عنوان الشريحة",
+  "File Name": "اسم الملف",
+  "Enter File Name": "أدخل اسم الملف",
+  "Hero Section Carousels": "شرائح قسم البطل",
+  "Hero Section Carousel": "شريحة قسم البطل",
+  "Deleting Client Feedback": "حذف ملاحظات العملاء",
+  "Are You Sure For Delete This Client Feedback?": "هل أنت متأكد من حذف ملاحظات العميل هذه؟",
+  "Product Category": "فئة المنتج",
+  "Fourth Product Image": "صورة المنتج الرابعة",
+  "Third Product Image": "صورة المنتج الثالثة",
+  "Second Product Image": "صورة المنتج الثانية",
+  "First Product Image": "صورة المنتج الأولى",
+  "Upload Brochure": "رفع الكتيب",
+  "Product Short Description": "وصف قصير للمنتج",
+  "Our Mission": "مهمتنا",
+  "Our Goals": "أهدافنا",
+  "About Us BreadCrumb": "مسار التنقل عنّا",
+  "About Us Section": "قسم عنّا",
+  "Our Certificate": "شهادتنا",
+  "Enter English BreadCrumb Describtion of Section": "أدخل وصف مسار التنقل باللغة الإنجليزية للقسم",
+  "BreadCrumb Describtion": "وصف مسار التنقل",
+  "Enter Arabic BreadCrumb Describtion of Section": "أدخل وصف مسار التنقل باللغة العربية للقسم",
+  "BreadCrumb Title": "عنوان مسار التنقل",
+  "Save changes": "حفظ التغييرات",
+  "Describtion": "وصف",
+  "Mission Icon": "رمز المهمة",
+  "Mission Section": "قسم المهمة",
+  "Enter English Describtion of Section": "أدخل وصف القسم باللغة الإنجليزية",
+  "Enter Arabic Describtion of Section": "أدخل وصف القسم باللغة العربية",
+  "Vision Icon": "رمز الرؤية",
+  "Vision Section": "قسم الرؤية",
+  "Goals Icon": "رمز الأهداف",
+  "Our Goals Section": "قسم أهدافنا",
+  "About Us Image": "صورة عنّا",
+  "Position": "المكانة",
+  "Add New Member Team": "إضافة عضو جديد للفريق",
+  "Add New Certificate": "إضافة شهادة جديدة",
+  "Our Team": "فريقنا",
+  "Our Vision": "رؤيتنا",
+  "Enter Arabic Title of Section": "أدخل عنوان القسم باللغة العربية",
+  "Enter English Title of Section": "أدخل عنوان القسم باللغة الإنجليزية",
+  "Client BreadCrumb": "مسار التنقل للعميل",
+  "Enter English BreadCrumb Title": "أدخل عنوان مسار التنقل باللغة الإنجليزية",
+  "Enter Arabic BreadCrumb Title": "أدخل عنوان مسار التنقل باللغة العربية",
+  "Product BreadCrumb": "مسار التنقل للمنتج",
+  "Project BreadCrumb": "مسار التنقل للمشروع",
+  "Services BreadCrumb": "مسار التنقل للخدمات",
+  "What We Do": "ما نقوم به",
+  "Enter English Title": "أدخل العنوان باللغة الإنجليزية",
+  "Enter Arabic Title": "أدخل العنوان باللغة العربية",
+  "Fourth Service Image": "صورة الخدمة الرابعة",
+  "Third Service Image": "صورة الخدمة الثالثة",
+  "Second Service Image": "صورة الخدمة الثانية",
+  "First Service Image": "صورة الخدمة الأولى",
+  "Contact Us BreadCrumb": "مسار التنقل لصفحة الاتصال بنا",
+  "Setting": "الإعدادات",
+  "Client Feedback": "آراء العملاء",
+  "Why Choose Us Section": "قسم لماذا تختارنا",
+  "Hero Section": "قسم البطل",
+  "Home BreadCrumb": "مسار التنقل للصفحة الرئيسية",
+  "Social Media": "وسائل التواصل الاجتماعي",
+  "Add New Feedback": "إضافة تقييم جديد",
+  "Enter Link of page in Linked In": "أدخل رابط الصفحة في لينكد إن",
+  "Linked In": "لينكد إن",
+  "Social Media Links": "روابط وسائل التواصل الاجتماعي",
+  "Enter Link of page in Twitter": "أدخل رابط الصفحة في تويتر",
+  "Enter Link of page in Instagram": "أدخل رابط الصفحة في إنستغرام",
+  "Watsapp": "واتساب",
+  "Enter Link of page in Facebook": "أدخل رابط الصفحة في فيسبوك",
+  "Facebook": "فيسبوك",
+  "Related Products": "المنتجات ذات الصلة",
+  "view stock process": "عرض عملية المخزون",
+  "Sales": "المبيعات",
+  "all sales": "كل المبيعات",
+  "import sales": "استيراد مبيعات",
+  "Targets": "الأهداف",
+  "all targets": "كل الأهداف",
+  "create target": "إنشاء هدف",
+  "delete target": "حذف هدف",
+  "edit target": "تعديل هدف",
+  "import targets": "استيراد أهداف",
+  "view target": "عرض هدف",
+  "all inquiries": "كل الاستفسارات",
+  "edit inquiry": "تعديل استفسار",
+  "view inquiry": "عرض استفسار",
+  "Log Requests": "طلبات السجل",
+  "all log requests": "كل طلبات السجل",
+  "view log request": "عرض طلب السجل",
+  "Notifications": "الإشعارات",
+  "all notifications": "كل الإشعارات",
+  "view notification": "عرض إشعار",
+  "all levels": "كل المستويات",
+  "create level": "إنشاء مستوى",
+  "delete level": "حذف مستوى",
+  "edit level": "تعديل مستوى",
+  "view level": "عرض مستوى",
+  "Retailers Details": "تفاصيل التجار",
+  "storecode": "رمز المتجر",
+  "Store Details": "تفاصيل المتجر",
+  "Sales Targets Details": "تفاصيل أهداف المبيعات",
+  "store_name": "اسم المتجر",
+  "target_quantity": "الكمية المستهدفة",
+  "target_value": "القيمة المستهدفة",
+  "last_year_achieved_quantity": "الكمية المحققة العام الماضي",
+  "BG": "الأعمال العامة",
+  "VCP": "خطة قيمة البيع",
+  "BU": "وحدة الأعمال",
+  "RSP": "سعر البيع المقترح",
+  "bg": "الأعمال العامة",
+  "vcp": "خطة قيمة البيع",
+  "bu": "وحدة الأعمال",
+  "rsp": "سعر البيع المقترح",
+  "facebook": "فيسبوك",
+  "Instagram": "إنستغرام",
+  "Dribble": "دريبل",
+  "LinkedIn": "لينكد إن",
+  "GitHub": "جيت هاب",
+  "Behance": "بيهانس",
+  "Twitter": "تويتر",
+  "Pinterest": "بينترست",
+  "WhatsApp": "واتساب",
+  "Reddit": "ريديت",
+  "Top 10 Referrals ": "أفضل 10 منصات",
+  "Post": "منشور",
+  "Count": "عدد",
+  "Action": "الإجراء",
+  "Analytics Dashboard": "التحليلات",
+  "Top Countries": "أهم البلدان",
+  "New vs Returning Visitors": "الجدد مقابل الزائرين العائدين",
+  "Device Breakdown": "توزيع الأجهزة",
+  "vs Previous 30 Days": "مقارنة بـ 30 يومًا السابقة",
+  "Sessions": "الجلسات",
+  "Page Views": "مشاهدات الصفحة",
+  "Avg Duration": "مدة الجلسة المتوسطة",
+  "Bounce Rate": "معدل الارتداد",
+  "Desktop": "سطح المكتب",
+  "Tablet": "جهاز لوحي",
+  "Mobile": "جوال",
+  "Old User": "مستخدم قديم",
+  "User By Country": "المستخدمون حسب الدولة",
+  "Top Page/Post": "أهم صفحة/منشور",
+  "See All": "عرض الكل",
+  "United State": "الولايات المتحدة",
+  "France": "فرنسا",
+  "Spain": "إسبانيا",
+  "Brazil": "البرازيل",
+  "totalusd": "الإجمالي بالدولار الأمريكي",
+  "totalsar": "الإجمالي بالريال السعودي",
+  "Image Preview": "عرض الصورة",
+  "all user": "جميع المستخدمين",
+  "Event Count": "عدد الأحداث",
+  "conversations": "المحادثات",
+  "New User": "مستخدم جديد",
+  "Reports Snapshot": "لمحة عن التقارير",
+  "Demographic properties of your customer": "الخصائص الديموغرافية لعملائك",
+  "Pick a date": "اختر تاريخًا",
+  "Select Date": "حدد التاريخ",
+  "Bangladesh": "بنغلاديش",
+  "India": "الهند",
+  "Pakistan": "باكستان",
+  "Australia": "أستراليا",
+  "America": "أمريكا",
+  "In Last 30 Minutes": "في آخر 30 دقيقة",
+  "63": "63",
+  "User Per Minutes": "المستخدمون لكل دقيقة",
+  "Before & After": "قبل وبعد",
+  "Before & After Details": "تفاصيل قبل وبعد",
+  "Product Availability": "توفر المنتج",
+  "Product Availability Details": "تفاصيل توفر المنتج",
+  "Planogram": "خطة العرض",
+  "Planogram Details": "تفاصيل خطة العرض",
+  "No File Chosen": "لم يتم اختيار ملف",
+  "promoter name": "اسم المروج",
+  "notes": "ملاحظات",
+  "warehouse name": "اسم المستودع",
+  "shelf photo": "صورة الرف",
+  "item": "البند",
+  "merchandiser photo": "صورة التاجر",
+  "planogram photo": "صورة خطة العرض",
+  "reasonofno": "سبب عدم التوفر",
+  "retailername": "اسم بائع التجزئة",
+  "shelfphoto": "صورة الرف",
+  "categoryname": "اسم الفئة",
+  "warehouse": "المستودع",
+  "brandname": "اسم العلامة التجارية",
+  "complete": "مكتمل",
+  "merchandisername": "اسم التاجر",
+  "planogramphoto": "صورة خطة العرض",
+  "merchandiserphoto": "صورة التاجر",
+  "reseon of no": "سبب عدم التوفر",
+  "complete planogram": "خطة عرض مكتملة",
+  "USER": "المستخدم",
+  "STORE": "المتجر",
+  "PRODUCT": "المنتج",
+  "MASTER": "الرئيسي",
+  "REPORT": "التقرير",
+  "CATEGORIES": "الفئات",
+  "elementss": "العناصر",
+  "mustBeAValidEmail": "يجب أن يكون بريدًا إلكترونيًا صالحًا ",
+  "mustBeAValidPhone": "يجب أن يكون رقم هاتف صالحًا  ",
+  "Quarter": "الربع",
+  "Achived Quantity": "الكمية المحققة",
+  "Store Name": "اسم المتجر",
+  "Week": "الأسبوع",
+  "Month": "الشهر",
+  "Year": "السنة",
+  "SKU Code": "رمز SKU",
+  "Create New Targets": "إنشاء أهداف جديدة",
+  "Create Products": "إنشاء منتجات",
+  "Create a New Product": "إنشاء منتج جديد",
+  "Models": "النماذج",
+  "Brand Name": "اسم العلامة التجارية",
+  "brand name": "اسم العلامة التجارية",
+  "Create a New Brand": "إنشاء علامة تجارية جديدة",
+  "Product Management": "إدارة المنتجات",
+  "models": "النماذج",
+  "Create Features": "إنشاء ميزات",
+  "Features Management": "إدارة الميزات",
+  "Create a New Feature": "إنشاء ميزة جديدة",
+  "Category": "الفئة",
+  "feature name": "اسم الميزة",
+  "Features Categories Management": "إدارة فئات الميزات",
+  "Create Features Category": "إنشاء فئة ميزات",
+  "Create a New Features Category": "إنشاء فئة ميزات جديدة",
+  "Level": "المستوى",
+  "category name": "اسم الفئة",
+  "Level Management": "إدارة المستويات",
+  "level name": "اسم المستوى",
+  "Create Levels": "إنشاء مستويات",
+  "Create a New Levels": "إنشاء مستويات جديدة",
+  "point": "النقطة",
+  "Create Point": "إنشاء نقطة",
+  "point name": "اسم النقطة",
+  "Create a New Point": "إنشاء نقطة جديدة",
+  "regions name": "اسم المنطقة",
+  "Create Regions": "إنشاء مناطق",
+  "Create a New Region": "إنشاء منطقة جديدة",
+  "region name": "اسم المنطقة",
+  "Create City": "إنشاء مدينة",
+  "Create a New City": "إنشاء مدينة جديدة",
+  "city name": "اسم المدينة",
+  "status": "الحالة",
+  "Create a New Journeys": "إنشاء رحلات جديدة",
+  "work shift": "نوبة العمل",
+  "priority": "الأولوية",
+  "Create Journeys": "إنشاء رحلات",
+  "quantity by promoter": "الكمية حسب المروج",
+  "Create Stock": "إنشاء مخزون",
+  "Create a New Stock": "إنشاء مخزون جديد",
+  "price": "السعر",
+  "Product name": "اسم المنتج",
+  "Create Inquiry": "إنشاء استفسار",
+  "Create a New Inquiry": "إنشاء استفسار جديد",
+  "main category name": "اسم الفئة الرئيسية",
+  "Main category name": "اسم الفئة الرئيسية",
+  "Second Category Management": "إدارة الفئة الثانوية",
+  "Second Category Details": "تفاصيل الفئة الثانوية",
+  "Create Second Category": "إنشاء فئة ثانوية",
+  "Create a New Second Category": "إنشاء فئة ثانوية جديدة",
+  "Main category": "الفئة الرئيسية",
+  "second category name": "اسم الفئة الثانوية",
+  "Model Category Management": "إدارة فئات النماذج",
+  "Model Category Details": "تفاصيل فئات النماذج",
+  "Create Model Category": "إنشاء فئة نموذج",
+  "Create a New Model Category": "إنشاء فئة نموذج جديدة",
+  "Second category": "الفئة الثانوية",
+  "model category name": "اسم فئة النموذج",
+  "mac ID": "معرف MAC",
+  "Body": "المحتوى",
+  "Title": "العنوان",
+  "notifications": "الإشعارات",
+  "Create a New Notification": "إنشاء إشعار جديد",
+  "inArabic": "بالعربية",
+  "inEnglish": "بالإنجليزية",
+  "user_name": "اسم المستخدم",
+  "isRequired": "مطلوب",
+  "isRequired2": "مطلوبه",
+  "Retailers Management": "إدارة تجار التجزئة",
+  "Create Retailers": "إنشاء تجار التجزئة",
+  "Create a New Retailer": "إنشاء تاجر تجزئة جديد",
+  "Name Retailer": "اسم تاجر التجزئة",
+  "Enter retailer name": "أدخل اسم تاجر التجزئة",
+  "Inactive": "غير نشط",
+  "Create Retailer": "إنشاء تاجر التجزئة",
+  "Store Managment": "إدارة المتجر",
+  "Home": "إدارة المتاجر",
+  "Create a New Store": "إنشاء متجر جديد",
+  "Brand name": "اسم العلامة التجارية",
+  "Create a New User": "إنشاء مستخدم جديد",
+  "Store Code": "رمز المتجر",
+  "Phone Number": "رقم الهاتف",
+  "Contact Email": "البريد الإلكتروني للتواصل",
+  "lat": "خط العرض",
+  "lng": "خط الطول",
+  " Address": "العنوان",
+  "Address": "العنوان",
+  "Active": "نشط",
+  "InActive": "غير نشط",
+  "Sales Targets Management": "إدارة أهداف المبيعات",
+  "Store Management": "إدارة المتاجر",
+  "Sales Targets": "أهداف المبيعات",
+  "Import Targets": "استيراد الأهداف",
+  "Import Sales": "استيراد المبيعات",
+  "Export EXCEL": "تصدير إلى إكسل",
+  "Create a New Targets": "إنشاء أهداف جديدة",
+  "Target Quantity": "الكمية المستهدفة",
+  "Target Value": "القيمة المستهدفة",
+  "Last Year Achived Quantity": "الكمية المحققة في العام الماضي",
+  "Last Year Achived Value": "القيمة المحققة في العام الماضي",
+  "Target By Week": "الهدف حسب الأسبوع",
+  "Arbic": "العربية",
+  "Create Targets": "إنشاء الأهداف",
+  "Create Store": "إنشاء متجر",
+  "Create  Targets": "إنشاء الأهداف",
+  "Deleting Items": "حذف العناصر",
+  "deleting items": "حذف العناصر",
+  "Are You Sure For Delete This Item?": "هل أنت متأكد من حذف هذا العنصر؟",
+  "are you sure for delete this item?": "هل أنت متأكد من حذف هذا العنصر؟",
+  "Disagree": "غير موافق",
+  "disagree": "غير موافق",
+  "Agree": "موافق",
+  "agree": "موافق",
+  "categoriesManagement": {
+    "categoriesTitle": "تفاصيل الفئات",
+    "categoryName": "اسم الفئة",
+    "priority": "الأولوية",
+    "active": "نشط",
+    "Created": "تم إنشاؤه"
+  },
+  "product details": "تفاصيل المنتجات",
+  "Product Details": "تفاصيل المنتجات",
+  "checkout": "تسجيل الخروج",
+  "checkin": "تسجيل الدخول",
+  "rtailer": "تاجر التجزئة",
+  "Sales Target Table Details": "تفاصيل جدول المبيعات",
+  "Achievement VS Target retailers": "الإنجاز مقابل تجار التجزئة المستهدفين",
+  "Sales target chart": "مخطط هدف المبيعات",
+  "Salse Chart Tracker": "متتبع مخطط المبيعات",
+  "New Installed Soft POSM Report Details": "تفاصيل تقارير POSM الناعم المثبت الجديد",
+  "installationdatefrom": "تاريخ التثبيت من",
+  "installationdateto": "تاريخ التثبيت إلى",
+  "Sampling Report Details": "تفاصيل تقرير العينة",
+  "availabilitydate": "تاريخ التوفر",
+  "posmtypes": "أنواع POSM",
+  "modelname": "اسم النموذج",
+  "New Installed POSM Report Details": "تفاصيل تقارير أدوات التسويق الجديدة المثبتة ",
+  "height": "الارتفاع",
+  "width": "العرض",
+  "length": "الطول",
+  "depth": "العمق",
+  "installationdate": "تاريخ التثبيت",
+  "removedate": "تاريخ الإزالة",
+  "Dashboard": "لوحة القيادة",
+  "Launched Model Report Details": "تفاصيل تقرير النموذج المطلق",
+  "campaignname": "اسم الحملة",
+  "activationdurationfrom": "مدة التفعيل من",
+  "activationdurationto": "مدة التفعيل إلى",
+  "samplingmodel": "نموذج العينة",
+  "Instore Promotion Details": "تفاصيل الترويج داخل المتجر",
+  "username": "اسم المستخدم",
+  "promotionpercentage": "نسبة الخصم",
+  "offerdatefrom": "تاريخ بدء العرض",
+  "offerdateto": "تاريخ انتهاء العرض",
+  "promotionamount": "قيمة الخصم",
+  "regularprice": "السعر العادي",
+  "skucode": "رمز المنتج (SKU)",
+  "Status": "الحالة",
+  "Priority": "الأولوية",
+  "storename": "اسم المتجر",
+  "Supervisors Locations": "مواقع المشرفين",
+  "Promoters Locations": "مواقع المروجين",
+  "Merchandiser Locations": "مواقع التجار",
+  "Categories Managment": "إدارة الفئات",
+  "Main Category Management": "إدارة الفئة الرئيسية",
+  "Create Main Category": "إنشاء الفئة الرئيسية",
+  "Create a New Main Category": "إنشاء فئة رئيسية جديدة",
+  "Create": "إنشاء",
+  "Region Name": " المنطقة",
+  "Quantity By Promoter": "الكمية حسب المروج",
+  "Bar Code": "رمز الباركود",
+  "Main Category Details": "تفاصيل الفئة الرئيسية",
+  "MASTER MANAGEMENT": "إدارة الرئيسية",
+  "STORE MANAGEMENT": "إدارة المتجر",
+  "PRODUCT MANAGEMENT": "إدارة المنتجات",
+  "USER MANAGEMENT": "إدارة المستخدم",
+  "CATEGORIES MANAGEMENT": "إدارة الفئات",
+  "Point": "النقط",
+  "Description": "الوصف",
+  "description": "الوصف",
+  "ELEMENTS": "العناصر ",
+  "Inquiries": "استفسارات",
+  "Stock": "المخزون",
+  "Journeys": "الرحلات",
+  "Regions": "المناطق",
+  "Retailers": "تجار التجزئة",
+  "Stores": "المتاجر",
+  "Sales Target": "هدف المبيعات",
+  "ToDoList": "قائمة المهام",
+  "Cities": "المدن",
+  "Main": "الرئيسية",
+  "Second": "الثانية",
+  "Model": "نافذة منبثقة",
+  "Promoter": "مروج",
+  "Supervisor": "مشرف",
+  "Products": "المنتجات",
+  "Brands": "العلامات التجارية",
+  "Features": "ميزة",
+  "Features Categories": "فئات المميزات",
+  "Levels": "المستويات",
+  "English": "الإنجليزية",
+  "Arabic": "العربية",
+  "Log Request": "تسجيل الطلب",
+  "woman": "أنثى",
+  "barcode": "رمز شريطي",
+  "Join Date": "تاريخ الانضمام",
+  "join date": "تاريخ الانضمام",
+  "Team Leader": "قائد الفريق",
+  "team leader": "قائد الفريق",
+  "Nationality": "الجنسية",
+  "nationality": "الجنسية",
+  "Notification": "الاشعارات",
+  "COPYRIGHT ©": "حقوق الطبع والنشر ©",
+  "All rights Reserved": "جميع الحقوق محفوظة",
+  "Hand-crafted & Made by": "تم تصميمه وبرمجته بواسطة",
+  "JOE 13 Team": "JOE 13 فريق",
+  "Stock Report": "تقرير المخزون",
+  "Sales Report": "تقرير المبيعات",
+  "Benchmark Report": "تقرير المعيار",
+  "Level Benchmark Report": "تقرير معيار المستوى",
+  "Instore Promotion": "ترويج داخل المتجر",
+  "Sampling Report": "تقرير العينة",
+  "Launched Model Report": "تقرير النموذج المطروح",
+  "New Installed POSM Report": "تقرير أدوات التسويق الجديدة المثبتة",
+  "New Installed Soft POSM Report": "تقرير أدوات التسويق اللينة الجديدة المثبتة",
+  "Sales Chart": "مخطط المبيعات",
+  "Sales Chart Tracker": "متتبع مخطط المبيعات",
+  "RSP Chart Tracker": "متتبع مخطط سعر البيع",
+  "Sales Target Chart": "مخطط هدف المبيعات",
+  "Achived VS Target Chart": "مخطط الإنجاز مقابل الهدف",
+  "Sales Target Table": "جدول هدف المبيعات",
+  "quantity": "الكمية",
+  "State": "الحالة",
+  "UserName": "اسم المستخدم",
+  "Subject": "الموضوع",
+  "LastUpdate": "آخر تحديث",
+  "lastupdate": "آخر تحديث",
+  "FeedBack": "التعليقات",
+  "feedback": "التعليقات",
+  "Message": "الرسالة",
+  "Cancel": "إلغاء",
+  "Availability": "التوفر",
+  "availabilty": "التوفر",
+  "Date to": "التاريخ إلى",
+  "Date From": " التاريخ من",
+  "Work Shift": "نوبة العمل",
+  "total sales sar": "إجمالي المبيعات بالريال",
+  "total sales usd": "إجمالي المبيعات بالدولار",
+  "Sales Details": "تفاصيل المبيعات",
+  "store": "المتجر",
+  "brand": "العلامة التجارية",
+  "sku_code": "رمز المنتج",
+  "offer_date_from": "تاريخ العرض من",
+  "offer_date_to": "تاريخ العرض إلى",
+  "product_price": "سعر المنتج",
+  "promotion_price": "سعر العرض",
+  "discount": "الخصم",
+  "Benchmark Details": "تفاصيل المعيار",
+  "Levels Benchmark Report": "تقرير معايير المستويات",
+  "Levels Benchmark Details": "تفاصيل معايير المستويات",
+  "level": "المستوى",
+  "productprice": "سعر المنتج",
+  "promotionprice": "سعر العرض",
+  "mac id": "معرف MAC",
+  "inactive": "غير نشط",
+  "in work": "يعمل",
+  "Employee Location": "موقع الموظف",
+  "Marchindizers Location": "موقع المروجين",
+  "Promoters Location": "موقع المروجين",
+  "Create Promoter": "إنشاء مروج",
+  "Create a New Promoter": "إنشاء مروج جديد",
+  "Supervisors Location": "موقع المشرفين",
+  "Export Excel": "تصدير إلى إكسل",
+  "Export PDF": "تصدير إلى PDF",
+  "check in": "تسجيل الوصول",
+  "check out": "تسجيل المغادرة",
+  "Search": "بحث ..",
+  "Marchindaizer Attendance": "حضور التجار",
+  "Marchindaizer": "التاجر",
+  "Marchindaizer Details": "تفاصيل التاجر",
+  "Supervisor Attendance": "حضور المشرفين",
+  "Supervisor Details": "تفاصيل المشرفين",
+  "Promoter Attendance": "حضور المروجين",
+  "Promoter Details": "تفاصيل المروجين",
+  "Stock Process": "عملية المخزون",
+  "Stock Details": "تفاصيل المخزون",
+  "state": "الحالة",
+  "serName": "اسم المستخدم",
+  "subject": "الموضوع",
+  "Inquiries Management": "إدارة الاستفسارات",
+  "inquiries management": "إدارة الاستفسارات",
+  "lastUpdate": "آخر تحديث",
+  "feedBack": "التعليقات",
+  "Users": "المستخدمين",
+  "Chats": "الدردشات",
+  "City name": "اسم المدينة",
+  "Active Now": "نشط الآن",
+  "Offline": "غير متصل",
+  "Members": "الأعضاء",
+  "Admin": "المشرف",
+  "User": "مستخدم",
+  "Check In": "تسجيل الدخول",
+  "Check Out": "تسجيل الخروج",
+  "Category Name": "اسم الفئة",
+  "Brand Length": "طول العلامة التجارية",
+  "BrandLength": "طول العلامة التجارية",
+  "Brandlength": "طول العلامة التجارية",
+  "brandlength": "طول العلامة التجارية",
+  "brand length": "طول العلامة التجارية",
+  "share length": "طول المشاركة",
+  "Share Length": "طول المشاركة",
+  "ShareLength": "طول المشاركة",
+  "Sharelength": "طول المشاركة",
+  "sharelength": "طول المشاركة",
+  "Shalf Share": "مشاركة الرف",
+  "Shalf Share Management": "إدارة مشاركة الرف",
+  "Shalf Share Details": "تفاصيل مشاركة الرف",
+  "Damaged": "التالف",
+  "Damaged Management": "إدارة التالف",
+  "Damaged Details": "تفاصيل التالف",
+  "Freshness": "الطزاجة",
+  "Freshness Management": "إدارة الطزاجة",
+  "Freshness Details": "تفاصيل الطزاجة",
+  "Image": "صورة",
+  "image": "صورة",
+  "Product Name": "اسم المنتج",
+  "ProductName": "اسم المنتج",
+  "Productname": "اسم المنتج",
+  "productname": "اسم المنتج",
+  "product name": "اسم المنتج",
+  "EXP Date": "تاريخ الانتهاء",
+  "EXPDate": "تاريخ الانتهاء",
+  "EXPdate": "تاريخ الانتهاء",
+  "expdate": "تاريخ الانتهاء",
+  "ExDate": "تاريخ الانتهاء",
+  "exdate": "تاريخ الانتهاء",
+  "MerchandiserPhone": "هاتف التاجر",
+  "Merchandiserphone": "هاتف التاجر",
+  "merchandiserphone": "هاتف التاجر",
+  "exp date": "تاريخ الانتهاء",
+  "Amount": "الكمية",
+  "amount": "الكمية",
+  "Merchandiser Name": "اسم التاجر",
+  "merchandiser name": "اسم التاجر",
+  "merchandiser phone": "هاتف التاجر",
+  "Merchandiser Phone": "هاتف التاجر",
+  "Groups": "المجموعات",
+  "don't worry, just take a deep breath & say 'Hello'": "لا تقلق، فقط خذ نفسًا عميقًا وقل 'مرحبًا'",
+  "No message yet": "لا توجد رسائل بعد",
+  "No chats available Please Select User First": "لا توجد محادثات متاحة. الرجاء اختيار المستخدم أولاً",
+  "No chats available": "لا توجد محادثات متاحة",
+  "stock": "المخزون",
+  "select or write": "اختر أو اكتب",
+  "Search...": "بحث...",
+  "Created": "تم الإنشاء",
+  "REPORT MANGEMENT": "إدارة التقارير",
+  "no results": "لا توجد نتائج.",
+  "reset": "إعادة تعيين",
+  "submit": "إرسال",
+  "dir": "left",
+  "Regions Name": "اسم المنطقة",
+  "actions": "إجراءات",
+  "retailer name": "اسم تاجر التجزئة",
+  "Retailer name": "اسم تاجر التجزئة",
+  "store code": "رمز المتجر",
+  "contact email": "البريد الإلكتروني للتواصل",
+  "created ": "تاريخ الإنشاء",
+  "Choose File": "أختر ملف",
+  "sku code": "رمز المنتج",
+  "target quantity": "الكمية المستهدفة",
+  "achived quantity": "الكمية المحققة",
+  "target value": "القيمة المستهدفة",
+  "week": "الأسبوع",
+  "month": "الشهر",
+  "quarter": "الربع",
+  "year": "السنة",
+  "Store name": "المتاجر",
+  "Create User": "إنشاء مستخدم",
+  "create user": "إنشاء مستخدم",
+  "Create Marchindaizer": "إنشاء مروّج",
+  "Create Supervisor": "إنشاء مشرف",
+  "Create a New Supervisor": "إنشاء مشرف جديد",
+  "Create a New Marchindaizer": "إنشاء تاجر جديد",
+  "Create Notification": "إنشاء إشعار",
+  "Log Out": "تسجيل الخروج",
+  "Profile": "الملف الشخصي",
+  "Settings": "الإعدادات",
+  "of": "من",
+  "row(s) selected": "صف/صفوف محددة.",
+  "Rows per page": "عدد الصفوف لكل صفحة",
+  "Page": "صفحة",
+  "UserManagment": {
+    "user": {
+      "User Management": "إدارة المستخدمين",
+      "User": "مستخدم",
+      "User Details": "تفاصيل المستخدم",
+      "id": "معرف",
+      "User Name": "اسم المستخدم",
+      "Role": "الدور",
+      "Mac Id": "معرف MAC",
+      "Phone": "الهاتف",
+      "Address": "العنوان",
+      "Birth Date": "تاريخ الميلاد",
+      "Gender": "النوع",
+      "Activation": "التفعيل",
+      "Vacation": "إجازة",
+      "English": "الإنجليزية",
+      "Arabic": "العربية",
+      "Created": "تم الإنشاء",
+      "Export PDF": "تصدير إلى PDF",
+      "Export Excel": "تصدير إلى Excel",
+      "Create a New User": "إنشاء مستخدم جديد",
+      "create a new user": "إنشاء مستخدم جديد",
+      "Enter User Name": "أدخل اسم المستخدم",
+      "Name": "الاسم",
+      "Enter Number": "أدخل الرقم",
+      "Phone Number": "رقم الهاتف",
+      "retailer": "تاجر التجزئة",
+      "stores": "المتاجر",
+      "region": "المنطقة",
+      "city": "المدينة",
+      "Enter Email": "أدخل البريد الإلكتروني",
+      "Email": " البريد الإلكتروني",
+      "New Password": "كلمة مرور جديدة",
+      "Password": "كلمة المرور",
+      "Confirm Password": "تأكيد كلمة المرور",
+      "Enter Address": "أدخل العنوان",
+      "woman": "أنثى",
+      "male": "ذكر",
+      "Date of birth": "تاريخ الميلاد",
+      "In Vacation": "في إجازة",
+      "inactive": "غير نشط",
+      "active": "نشط",
+      "in work": "يعمل",
+      "Cancel": "إلغاء"
+    },
+    "supervisor": {
+      "User Management": "إدارة المستخدمين",
+      "Supervisor Management": "إدارة المشرفين",
+      "Supervisor": "مشرف",
+      "Supervisor Details": "تفاصيل المشرف",
+      "id": "معرف",
+      "User Name": "اسم المستخدم",
+      "Role": "الدور",
+      "Mac Id": "معرف MAC",
+      "Phone": "الهاتف",
+      "Address": "العنوان",
+      "Birth Date": "تاريخ الميلاد",
+      "Gender": "النوع",
+      "Activation": "التفعيل",
+      "Vacation": "إجازة",
+      "Created": "تم الإنشاء",
+      "Export PDF": "تصدير إلى PDF",
+      "Export Excel": "تصدير إلى Excel",
+      "Create Supervisor": "إنشاء مشرف",
+      "Create a New Supervisor": "إنشاء مشرف جديد",
+      "Enter Supervisor Name": "أدخل اسم المشرف",
+      "Name": "الاسم",
+      "Phone Number": "رقم الهاتف",
+      "Enter Phone Number": "أدخل رقم الهاتف",
+      "Email": "البريد الإلكتروني",
+      "Enter Email": "أدخل البريد الإلكتروني",
+      "Enter Address": "أدخل العنوان",
+      "Enter Mac Id": "أدخل معرف MAC",
+      "Date of birth": "تاريخ الميلاد",
+      "Female": "أنثى",
+      "Male": "ذكر",
+      "In Vacation": "في إجازة",
+      "Working": "يعمل",
+      "Active": "نشط",
+      "InActive": "غير نشط",
+      "Cancel": "إلغاء"
+    },
+    "merchandiser": {
+      "User Management": "إدارة المستخدمين",
+      "Marchindaizer Management": "إدارة التجار",
+      "Marchindaizer": "التاجر",
+      "Marchindaizer Details": "تفاصيل التاجر",
+      "Created": "تم الإنشاء",
+      "Activation": "التفعيل",
+      "Vacation": "إجازة",
+      "Gender": "النوع",
+      "Phone": "الهاتف",
+      "Address": "العنوان",
+      "Birth Date": "تاريخ الميلاد",
+      "Email": "البريد الإلكتروني",
+      "id": "معرف",
+      "Mac Id": "معرف MAC",
+      "Role": "الدور",
+      "User Name": "اسم المستخدم",
+      "Export PDF": "تصدير إلى PDF",
+      "Export Excel": "تصدير إلى Excel",
+      "Create Marchindaizer": "إنشاء تاجر",
+      "Create a New Marchindaizer": "إنشاء تاجر جديد",
+      "Enter Marchindaizer Name": "أدخل اسم الالتاجر",
+      "Phone Number": "رقم الهاتف",
+      "Name": "الاسم",
+      "Enter Phone Number": "أدخل رقم الهاتف",
+      "Retailer": "تاجر التجزئة",
+      "Stores": "المتاجر",
+      "Enter Email": "أدخل البريد الإلكتروني",
+      "Enter Address": "أدخل العنوان",
+      "Enter Mac Id": "أدخل معرف MAC",
+      "Date of birth": "تاريخ الميلاد",
+      "Female": "أنثى",
+      "Male": "ذكر",
+      "In Vacation": "في إجازة",
+      "Working": "يعمل",
+      "Not Active": "غير نشط",
+      "Active": "نشط",
+      "Cancel": "إلغاء"
+    },
+    "promoter": {
+      "User Management": "إدارة المستخدمين",
+      "Promoter Management": "إدارة المروجين",
+      "Promoter": "مروج",
+      "Promoter Details": "تفاصيل المروج",
+      "id": "معرف",
+      "User Name": "اسم المستخدم",
+      "Role": "الدور",
+      "Mac Id": "معرف MAC",
+      "Store Name": "اسم المتجر",
+      "Email": "البريد الإلكتروني",
+      "Address": "العنوان",
+      "Phone": "الهاتف",
+      "Birth Date": "تاريخ الميلاد",
+      "Gender": "النوع",
+      "Activation": "التفعيل",
+      "Vacation": "إجازة",
+      "Created": "تم الإنشاء",
+      "Export PDF": "تصدير إلى PDF",
+      "Export Excel": "تصدير إلى Excel",
+      "Create Promoter": "إنشاء مروج",
+      "Create a New Promoter": "إنشاء مروج جديد",
+      "Enter Promoter Name": "أدخل اسم المروج",
+      "Name": "الاسم",
+      "Stores": "المتاجر",
+      "Retailer": "تاجر التجزئة",
+      "Phone Number": "رقم الهاتف",
+      "Enter Phone Number": "أدخل رقم الهاتف",
+      "Enter Email": "أدخل البريد الإلكتروني",
+      "Enter Address": "أدخل العنوان",
+      "Enter Mac Id": "أدخل معرف MAC",
+      "Date of birth": "تاريخ الميلاد",
+      "Female": "أنثى",
+      "Male": "ذكر",
+      "In Vacation": "في إجازة",
+      "Working": "يعمل",
+      "Not Active": "غير نشط",
+      "Active": "نشط",
+      "Cancel": "إلغاء"
+    },
+    "notification": {
+      "User Management": "إدارة المستخدمين",
+      "Notification Management": "إدارة الإشعارات",
+      "Notification": "إشعار",
+      "Notification Details": "تفاصيل الإشعار",
+      "id": "معرف",
+      "Type": "النوع",
+      "Title": "العنوان",
+      "Body": "المحتوى",
+      "Date": "التاريخ",
+      "Export PDF": "تصدير إلى PDF",
+      "Export Excel": "تصدير إلى Excel",
+      "Create Notification": "إنشاء إشعار",
+      "Create a New Notification": "إنشاء إشعار جديد",
+      "Cancel": "إلغاء",
+      "What's On Your Mind": "ما الذي يدور في ذهنك ...",
+      "Message": "الرسالة",
+      "Email": "البريد الإلكتروني",
+      "Enter Email": "أدخل البريد الإلكتروني",
+      "Enter Title": "أدخل العنوان",
+      "User Type": "نوع المستخدم"
+    },
+    "log": {
+      "User Management": "إدارة المستخدمين",
+      "Log Request Management": "إدارة طلبات السجل",
+      "Log Request": "طلب السجل",
+      "Log Request Details": "تفاصيل طلب السجل",
+      "id": "معرف",
+      "User Name": "اسم المستخدم",
+      "Type": "النوع",
+      "Mac Id": "معرف MAC",
+      "Store Name": "اسم المتجر",
+      "Store Location": "موقع المتجر",
+      "User Location": "موقع المستخدم",
+      "Retailer": "تاجر التجزئة",
+      "Export PDF": "تصدير إلى PDF",
+      "Export Excel": "تصدير إلى Excel"
+    }
+  },
+  "importGUI": {
+    "Drop or select file": "اسحب أو اختر ملفًا",
+    "Drop files here or click": "اسحب الملفات هنا أو انقر",
+    "browse": "تصفح",
+    "through your machine": "من خلال جهازك",
+    "Import File": "استيراد ملف",
+    "Download Sample": "تحميل نموذج"
+  },
+  "ProductManagment": {
+    "brand": {
+      "Products Management": "إدارة المنتجات",
+      "Brand Management": "إدارة العلامات التجارية",
+      "Brand": "العلامة التجارية",
+      "Export PDF": "تصدير PDF",
+      "Export Excel": "تصدير Excel",
+      "Brand Details": "تفاصيل العلامة التجارية",
+      "Cancel": "إلغاء",
+      "Create Brand": "إنشاء علامة تجارية",
+      "Enter Beand": "أدخل العلامة التجارية",
+      "Beand Name": "اسم العلامة التجارية",
+      "English": "الإنجليزية",
+      "Arabic": "العربية",
+      "Create a New Brand": "إنشاء علامة تجارية جديدة",
+      "Created": "تم الإنشاء"
+    },
+    "feature": {
+      "Products Management": "إدارة المنتجات",
+      "Features Management": "إدارة الخصائص",
+      "Features": "الخصائص",
+      "Export PDF": "تصدير PDF",
+      "Export Excel": "تصدير Excel",
+      "Feature Details": "تفاصيل الخاصية",
+      "Cancel": "إلغاء",
+      "Create Feature": "إنشاء خاصية",
+      "English": "الإنجليزية",
+      "Arabic": "العربية",
+      "Create a New Feature": "إنشاء خاصية جديدة",
+      "Create Features": "إنشاء الخصائص",
+      "Category": "الفئة",
+      "Enter Feature Name": "أدخل اسم الخاصية",
+      "Feature Name": "اسم الخاصية",
+      "Not Active": "غير نشط",
+      "Active": "نشط",
+      "Activation": "التفعيل",
+      "Created": "تم الإنشاء"
+    },
+    "featureCategories": {
+      "Products Management": "إدارة المنتجات",
+      "Features Categories Management": "إدارة فئات الميزات",
+      "Features Categories": "فئات الميزات",
+      "Features Categories Details": "تفاصيل فئات الميزات",
+      "Export PDF": "تصدير PDF",
+      "Export Excel": "تصدير Excel",
+      "Feature Details": "تفاصيل الميزة",
+      "Cancel": "إلغاء",
+      "Create Feature": "إنشاء ميزة",
+      "English": "الإنجليزية",
+      "Arabic": "العربية",
+      "Create a New Features Category": "إنشاء فئة ميزات جديدة",
+      "Enter Category Name": "أدخل اسم الفئة",
+      "Create Features Category": "إنشاء فئة ميزات",
+      "Create Features": "إنشاء ميزات",
+      "Category": "الفئة",
+      "Enter Feature Name": "أدخل اسم الميزة",
+      "Feature Name": "اسم الميزة",
+      "Not Active": "غير نشط",
+      "Active": "نشط",
+      "Level": "المستوى",
+      "Activation": "التفعيل",
+      "Created": "تم الإنشاء",
+      "Category Name": "اسم الفئة"
+    },
+    "level": {
+      "Product Management": "إدارة المنتجات",
+      "Level Management": "إدارة المستويات",
+      "Levels": "المستويات",
+      "Export PDF": "تصدير PDF",
+      "Export Excel": "تصدير Excel",
+      "Levels Details": "تفاصيل المستويات",
+      "Cancel": "إلغاء",
+      "Create Feature": "إنشاء ميزة",
+      "English": "الإنجليزية",
+      "Arabic": "العربية",
+      "Create a New Levels": "إنشاء مستويات جديدة",
+      "Enter Category Name": "أدخل اسم الفئة",
+      "Create Features Category": "إنشاء فئة الميزات",
+      "Create Features": "إنشاء ميزات",
+      "Category": "الفئة",
+      "Enter Level Name": "أدخل اسم المستوى",
+      "Create Levels": "إنشاء مستويات",
+      "Not Active": "غير نشط",
+      "Active": "نشط",
+      "Level": "المستوى",
+      "Activation": "التفعيل",
+      "Created": "تم الإنشاء",
+      "Level Name": "اسم المستوى"
+    },
+    "product": {
+      "Product Management": "إدارة المنتجات",
+      "Products": "المنتجات",
+      "Product Details": "تفاصيل المنتجات",
+      "Export PDF": "تصدير PDF",
+      "Export Excel": "تصدير Excel",
+      "Levels Details": "تفاصيل المستويات",
+      "Cancel": "إلغاء",
+      "User Name": "اسم المستخدم",
+      "English": "الإنجليزية",
+      "Arabic": "العربية",
+      "Levels": "المستويات",
+      "VCP": "VCP",
+      "BU": "BU",
+      "Brand Name": "اسم العلامة التجارية",
+      "Models": "النماذج",
+      "SKU Code": "رمز SKU",
+      "Description": "الوصف",
+      "Created": "تم الإنشاء",
+      "Model": "النموذج",
+      "Brands": "العلامات التجارية",
+      "Level": "المستوى",
+      "Not Active": "غير نشط",
+      "Active": "نشط",
+      "Enter Model": "أدخل النموذج",
+      "Brand": "العلامة التجارية",
+      "Create a New Product": "إنشاء منتج جديد",
+      "Create Products": "إنشاء منتجات",
+      "Enter Bar Code": "أدخل رمز الباركود",
+      "Bar Code": "رمز الباركود",
+      "Enter Description": "أدخل الوصف",
+      "Enter SKU Code": "أدخل رمز SKU",
+      "Activation": "التفعيل",
+      "Level Name": "اسم المستوى"
+    }
+  },
+  "management": {
+    "retailers": {
+      "Retailers": "تجار التجزئة",
+      "Store Management": "إدارة المتاجر",
+      "Retailers Management": "إدارة تجار التجزئة",
+      "Export Excel": "تصدير إلى إكسل",
+      "Export PDF": "تصدير إلى PDF",
+      "Create Retailers": "إنشاء تجار التجزئة",
+      "Create a New Retailer": "إنشاء تاجر تجزئة جديد",
+      "Retailers Details": "تفاصيل تجار التجزئة",
+      "English": "الإنجليزية",
+      "Arbic": "عربي",
+      "Name Retailer": "اسم تاجر التجزئة",
+      "Enter retailer name": "أدخل اسم تاجر التجزئة",
+      "Active": "نشط",
+      "Inactive": "غير نشط",
+      "Cancel": "إلغاء",
+      "Create Retailer": "إنشاء تاجر التجزئة"
+    },
+    "store": {
+      "Store Managment": "إدارة المتجر",
+      "Home": "إدارة المتاجر",
+      "Store": "المتجر",
+      "Export Excel": "تصدير إلى إكسل",
+      "Export PDF": "تصدير إلى PDF",
+      "Create Store": "إنشاء متجر",
+      "Create a New Store": "إنشاء متجر جديد",
+      "Store Details": "تفاصيل المتجر",
+      "Store name": "اسم المتجر",
+      "Store Code": "رمز المتجر",
+      "Type": "النوع",
+      "Phone Number": "رقم الهاتف",
+      "Contact Email": "البريد الإلكتروني للتواصل",
+      "lat": "خط العرض",
+      "lng": "خط الطول",
+      " Address": "العنوان",
+      "English": "الإنجليزية",
+      "Arbic": "العربية",
+      "Region": "المنطقة",
+      "City": "المدينة",
+      "Retailer": "تاجر التجزئة",
+      "Address": "العنوان",
+      "Cancel": "إلغاء",
+      "Active": "نشط",
+      "InActive": "غير نشط"
+    },
+    "sales": {
+      "Sales Targets Management": "إدارة أهداف المبيعات",
+      "Store Management": "إدارة المتاجر",
+      "Sales Targets": "أهداف المبيعات",
+      "Import Targets": "استيراد الأهداف",
+      "Import Sales": "استيراد المبيعات",
+      "Export EXCEL": "تصدير إلى إكسل",
+      "Export PDF": "تصدير إلى PDF",
+      "Create  Targets": "إنشاء الأهداف",
+      "Create a New Targets": "إنشاء أهداف جديدة",
+      "Sales Targets Details": "تفاصيل أهداف المبيعات",
+      "Target Quantity": "الكمية المستهدفة",
+      "Target Value": "القيمة المستهدفة",
+      "Last Year Achived Quantity": "الكمية المحققة في العام الماضي",
+      "Last Year Achived Value": "القيمة المحققة في العام الماضي",
+      "Target By Week": "الهدف حسب الأسبوع",
+      "English": "الإنجليزية",
+      "Arbic": "العربية",
+      "Store": "المتجر",
+      "Product": "المنتج",
+      "Cancel": "إلغاء",
+      "Create Targets": "إنشاء الأهداف",
+      "detailsLocation": "تفاصيل الموقع"
+    }
+  },
+  "productsManager": {
+    "Product Management": "إدارة المنتجات"
+  },
+  "MasterManagment": {
+    "ToDoList": {
+      "ToDo Management": "إدارة المهام",
+      "To Do": "قيد الإنجاز",
+      "To Do Details": "تفاصيل المهمة",
+      "Point": "نقطة",
+      "Created": "تم الإنشاء",
+      "Create Point": "إنشاء مهمة",
+      "Export Excel": "تصدير إلى Excel",
+      "Export PDF": "تصدير إلى PDF",
+      "Title": "العنوان",
+      "Description": "الوصف",
+      "Enter Description": "ادخل الوصف",
+      "Cancel": "إلغاء",
+      "English": "الإنجليزية",
+      "Arabic": "العربية",
+      "Create a New Point": "إنشاء نقطة جديدة"
+    },
+    "regions": {
+      "Regions Management": "إدارة المناطق",
+      "Regions": "المناطق",
+      "Create a New Region": "إنشاء منطقة جديدة",
+      "Regions Details": "تفاصيل المناطق",
+      "Regions name": "اسم المنطقة",
+      "Enter Region Name": "أدخل اسم المنطقة",
+      "Active": "نشط",
+      "Not Active": "غير نشط",
+      "Create Regions": "إنشاء مناطق",
+      "Export Excel": "تصدير إلى Excel",
+      "Export PDF": "تصدير إلى PDF",
+      "Created": "تم الإنشاء",
+      "Cancel": "إلغاء",
+      "English": "الإنجليزية",
+      "Arabic": "العربية"
+    },
+    "city": {
+      "Cities Details": "تفاصيل المدن",
+      "Cities Management": "إدارة المدن",
+      "Cities": "المدن",
+      "Region Name": "اسم المنطقة",
+      "City Name": "اسم المدينة",
+      "Active": "نشط",
+      "Create City": "إنشاء مدينة",
+      "Export Excel": "تصدير إلى Excel",
+      "Export PDF": "تصدير إلى PDF",
+      "Created": "تم الإنشاء",
+      "Cancel": "إلغاء",
+      "Not Active": "غير نشط",
+      "Create a New City": "إنشاء مدينة جديدة",
+      "English": "الإنجليزية",
+      "Enter City Name": "أدخل اسم المدينة",
+      "Arabic": "العربية",
+      "Region": "المنطقة"
+    },
+    "journeys": {
+      "User Name": "اسم المستخدم",
+      "Store Name": "اسم المتجر",
+      "Date": "التاريخ",
+      "Status": "الحالة",
+      "Priority": "الأولوية",
+      "Journeys": "الرحلات",
+      "Journeys Details": "تفاصيل الرحلات",
+      "Journeys Management": "إدارة الرحلات",
+      "City Name": "اسم المدينة",
+      "Active": "نشط",
+      "Create Journeys": "إنشاء رحلات",
+      "Export Excel": "تصدير إلى Excel",
+      "Export PDF": "تصدير إلى PDF",
+      "Created": "تم الإنشاء",
+      "Create a New Journeys": "إنشاء رحلات جديدة",
+      "End Date": "تاريخ الانتهاء",
+      "Cancel": "إلغاء",
+      "Date to": "التاريخ إلى",
+      "Date From": " التاريخ من",
+      "Work Shift": "نوبة العمل",
+      "Work shift": "نوبة العمل",
+      "Start Date": "تاريخ البدء",
+      "Enter Work Shift": "أدخل نوبة العمل",
+      "Store": "المتجر",
+      "Retailer": "تاجر التجزئة",
+      "User": "المستخدم",
+      "Enter Priority": "أدخل الأولوية"
+    },
+    "stock": {
+      "Stock": "المخزون",
+      "Stock Details": "تفاصيل المخزون",
+      "Stock Management": "إدارة المخزون",
+      "Status": "الحالة",
+      "Quantity By Promoter": "الكمية حسب المروج",
+      "Quantity": "الكمية",
+      "RSP": "سعر التجزئة المقترح",
+      "Discount": "خصم",
+      "SkuCode": "رمز SKU",
+      "Brand": "ماركة",
+      "BarCode": "رمز شريطي",
+      "Store": "المتجر",
+      "City": "المدينة",
+      "Created": "تم الإنشاء",
+      "Create Stock": "إنشاء مخزون",
+      "Export Excel": "تصدير إلى Excel",
+      "Export PDF": "تصدير إلى PDF",
+      "Create a New Stock": "إنشاء مخزون جديد",
+      "Enter a Discount": "أدخل خصم",
+      "Enter a Quantity": "أدخل كمية",
+      "Enter a Price": "أدخل سعر",
+      "Price": "السعر",
+      "Products": "المنتجات",
+      "Cancel": "إلغاء"
+    },
+    "inquires": {
+      "Inquiries": "استفسارات",
+      "Inquiries Details": "تفاصيل الاستفسارات",
+      "Inquiries Management": "إدارة الاستفسارات",
+      "Quantity By Promoter": "الكمية حسب المروج",
+      "Quantity": "الكمية",
+      "RSP": "سعر التجزئة المقترح",
+      "Discount": "خصم",
+      "SkuCode": "رمز SKU",
+      "Status": "الحالة",
+      "State": "الحالة",
+      "UserName": "اسم المستخدم",
+      "Subject": "الموضوع",
+      "LastUpdate": "آخر تحديث",
+      "FeedBack": "التعليقات",
+      "Message": "الرسالة",
+      "Brand": "ماركة",
+      "BarCode": "رمز شريطي",
+      "Store": "المتجر",
+      "City": "المدينة",
+      "Created": "تم الإنشاء",
+      "Create Stock": "إنشاء مخزون",
+      "Export Excel": "تصدير إلى Excel",
+      "Export PDF": "تصدير إلى PDF",
+      "Create a New Stock": "إنشاء مخزون جديد",
+      "Enter a Discount": "أدخل خصم",
+      "Enter a Quantity": "أدخل كمية",
+      "Enter a Price": "أدخل سعر",
+      "Price": "السعر",
+      "Products": "المنتجات",
+      "Cancel": "إلغاء"
+    }
+  },
+  "value 1": "القيمة 1",
+  "value 2": "القيمة 2",
+  "value 3": "القيمة 3",
+  "Filter": "تصفية",
+  "Filters": "التصفيات",
+  "analytics": "تحليلات",
+  "ecommerce": "تجارة اكترونية",
+  "project": "مشروع",
+  "chat": "دردشة",
+  "user": "المستخدمين",
+  "user management": "إدارة المستخدم",
+  "marchindaizer": "مارشيندايزر",
+  "promoter": "المروجين",
+  "supervisor": "مشرف",
+  "log request": "طلب السجلات",
+  "notification": "إشعارات",
+  "store management": "إدارة المتاجر",
+  "retailers": "تجار التجزئة",
+  "stores": "المتاجر",
+  "sales target": "هدف المبيعات",
+  "product  management": "إدارة المنتجات",
+  "products": "المنتجات",
+  "brands": "العلامات التجارية",
+  "features categories": "فئات الميزات",
+  "features": "السمات",
+  "levels": "المستويات",
+  "export pdf": "تصدير PDF",
+  "export excel": "تصدير اكسل",
+  "create a new user": "إنشاء مستخدم جديد",
+  "enter user name": "أدخل اسم المستخدم",
+  "name": "اسم",
+  "enter number": "أدخل الرقم",
+  "phone number": "رقم التليفون",
+  "region": "المنطقة",
+  "city": "المدينة",
+  "id": "بطاقة تعريف",
+  "user name": "اسم المستخدم",
+  "role1": "دور",
+  "mac ids": "بطاقة تعريف ",
+  "created": "تم انشاءوه",
+  "vacation": "أجازة",
+  "activation": "التنشيط",
+  "birth date": "تاريخ الميلاد",
+  "gender": "النوع",
+  "phone": "رقم التليفون",
+  "user details": "تفاصيل المستخدم",
+  "supervisor management": "إدارة المشرف",
+  "supervisor details": "تفاصيل المشرف",
+  "create supervisor": "إنشاء المشرف",
+  "create a new supervisor": "إنشاء مشرف جديد",
+  "enter supervisor name": "أدخل اسم المشرف",
+  "enter phone number": "أدخل رقم الهاتف",
+  "enter mac id": "أدخل معرف ماك",
+  "marchindaizer management": "إدارة مارشيندايزر",
+  "promoter management": "إدارة المروج",
+  "promoter details": "تفاصيل المروج",
+  "create promoter": "إنشاء المروج",
+  "create a new promoter": "إنشاء مروج جديد",
+  "enter promoter name": "أدخل اسم المروج",
+  "store name": "اسم المتجر",
+  "marchindaizer details": "تفاصيل المارشيندايزر",
+  "create marchindaizer": "إنشاء مارشيندايزر",
+  "create a new marchindaizer": "إنشاء مارشيندايزر جديد",
+  "enter marchindaizer name": "أدخل اسم مارشيندايزر",
+  "user location": "موقع المستخدم",
+  "store location": "موقع المتجر",
+  "type": "النوع",
+  "Log Request Details": "تفاصيل طلب السجل",
+  "notification details": "تفاصيل الاشعار",
+  "create notification": "انشاء اشعار",
+  "user type": "نوع المستخدم",
+  "enter title": "ادخل العنوان",
+  "what's on your mind": "ماذا يدور فى عقلك",
+  "message": "الرسالة",
+  "date": "التاريخ",
+  "body": "الجسم",
+  "choose file": "اختر الملف",
+  "toggle columns": "تبديل الأعمدة",
+  "view": "عرض المزيد",
+  "filter tasks...": "تصفية المهام...",
+  "retailer": "بائع تجزئة",
+  "role": "دور",
+  "enter email": "أدخل البريد الإلكتروني",
+  "new password": "كلمة المرور الجديدة",
+  "password": "كلمة المرور",
+  "confirm password": "تأكيد كلمة المرور",
+  "enter address": "أدخل العنوان",
+  "female": "أنثى",
+  "male": "ذكر",
+  "date of birth": "تاريخ الميلاد",
+  "address": "عنوان",
+  "cancel": "يلغي",
+  "working": "عمل",
+  "in vacation": "في اجازة",
+  "not active": "غير نشط",
+  "active": "نشط",
+  "email": "بريد الكتروني",
+  "kanban": "كانبان",
+  "task": "مهمة",
+  "Calender": "تقويم",
+  "projects": "المشاريع",
+  "base ui": "واجهة المستخدم الأساسية",
+  "accordion": "أكورديون",
+  "alert": "تنبيه",
+  "avatar": "الصورة الرمزية",
+  "badge": "شارة",
+  "breadcrumb": "فتات الخبز ",
+  "button": "زر",
+  "card": "بطاقة",
+  "carousel": "دائري",
+  "color": "لون",
+  "combobox": "صندوق التحرير",
+  "command": "أمر",
+  "dropdown": "قائمة منسدلة",
+  "dialog": "الحوار",
+  "kbd": "كيبد",
+  "pagination": "ترقيم الصفحات",
+  "popover": "نبذة معينة",
+  "progress": "التقدم",
+  "sheet": "ورقة",
+  "skeleton": "جذر",
+  "tabs": "علامات التبويب",
+  "toast": "تنبيه",
+  "tooltip": "تلميح",
+  "typography": "التصميم",
+  "affix": "تثبيت",
+  "calendar": "تقويم",
+  "steps": "خطوات",
+  "timeline": "الجدول الزمني",
+  "tour": "رحلة",
+  "tree": "شجرة",
+  "watermark": "علامة تحذير",
+  "autocomplete": "تلميح التلقائي",
+  "checkbox": "تحديد",
+  "file uploader": "رفع ملف",
+  "input": "إدخال",
+  "input group": "مجموعة الإدخال",
+  "input mask": "قناع الإدخال",
+  "radio": "راديو",
+  "range slider": "شريط تمرير النطاق",
+  "rating": "تصنيف",
+  "select": "تحديد",
+  "react select": "تحديد React",
+  "switch": "تبديل",
+  "textarea": "منطقة نصية",
+  "form layout": "تخطيط النموذج",
+  "form elemenets": "عناصر النموذج",
+  "form validation": "التحقق من صحة النموذج",
+  "use controller": "استخدام الطريي",
+  "use form": "استخدام النموذج",
+  "form wizard": "استعمال النموذج",
+  "pages": "الصفحات",
+  "error": "خطأ",
+  "utility": "المساهمة",
+  "invoice": "فاتورة",
+  "sign in 01": "تسجيل الدخول 1",
+  "sign in 02": "تسجيل الدخول 2",
+  "sign in 03": "تسجيل الدخول 3",
+  "sign in 04": "تسجيل الدخول 4",
+  "sign in 05": "تسجيل الدخول 5",
+  "sign up 01": "تسجيل 1",
+  "sign up 02": "تسجيل 2",
+  "sign up 03": "تسجيل 3",
+  "sign up 04": "تسجيل 4",
+  "sign up 05": "تسجيل 5",
+  "forget password 01": "نسيت كلمة المرور 1",
+  "forget password 02": "نسيت كلمة المرور 2",
+  "forget password 03": "نسيت كلمة المرور 3",
+  "forget password 04": "نسيت كلمة المرور 4",
+  "forget password 05": "نسيت كلمة المرور 5",
+  "lock screen 01": "قفل الشاشة 1",
+  "lock screen 02": "قفل الشاشة 2",
+  "lock screen 03": "قفل الشاشة 3",
+  "lock screen 04": "قفل الشاشة 4",
+  "lock screen 05": "قفل الشاشة 5",
+  "two step 01": "الخطوة 2 1",
+  "two step 02": "الخطوة 2 2",
+  "two step 03": "الخطوة 2 3",
+  "two step 04": "الخطوة 2 4",
+  "two step 05": "الخطوة 2 5",
+  "password create 01": "انشاء كلمة المرور 1",
+  "password create 02": "انشاء كلمة المرور 2",
+  "password create 03": "انشاء كلمة المرور 3",
+  "password create 04": "انشاء كلمة المرور 4",
+  "password create 05": "انشاء كلمة المرور 5",
+  "error 401": "خطأ 401",
+  "error 403": "خطأ 403",
+  "error 404": "خطأ 404",
+  "error 419": "خطأ 419",
+  "error 429": "خطأ 429",
+  "error 500": "خطأ 500",
+  "error 503": "خطأ 503",
+  "blank page": "صفحة فارغة",
+  "comming soon": "يصبح الاستمرار",
+  "under maintenance": "في الصيانة",
+  "user profile": "ملف تعريف المستخدم",
+  "overview": "نظرة عامة",
+  "documents": "المستندات",
+  "activities": "النشاطات",
+  "settings": "الإعدادات",
+  "invoices": "الفواتير",
+  "create invoice": "انشاء فاتورة",
+  "invoice list": "قائمة الفواتير",
+  "email template": "قالب البريد الإلكتروني",
+  "welcome": "مرحبا",
+  "authentication": "المصادقة",
+  "advanced": "متقدمة",
+  "basic": "مبسطة",
+  "reset password 01": "اعادة تعيين كلمة المرور 1",
+  "reset password 02": "اعادة تعيين كلمة المرور 2",
+  "verify email": "تحقق من بريدك الإلكتروني",
+  "verify otp": "تحقق من OTP",
+  "shop": "تسوق",
+  "shopping cart": "عربة التسوق",
+  "corporate": "الشركات",
+  "agency": "الوكلاء",
+  "blog": "مدونة",
+  "photography": "التصوير",
+  "tables": "الجداول",
+  "simple table": "جدول بسيط",
+  "tailwindui table": "جدول tailwindui",
+  "data table": "جدول البيانات",
+  "diagram": "الرسوم البيانية",
+  "react flow": "ترتيب react",
+  "organization tree": "شجرة المنظمة",
+  "update node": "تحديث العقد",
+  "add node": "اضافة عقد",
+  "horizontal flow": "ترتيب افقي",
+  "dagree tree": "شجرة دائرية",
+  "download diagram": "تحميل الرسم البياني",
+  "with minimap": "مع الخريطة الصغيرة",
+  "with background": "مع خلفية",
+  "panel position": "موضع اللوحة",
+  "chart": "مخطط",
+  "apex chart": "مخطط Apex",
+  "rechart chart": "مخطط Rechart",
+  "chart js": "مخطط Chart Js",
+  "unovis": "Unovis",
+  "line": "خط",
+  "area": "منطقة",
+  "column": "عمود",
+  "bar": "شريط",
+  "combo/mixed": "ترتيب متعدد",
+  "Range Area": "منطقة نطاق",
+  "funnel": "فانيل",
+  "candle stick": "ستيكل",
+  "boxplot": "بوكس بوت",
+  "pie": "فيزي",
+  "radar": "رادار",
+  "polar area": "منطقة نطاق",
+  "radial bars": "منطقة نطاق",
+  "bubble": "بولب",
+  "scatter": "متجر",
+  "heatmap": "معدل الإحصاء",
+  "treemap": "خريطة تريم",
+  "composed": "منشط",
+  "tree map": "خريطة تريم",
+  "other": "غير ذلك",
+  "scales": "المقياسات",
+  "scale options": "خيارات المقياسات",
+  "legend": "العلامة",
+  "title": "العنوان",
+  "subtitle": "العنوان الفرعي",
+  "scriptable options": "خيارات السكربت",
+  "animations": "التحريكات",
+  "maps": "الخرائط",
+  "google": "جوجل",
+  "vector": "المتغير",
+  "react leaflet": "نشرة الرد",
+  "unovis map": "خريطة أونوفيس",
+  "leaflet map": "خريطة النشرة",
+  "leaflet flow": "ترتيب النشرة",
+  "leaflet advance": "تقدم النشرة",
+  "icons": "الأيقونات",
+  "hero icons": "أيقونات هيرو",
+  "lucide icons": "أيقونات لوسيد",
+  "custom icons": "أيقونات مخصصة",
+  "multi level": "مستوى متعدد",
+  "level 1.1": "مستوى 1.1",
+  "level 2": "مستوى 2",
+  "application": "التطبيق",
+  "components": "العناصر",
+  "forms": "النماذج",
+  "menu": "القائمة ",
+  "Date": "التاريخ",
+  "Activation": "التنشيط",
+  "Store": "المتجر",
+  "City": "المدينة",
+  "Region": "المنطقة",
+  "Retailer": "تاجر التجزئة",
+  "Role": "الدور",
+  "Type": "النوع",
+  "Brand": "العلامة التجارية",
+  "Product": "المنتج",
+  "Stores Type": "نوع المتاجر",
+  "main category": "الفئة الرئيسية",
+  "second category": "الفئة الثانية",
+  "period": "الفترة",
+  "tgt": "tgt",
+  "cy": "cy",
+  "remaining": "المتبقي",
+  "ach%": "ach%",
+  "ach% remaining": "ach% المتبقية",
+  "model": "نموذج",
+  "Employee Locations": "مواقع الموظفين",
+  "Vendors": "البائعون",
+  "Account": "الحساب",
+  "Property": "الملكية",
+  "vendors": "البائعون",
+  "Properties Details": "تفاصيل الممتلكات",
+  "properties": "الممتلكات",
+  "Ticket ID": "معرف التذكرة",
+  "Ticket id": "معرف التذكرة",
+  "ticket id": "معرف التذكرة",
+  "User Name": "اسم المستخدم",
+  "Email": "البريد الإلكتروني",
+  "Prepayment Policies": "سياسات الدفع المسبق",
+  "Submission Date": "تاريخ التقديم",
+  "Submission date": "تاريخ التقديم",
+  "submission date": "تاريخ التقديم",
+  "Resolution Date": "تاريخ الحل",
+  "Resolution date": "تاريخ الحل",
+  "resolution date": "تاريخ الحل",
+  "Contact Us": "اتصل بنا",
+  "Vendors 1": "البائعون 1",
+  "Vendor ID": "معرف البائع",
+  "Property Name": "اسم الملكية",
+  "Occasion Type": "نوع المناسبة",
+  "Operating System": "نظام التشغيل",
+  "Location": "الموقع",
+  "Joined Date": "تاريخ الانضمام",
+  "Overall Revenu": "الإيرادات الإجمالية",
+  "All Data": "جميع البيانات",
+  "Vendors Details": "تفاصيل البائعين",
+  "Create Vendors": "إنشاء بائعين",
+  "Create a New Vendors": "إنشاء بائعين جدد",
+  "New Vendors this month": "بائعون جدد هذا الشهر",
+  "Revenue of this month": "إيرادات هذا الشهر",
+  "Reservations this month": "الحجوزات هذا الشهر",
+  "All vendors number": "عدد جميع البائعين",
+  "vendor id": "معرف البائع",
+  "property name ": "اسم الملكية",
+  "occasion type ": "نوع المناسبة",
+  "operating system": "نظام التشغيل",
+  "location": "الموقع",
+  "joined date": "تاريخ الانضمام",
+  "overall revenu": "الإيرادات الإجمالية",
+  "all data": "جميع البيانات",
+  "venue name": "اسم المكان",
+  "total bookings": "إجمالي الحجوزات",
+  "revenue generated": "الإيرادات المحققة",
+  "average revenue per booking": "متوسط الإيرادات لكل حجز",
+  "Venues": "الأماكن",
+  "Event Type": "نوع الحدث",
+  "Event type": "نوع الحدث",
+  "event type": "نوع الحدث",
+  "Booking Price": "سعر الحجز",
+  "Booking price": "سعر الحجز",
+  "booking price": "سعر الحجز",
+  "Venue Name": "اسم المكان",
+  "Venue name": "اسم المكان",
+  "Total Spend": "إجمالي الإنفاق",
+  "Total spend": "إجمالي الإنفاق",
+  "total spend": "إجمالي الإنفاق",
+  "Number of Events": "عدد الأحداث",
+  "Number of events": "عدد الأحداث",
+  "number of events": "عدد الأحداث",
+  "Client Name": "اسم العميل",
+  "Client name": "اسم العميل",
+  "client name": "اسم العميل",
+  "Properties": "الممتلكات",
+  "Venau Details": "تفاصيل المكان",
+  "Venau ID": "المكان id",
+  "Venau Name": "اسم المكان",
+  "start date": "من  تاريخ",
+  "end date": "الى تاريخ"
+}
