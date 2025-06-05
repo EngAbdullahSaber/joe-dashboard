@@ -1,3 +1,3 @@
-export const baseUrl = "http://146.190.169.246:8095/",
-  ImageUrl = "http://146.190.169.246:8095",
+export const baseUrl = "https://back.joe13th.com/",
+  ImageUrl = "https://back.joe13th.com",
   headerConfigKeyName = "joe13";
