@@ -56,104 +56,27 @@ const page = () => {
         <PageSection />
       </TabsContent>
       <TabsContent value="ContactUs Details">
-        {" "}
-        <Tabs defaultValue="User">
-          <TabsList className="grid w-full grid-cols-3 h-14 border bg-background">
-            <TabsTrigger
-              value="User"
-              className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-            >
-              <Icon icon="carbon:data-table" className="h-5 w-5 mr-2" />
-              {t("Contact Us User Message")}
-            </TabsTrigger>{" "}
-            <TabsTrigger
-              value="Offers"
-              className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-            >
-              <Icon
-                icon="tdesign:component-breadcrumb"
-                className="h-5 w-5 mr-2"
+        <div className="space-y-5">
+          <div className="flex sm:flex-row xs:gap-5 xs:flex-col justify-between items-center my-5">
+            <div>
+              <h1 className="text-default-900 text-2xl font-bold my-2">
+                {t("Contact Us User Management")}
+              </h1>
+              <BreadcrumbComponent
+                header="Contact Us Users Management"
+                body="Contact Us User Message"
               />
-              {t("Contact Us Offers Message")}
-            </TabsTrigger>
-            <TabsTrigger
-              value="Career"
-              className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-            >
-              <Icon icon="carbon:data-table" className="h-5 w-5 mr-2" />
-              {t("Contact Us Career Message")}
-            </TabsTrigger>{" "}
-          </TabsList>
-          <TabsContent value="Offers">
-            <div className="space-y-5">
-              <div className="flex sm:flex-row xs:gap-5 xs:flex-col justify-between items-center my-5">
-                <div>
-                  <h1 className="text-default-900 text-2xl font-bold my-2">
-                    {t("Contact Us Offer Management")}
-                  </h1>
-                  <BreadcrumbComponent
-                    header="Contact Us Offers Management"
-                    body="Contact Us Offer Message"
-                  />
-                </div>
-              </div>
-              <Card>
-                <CardHeader>
-                  <CardTitle>{t("Contact Us Offer Details")}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <TableDataOffer />
-                </CardContent>
-              </Card>
             </div>
-          </TabsContent>
-          <TabsContent value="Career">
-            <div className="space-y-5">
-              <div className="flex sm:flex-row xs:gap-5 xs:flex-col justify-between items-center my-5">
-                <div>
-                  <h1 className="text-default-900 text-2xl font-bold my-2">
-                    {t("Contact Us Career Management")}
-                  </h1>
-                  <BreadcrumbComponent
-                    header="Contact Us Careers Management"
-                    body="Contact Us Career Message"
-                  />
-                </div>
-              </div>
-              <Card>
-                <CardHeader>
-                  <CardTitle>{t("Contact Us Career Details")}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <TableDataCareer />
-                </CardContent>
-              </Card>
-            </div>
-          </TabsContent>{" "}
-          <TabsContent value="User">
-            <div className="space-y-5">
-              <div className="flex sm:flex-row xs:gap-5 xs:flex-col justify-between items-center my-5">
-                <div>
-                  <h1 className="text-default-900 text-2xl font-bold my-2">
-                    {t("Contact Us User Management")}
-                  </h1>
-                  <BreadcrumbComponent
-                    header="Contact Us Users Management"
-                    body="Contact Us User Message"
-                  />
-                </div>
-              </div>
-              <Card>
-                <CardHeader>
-                  <CardTitle>{t("Contact Us User Details")}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <TableDataUser />
-                </CardContent>
-              </Card>
-            </div>
-          </TabsContent>
-        </Tabs>
+          </div>
+          <Card>
+            <CardHeader>
+              <CardTitle>{t("Contact Us User Details")}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <TableDataUser />
+            </CardContent>
+          </Card>
+        </div>
       </TabsContent>
     </Tabs>
   );
