@@ -160,13 +160,6 @@ const PageSection = () => {
       tab: "Arabic",
       required: true,
     },
-    {
-      name: "position",
-      label: "Position",
-      type: "number",
-      tab: "English",
-      required: true,
-    },
   ];
 
   const getData = async () => {
@@ -208,7 +201,6 @@ const PageSection = () => {
     id: "",
     type: "hero",
     visible: "true",
-    position: null,
     titleEn: "",
     titleAr: "",
     contentEn: "",
@@ -274,7 +266,7 @@ const PageSection = () => {
           <CardTitle className="flex justify-between items-center flex-row w-full">
             {t("page sections")}
 
-            <CreateButtonSection
+            {/* <CreateButtonSection
               entityName="Section"
               fields={sectionFields}
               onCreate={async (data, lang, pageId) => {
@@ -326,7 +318,7 @@ const PageSection = () => {
               }}
               pageId={data?.id}
               refetch={getData}
-            />
+            /> */}
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -337,7 +329,6 @@ const PageSection = () => {
                 id: section?.id,
                 type: section?.type,
                 visible: section?.visible,
-                position: section?.position,
                 titleEn: section?.title?.en,
                 titleAr: section?.title?.ar,
                 contentEn: section?.content?.en,

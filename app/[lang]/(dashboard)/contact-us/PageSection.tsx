@@ -274,7 +274,7 @@ const PageSection = () => {
           <CardTitle className="flex justify-between items-center flex-row w-full">
             {t("page sections")}
 
-            <CreateButtonSection
+            {/* <CreateButtonSection
               entityName="Section"
               fields={sectionFields}
               onCreate={async (data, lang, pageId) => {
@@ -326,7 +326,7 @@ const PageSection = () => {
               }}
               pageId={data?.id}
               refetch={getData}
-            />
+            /> */}
           </CardTitle>
         </CardHeader>
         <CardContent>
