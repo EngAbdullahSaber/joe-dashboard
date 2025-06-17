@@ -19,6 +19,7 @@ import {
   SearchTeamMember,
 } from "@/services/team/team";
 import UpdateTeamMemberButton from "./UpdateTeamMemberButton";
+import { ImageUrl } from "@/services/app.config";
 interface Task {
   id: string;
   name?: any;
@@ -246,7 +247,7 @@ const TableData = ({ flag, setFlag }: TableDataProps) => {
         return (
           <div className="flex  items-center justify-center gap-2 mx-auto">
             <Avatar>
-              <AvatarImage src={`${row.original.image_url}`} />
+              <AvatarImage src={`${ImageUrl}${row.original.image_url}`} />
               <AvatarFallback>image</AvatarFallback>
             </Avatar>
           </div>

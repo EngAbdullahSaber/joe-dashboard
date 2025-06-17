@@ -16,6 +16,12 @@ const CreateBlog = ({ flag, setFlag }: CreateButtonProps) => {
     value: lang == "en" ? item.name.en : item.name.ar,
     label: lang == "en" ? item.name.en : item.name.ar,
   }));
+
+  const transformedStatus = [
+    { id: "draft", value: "draft", label: "draft" },
+    { id: "published", value: "published", label: "published" },
+    { id: "archived", value: "archived", label: "archived" },
+  ];
   const fetchData = async () => {
     try {
       const departmentData = await getAllDepatment(lang);
@@ -41,9 +47,9 @@ const CreateBlog = ({ flag, setFlag }: CreateButtonProps) => {
           author: "",
           status: "",
           published_at: "",
-          tags: "",
+          tags: [],
           views_count: "",
-          meta_keywords: "",
+          meta_keywords: [],
           image_alt: "",
           departmentId: { id: "", value: "", label: "" },
           file: null,
@@ -109,7 +115,7 @@ const CreateBlog = ({ flag, setFlag }: CreateButtonProps) => {
           {
             name: "views_count",
             label: "Blog Views Count",
-            type: "text",
+            type: "number",
             tab: "English",
             required: true,
           },
@@ -160,7 +166,9 @@ const CreateBlog = ({ flag, setFlag }: CreateButtonProps) => {
           {
             name: "status",
             label: "Blog Status",
-            type: "text",
+            type: "select",
+            options: transformedStatus,
+
             tab: "English",
             required: true,
           },
@@ -177,7 +185,7 @@ const CreateBlog = ({ flag, setFlag }: CreateButtonProps) => {
           },
 
           {
-            name: "meta_keywordsEn",
+            name: "meta_keywords",
             label: "Blog Meta Keywords",
             type: "keywords",
             tab: "English",
@@ -193,22 +201,65 @@ const CreateBlog = ({ flag, setFlag }: CreateButtonProps) => {
         ]}
         onCreate={async (data, lang) => {
           const formData = new FormData();
+
           Object.entries(data).forEach(([key, value]) => {
-            if (value !== null) {
-              const match = key.match(/^(.*)(En|Ar)$/); // Check if key ends in En or Ar
-              if (match) {
-                const base = match[1]; // e.g., "description", "bio", "meta_title"
-                const lang = match[2].toLowerCase(); // "en" or "ar"
-                formData.append(`${base}[${lang}]`, value as string | Blob);
+            if (value !== null && value !== undefined) {
+              // Handle special fields first
+              if (key === "published_at") {
+                // Ensure date is properly formatted
+                const dateValue =
+                  value instanceof Date ? value.toISOString() : value;
+                formData.append(key, dateValue);
+              } else if (key === "departmentId") {
+                formData.append("departmentId", value.id);
+              } else if (key === "status") {
+                // Send the status value directly (not value.id)
+                formData.append(key, value.id);
+              } else if (key === "tags") {
+                // Convert tags to array format
+                if (Array.isArray(value)) {
+                  value.forEach((tag, index) =>
+                    formData.append(`tags[${index}]`, tag)
+                  );
+                } else if (typeof value === "string") {
+                  value
+                    .split(",")
+                    .forEach((tag, index) =>
+                      formData.append(`tags[${index}]`, tag.trim())
+                    );
+                }
+              } else if (key === "meta_keywords") {
+                // Convert keywords to array format
+                if (Array.isArray(value)) {
+                  value.forEach((keyword, index) =>
+                    formData.append(`meta_keywords[${index}]`, keyword)
+                  );
+                } else if (typeof value === "string") {
+                  value
+                    .split(",")
+                    .forEach((keyword, index) =>
+                      formData.append(`meta_keywords[${index}]`, keyword.trim())
+                    );
+                }
               } else {
-                formData.append(key, value as string | Blob);
+                // Handle language-specific fields
+                const match = key.match(/^(.*)(En|Ar)$/);
+                if (match) {
+                  const base = match[1];
+                  const langSuffix = match[2].toLowerCase();
+                  formData.append(
+                    `${base}[${langSuffix}]`,
+                    value as string | Blob
+                  );
+                } else {
+                  formData.append(key, value as string | Blob);
+                }
               }
             }
           });
-          // Handle select fields (like department_id)
-          if (data.department_id?.id) {
-            formData.append("departmentId", data.department_id.id);
-          }
+
+          // For debugging - log formData entries
+
           return await CreateBlogs(formData, lang);
         }}
         setFlag={setFlag}

@@ -16,6 +16,7 @@ import { useTranslate } from "@/config/useTranslation";
 import { useParams } from "next/navigation";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ImageUrl } from "@/services/app.config";
 
 // A reusable component to display a list of details
 const DetailItem: React.FC<{ label: string; value: string | number }> = ({
@@ -98,7 +99,7 @@ const ViewMore: React.FC<ViewUserData> = ({ row }) => {
               <Avatar className="w-14 h-14">
                 <AvatarImage
                   className="w-14 h-14"
-                  src={`${lawyerData.image_url}`}
+                  src={`${ImageUrl}${lawyerData.image_url}`}
                 />
                 <AvatarFallback>image</AvatarFallback>
               </Avatar>{" "}

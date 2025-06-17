@@ -50,7 +50,7 @@ const LogInForm = () => {
 
         storeTokenInLocalStorage(res?.access_token);
       }
-      router.push("/departmens");
+      router.push("/home-page");
     } catch (error) {
       const axiosError = error as AxiosError<{ message: string }>;
       reToast.error(axiosError.response?.data?.message || "An error occurred");

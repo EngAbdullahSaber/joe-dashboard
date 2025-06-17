@@ -26,6 +26,7 @@ import { Controller, useForm } from "react-hook-form";
 import { translateToArabic } from "@/services/auth/auth";
 import BasicSelect from "./basic-select";
 import MultiImageUploader from "../../shared/MultiImageUploader";
+import Flatpickr from "react-flatpickr";
 
 type FieldError = {
   field: string;
@@ -50,6 +51,7 @@ type FieldConfig = {
     | "record"
     | "number"
     | "select"
+    | "date"
     | "alt_text";
   tab: "English" | "Arabic";
   options?: any;
@@ -173,6 +175,22 @@ const UpdateButton = <T extends Record<string, any>>({
               }
             )
           );
+          break;
+        case "date":
+          validator = z.union([z.string(), z.date()]).transform((val) => {
+            if (typeof val === "string") {
+              return new Date(val);
+            }
+            return val;
+          });
+          if (field.required) {
+            validator = validator.refine(
+              (val) => val instanceof Date && !isNaN(val.getTime()),
+              {
+                message: `${field.label} is required`,
+              }
+            );
+          }
           break;
         case "number": {
           const validator: ZodType<number | null> = z
@@ -542,6 +560,35 @@ const UpdateButton = <T extends Record<string, any>>({
               )}
             </div>
 
+            {error && <p className="text-xs text-red-500 mt-1">{t(error)}</p>}
+          </div>
+        );
+      case "date":
+        return (
+          <div>
+            <Controller
+              name={field.name}
+              control={control}
+              render={({ field: { onChange, value } }) => (
+                <Flatpickr
+                  value={value || ""}
+                  onChange={([date]) => {
+                    onChange(date);
+                    trigger(field.name);
+                  }}
+                  options={{
+                    dateFormat: "Y-m-d",
+                    locale: lang === "ar" ? Arabic : undefined,
+                    // Add more options as needed
+                    appendTo: document.body,
+                    static: true,
+                    clickOpens: true,
+                  }}
+                  className="border border-default-300 !text-[#878b94] font-[300] capitalize-first pl-[30px] w-full cursor-pointer h-[36px] focus:border-[#2684ff] focus:outline-none rounded-[4px] px-2 placeholder:text-default-600"
+                  placeholder={t(field.label)}
+                />
+              )}
+            />
             {error && <p className="text-xs text-red-500 mt-1">{t(error)}</p>}
           </div>
         );
