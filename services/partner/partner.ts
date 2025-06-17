@@ -1,35 +1,35 @@
 import { apis } from "../axios";
 
 export async function getPartner(lang: any) {
-  let res = await apis.get(`api/v1/partners`, {
+  let res = await apis.get(`api/v1/pages/home-page`, {
     headers: { "Accept-Language": lang },
   });
   if (res) return res.data;
   else return false;
 }
 export async function getPartnerPanigation(page: any, lang: any) {
-  let res = await apis.get(`api/v1/partners?page=${page}&per_page=10`, {
+  let res = await apis.get(`api/v1/pages/home-page?page=${page}&per_page=10`, {
     headers: { "Accept-Language": lang },
   });
   if (res) return res.data;
   else return false;
 }
 export async function SearchPartner(id: any, lang: any) {
-  let res = await apis.get(`api/v1/partners?search=${id}`, {
+  let res = await apis.get(`api/v1/pages/home-page?search=${id}`, {
     headers: { "Accept-Language": lang },
   });
   if (res) return res.data;
   else return false;
 }
 export async function DeletePartner(id: any, lang: any) {
-  let res = await apis.delete(`api/v1/partners/${id}`, {
+  let res = await apis.delete(`api/v1/pages/home-page/${id}`, {
     headers: { "Accept-Language": lang },
   });
   if (res) return res.data;
   else return false;
 }
 export async function CreatePartners(data: any, lang: any) {
-  let res = await apis.post(`api/v1/partners`, data, {
+  let res = await apis.post(`api/v1/pages/home-page`, data, {
     headers: {
       "Accept-Language": lang,
     },

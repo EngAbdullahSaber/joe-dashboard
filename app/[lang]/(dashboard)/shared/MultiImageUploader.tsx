@@ -10,6 +10,7 @@ import { useRef } from "react";
 import { DeleteProjectImage } from "@/services/projects/projects";
 import { useParams } from "next/navigation";
 import { toast as reToast } from "react-hot-toast";
+import { ImageUrl } from "@/services/app.config";
 
 interface ImageFile {
   file: File | string;

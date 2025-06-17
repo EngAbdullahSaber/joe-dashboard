@@ -427,7 +427,11 @@ td button[role="checkbox"] {
     margin-top: -12px;
   }
 }
-
+.flatpickr-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
 @import "partials/calendar.scss";
 @import "partials/react-slect";
 @import "partials/map";

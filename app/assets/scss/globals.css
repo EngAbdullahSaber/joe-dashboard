@@ -740,3 +740,8 @@ html[dir="rtl"] .react-select .select__loading-indicator {
   display: flex;
   flex-direction: column;
 }
+.flatpickr-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100% !important;
+}

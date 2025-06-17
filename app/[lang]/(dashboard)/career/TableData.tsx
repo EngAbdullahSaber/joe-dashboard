@@ -43,7 +43,7 @@ const TableData = ({ flag, setFlag }: TableDataProps) => {
   const [open, setOpen] = useState(false);
   const { t } = useTranslate();
   const debouncedSearch = useDebounce(search, 1000); // 300ms debounce time
-  const searchPalsceholder = "";
+  const searchPalsceholder = "gfgf";
 
   const getData = async () => {
     setLoading(true);

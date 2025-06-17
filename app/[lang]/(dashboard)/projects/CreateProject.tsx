@@ -36,7 +36,8 @@ const CreateProject = ({ flag, setFlag }: CreateButtonProps) => {
           nameAr: "",
           descriptionEn: "",
           descriptionAr: "",
-          meta_title: "",
+          meta_titleEn: "",
+          meta_titleAr: "",
           meta_description: "",
           slug: "",
           meta_keywords: [],
@@ -117,17 +118,27 @@ const CreateProject = ({ flag, setFlag }: CreateButtonProps) => {
             },
           },
           {
-            name: "meta_title",
+            name: "meta_titleEn",
             label: "Project Meta Title",
-            type: "textarea",
+            type: "text",
             tab: "English",
             required: true,
             validation: {
-              minLength: 10,
+              minLength: 5,
               maxLength: 100,
             },
           },
-
+          {
+            name: "meta_titleAr",
+            label: "Project Meta Title",
+            type: "text",
+            tab: "Arabic",
+            required: true,
+            validation: {
+              minLength: 5,
+              maxLength: 100,
+            },
+          },
           {
             name: "meta_description",
             label: "Project Meta Description",

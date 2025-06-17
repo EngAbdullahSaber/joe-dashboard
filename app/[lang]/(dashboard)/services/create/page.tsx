@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useParams } from "next/navigation";
 import { Stepper, Step, StepLabel } from "@/components/ui/steps";
 import { toast } from "@/components/ui/use-toast";
@@ -7,14 +7,16 @@ import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { faker } from "@faker-js/faker";
 
-import BasicInfo from "./BasicInfo/page";
-import MetaInfo from "./MetaInfo/page";
-import HeroSection from "./HeroSection/page";
-import PartnersSection from "./PartnersSection/page";
-import BenefitsSection from "./BenefitsSection/page";
-import ImpactSection from "./ImpactSection/page";
-import FaqsSection from "./FaqsSection/page";
-import CallToActionSection from "./CallToActionSection/page";
+import BasicInfo, { BasicInfoRef } from "./BasicInfo/page";
+import MetaInfo, { MetaInfoRef } from "./MetaInfo/page";
+import HeroSection, { HeroSectionRef } from "./HeroSection/page";
+import PartnersSection, { PartnersSectionRef } from "./PartnersSection/page";
+import BenefitsSection, { BenefitsSectionRef } from "./BenefitsSection/page";
+import ImpactSection, { ImpactSectionRef } from "./ImpactSection/page";
+import FaqsSection, { FaqsSectionRef } from "./FaqsSection/page";
+import CallToActionSection, {
+  CallToActionRef,
+} from "./CallToActionSection/page";
 
 import { useTranslate } from "@/config/useTranslation";
 import { Auth } from "@/components/auth/Auth";
@@ -87,8 +89,22 @@ const ServiceBuilderPage = () => {
   const [activeStep, setActiveStep] = useState<number>(0);
   const { t } = useTranslate();
   const { lang } = useParams();
-
   const [loading, setLoading] = useState(false);
+
+  // Refs for each step component that needs validation
+  const basicInfoRef = useRef<BasicInfoRef>(null);
+  const metaInfoRef = useRef<MetaInfoRef>(null);
+  const heroSectionRef = useRef<HeroSectionRef>(null);
+  const partnerSectionRef = useRef<PartnersSectionRef>(null);
+  const benefitSectionRef = useRef<BenefitsSectionRef>(null);
+  const impactSectionRef = useRef<ImpactSectionRef>(null);
+  const faqsSectionRef = useRef<FaqsSectionRef>(null);
+  const callToActionRef = useRef<CallToActionRef>(null);
+
+  // Add other refs as needed for other steps
+  // const metaInfoRef = useRef<MetaInfoRef>(null);
+  // const heroSectionRef = useRef<HeroSectionRef>(null);
+
   const [service, setService] = useState<ServiceData>({
     slug: "",
     title: { en: "", ar: "" },
@@ -138,7 +154,7 @@ const ServiceBuilderPage = () => {
       image: { url: "", alt: "" },
     },
   });
-  console.log(service);
+
   const steps = [
     "Basic Info",
     "SEO & Meta",
@@ -152,45 +168,90 @@ const ServiceBuilderPage = () => {
 
   const isStepOptional = (step: number) => step > 3; // Make steps after "Partners" optional
 
-  const handleNext = () => {
-    if (validateCurrentStep()) {
+  const handleNext = async () => {
+    // Validate current step before proceeding
+    const isValid = await validateCurrentStep();
+    if (isValid) {
       setActiveStep((prev) => prev + 1);
     }
   };
 
   const handleBack = () => setActiveStep((prev) => prev - 1);
 
-  const validateCurrentStep = (): boolean => {
+  const validateCurrentStep = async (): Promise<boolean> => {
     switch (activeStep) {
       case 0: // Basic Info
-        if (!service.slug || !service.title.en || !service.title.ar) {
-          toast({
-            title: "Validation Error",
-            description:
-              "Please fill in all required basic information fields.",
-            variant: "destructive",
-          });
-          return false;
+        if (basicInfoRef.current) {
+          const isValid = await basicInfoRef.current.validateForm();
+          const isUploading = basicInfoRef.current.getUploadStatus?.() || false;
+
+          if (!isValid || isUploading) {
+            return false;
+          }
         }
         break;
+
       case 1: // Meta Info
-        if (!service.meta.title || !service.meta.description) {
-          toast({
-            title: "Validation Error",
-            description: "Please fill in meta title and description.",
-            variant: "destructive",
-          });
-          return false;
+        if (metaInfoRef.current) {
+          const isValid = await metaInfoRef.current.validateForm();
+          if (!isValid) {
+            return false;
+          }
         }
         break;
+
       case 2: // Hero Section
-        if (!service.hero.serviceName.en || !service.hero.title.en) {
-          toast({
-            title: "Validation Error",
-            description: "Please fill in hero section required fields.",
-            variant: "destructive",
-          });
-          return false;
+        // Add validation for HeroSection if needed
+        if (heroSectionRef.current) {
+          const isValid = await heroSectionRef.current.validateForm();
+          if (!isValid) {
+            return false;
+          }
+        }
+        break;
+      case 3: // Hero Section
+        // Add validation for HeroSection if needed
+        if (partnerSectionRef.current) {
+          const isValid = await partnerSectionRef.current.validateForm();
+          if (!isValid) {
+            return false;
+          }
+        }
+        break;
+      case 4: // Hero Section
+        // Add validation for HeroSection if needed
+        if (benefitSectionRef.current) {
+          const isValid = await benefitSectionRef.current.validateForm();
+          if (!isValid) {
+            return false;
+          }
+        }
+        break;
+      case 5: // Hero Section
+        // Add validation for HeroSection if needed
+        if (impactSectionRef.current) {
+          const isValid = await impactSectionRef.current.validateForm();
+          if (!isValid) {
+            return false;
+          }
+        }
+        break;
+      case 6: // Hero Section
+        // Add validation for HeroSection if needed
+        if (faqsSectionRef.current) {
+          const isValid = await faqsSectionRef.current.validateForm();
+          if (!isValid) {
+            return false;
+          }
+        }
+        break;
+      case 7: // Hero Section
+        // Add validation for HeroSection if needed
+        if (callToActionRef.current) {
+          const isValid = await callToActionRef.current.validateForm();
+          if (!isValid) {
+            return false;
+          }
         }
         break;
       default:
@@ -202,7 +263,7 @@ const ServiceBuilderPage = () => {
   const handleSave = async () => {
     setLoading(true);
     try {
-      const response = await CreateServices(service, lang); // Send service data to backend
+      const response = await CreateServices(service, lang);
 
       toast({
         title: "Service Saved Successfully!",
@@ -230,6 +291,7 @@ const ServiceBuilderPage = () => {
       case 0:
         return (
           <BasicInfo
+            ref={basicInfoRef}
             setService={setService}
             service={service}
             lang={lang as "en" | "ar"}
@@ -238,6 +300,7 @@ const ServiceBuilderPage = () => {
       case 1:
         return (
           <MetaInfo
+            ref={metaInfoRef}
             setService={setService}
             service={service}
             lang={lang as "en" | "ar"}
@@ -246,6 +309,7 @@ const ServiceBuilderPage = () => {
       case 2:
         return (
           <HeroSection
+            ref={heroSectionRef}
             service={service.hero}
             setService={(updateFunction) => {
               setService((prev) => ({
@@ -262,6 +326,7 @@ const ServiceBuilderPage = () => {
       case 3:
         return (
           <PartnersSection
+            ref={partnerSectionRef}
             setService={setService}
             service={service}
             lang={lang as "en" | "ar"}
@@ -271,6 +336,7 @@ const ServiceBuilderPage = () => {
         return (
           <BenefitsSection
             benefits={service.benefits}
+            ref={benefitSectionRef}
             setService={setService}
             lang={lang as "en" | "ar"}
           />
@@ -278,6 +344,7 @@ const ServiceBuilderPage = () => {
       case 5:
         return (
           <ImpactSection
+            ref={impactSectionRef}
             impact={service.impact}
             setService={setService}
             lang={lang as "en" | "ar"}
@@ -288,12 +355,14 @@ const ServiceBuilderPage = () => {
           <FaqsSection
             faqs={service.faqs}
             setService={setService}
-            lang={lang as "en" | "ar"}
+            lang={lang}
+            ref={faqsSectionRef}
           />
         );
       case 7:
         return (
           <CallToActionSection
+            ref={callToActionRef}
             call={service.call}
             setService={setService}
             lang={lang as "en" | "ar"}
@@ -302,6 +371,7 @@ const ServiceBuilderPage = () => {
       default:
         return (
           <BasicInfo
+            ref={basicInfoRef}
             setService={setService}
             service={service}
             lang={lang as "en" | "ar"}
@@ -392,15 +462,3 @@ const ServiceBuilderPage = () => {
 
 const ProtectedComponent = Auth()(ServiceBuilderPage);
 export default ProtectedComponent;
-
-// {slug: "gdfgdfgdfg", title: {en: "gdfgdfgdfg", ar: "gdfgdfgdfg"},…}
-// benefits : {title: {en: "gdfgdfgdfg", ar: "gdfgdfgdfg"}, subTitle: {en: "gdfgdfgdfg", ar: "gdfgdfgdfg"},…}
-//
-// image : {url: "/uploads/54545-ef8326298410971d839d9a2e4ad5aa58c.png", alt: "gdfgdfgdfggdfgdfgdfg"}
-// subTitle : {en: "gdfgdfgdfg", ar: "gdfgdfgdfg"}
-// title : {en: "gdfgdfgdfg", ar: "gdfgdfgdfg"}
-// call : {title: {en: "gdfgdfgdfg", ar: "gdfgdfgdfg"}, subTitle: {en: "gdfgdfgdfg", ar: "gdfgdfgdfg"},…}
-// faqs : {title: {en: "gdfgdfgdfg", ar: "gdfgdfgdfg"}, subTitle: {en: "gdfgdfgdfg", ar: "gdfgdfgdfg"},…}
-// hero :{serviceName: {en: "gdfgdfgdfg", ar: "gdfgdfgdfg"}, title: {en: "gdfgdfgdfg", ar: "gdfgdfgdfg"},…}
-// image : {url: "/uploads/54545-54107ae333103310269f9cb910188a853747.png", alt: "54545"}
-// meta : {title: "gdfgdfgdfg", description: "gdfgdfgdfg", keywords: ["gdfgdfgdfg", "fsdfsdf"],…}

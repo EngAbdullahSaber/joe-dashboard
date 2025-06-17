@@ -8,7 +8,7 @@ import { useParams } from "next/navigation";
 import { useTranslate } from "@/config/useTranslation";
 import useDebounce from "../shared/useDebounce";
 import DeleteConfirmationDialog from "../(user-mangement)/shared/DeleteButton";
-import ViewMore from "./View";
+import ViewMore from "../contact-us/View";
 
 import { toast as reToast } from "react-hot-toast";
 import { AxiosError } from "axios";
@@ -29,7 +29,7 @@ interface Task {
   message?: any;
   created_at?: string;
 }
-const TableData = () => {
+const TableDataCareer = () => {
   const [data, setData] = useState<any>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState<string>("");
@@ -315,4 +315,4 @@ const TableData = () => {
   );
 };
 
-export default TableData;
+export default TableDataCareer;

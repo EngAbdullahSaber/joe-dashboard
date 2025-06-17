@@ -1,29 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CreateButton from "../(user-mangement)/shared/CreateButton";
 import { CreateBlogs } from "@/services/blog/blog";
+import { getAllDepatment } from "@/services/departments/departments";
+import { useParams } from "next/navigation";
 interface CreateButtonProps {
   setFlag: (flag: boolean) => void;
   flag: boolean;
 }
 const CreateBlog = ({ flag, setFlag }: CreateButtonProps) => {
+  const [department, setDepartment] = useState<any[]>([]);
+  const { lang } = useParams();
+
+  const transformedDepartments = department.map((item) => ({
+    id: item.id,
+    value: lang == "en" ? item.name.en : item.name.ar,
+    label: lang == "en" ? item.name.en : item.name.ar,
+  }));
+  const fetchData = async () => {
+    try {
+      const departmentData = await getAllDepatment(lang);
+      setDepartment(departmentData?.data || []);
+    } catch (error) {}
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <div>
       <CreateButton
         entityName="Blog"
         initialData={{
+          slug: "",
           titleEn: "",
           titleAr: "",
           contentEn: "",
           contentAr: "",
-          meta_titleEn: "",
-          meta_titleAr: "",
-          meta_descriptionEn: "",
-          meta_descriptionAr: "",
-          meta_keywordsEn: "",
-          meta_keywordsAr: "",
+          meta_title: "",
+          meta_description: "",
+          author: "",
+          status: "",
+          published_at: "",
+          tags: "",
+          views_count: "",
+          meta_keywords: "",
           image_alt: "",
-          slug: "",
-          type_blog: "",
+          departmentId: { id: "", value: "", label: "" },
           file: null,
         }}
         fields={[
@@ -71,26 +93,40 @@ const CreateBlog = ({ flag, setFlag }: CreateButtonProps) => {
             },
           },
           {
-            name: "type_blog",
-            label: "Blog Type",
+            name: "slug",
+            label: "Blog slug",
             type: "text",
             tab: "English",
             required: true,
-            validation: {
-              minLength: 3,
-              maxLength: 100,
-            },
           },
           {
-            name: "slug",
-            label: "Blog Slug",
-            type: "textarea",
+            name: "author",
+            label: "Blog Author",
+            type: "text",
             tab: "English",
             required: true,
-            validation: {
-              minLength: 3,
-              maxLength: 100,
-            },
+          },
+          {
+            name: "views_count",
+            label: "Blog Views Count",
+            type: "text",
+            tab: "English",
+            required: true,
+          },
+          {
+            name: "published_at",
+            label: "Date of Publish",
+            type: "date",
+            tab: "English",
+            required: true,
+          },
+          {
+            name: "departmentId",
+            label: "department",
+            type: "select",
+            tab: "English",
+            options: transformedDepartments,
+            required: true,
           },
           {
             name: "contentEn",
@@ -115,29 +151,21 @@ const CreateBlog = ({ flag, setFlag }: CreateButtonProps) => {
             },
           },
           {
-            name: "meta_titleEn",
+            name: "meta_title",
             label: "Blog Meta Title",
-            type: "textarea",
+            type: "text",
             tab: "English",
             required: true,
-            validation: {
-              minLength: 10,
-              maxLength: 100,
-            },
           },
           {
-            name: "meta_titleAr",
-            label: "Blog Meta Title",
-            type: "textarea",
-            tab: "Arabic",
+            name: "status",
+            label: "Blog Status",
+            type: "text",
+            tab: "English",
             required: true,
-            validation: {
-              minLength: 10,
-              maxLength: 100,
-            },
           },
           {
-            name: "meta_descriptionEn",
+            name: "meta_description",
             label: "Blog Meta Description",
             type: "textarea",
             tab: "English",
@@ -147,38 +175,20 @@ const CreateBlog = ({ flag, setFlag }: CreateButtonProps) => {
               maxLength: 100,
             },
           },
-          {
-            name: "meta_descriptionAr",
-            label: "Blog Meta Description",
-            type: "textarea",
-            tab: "Arabic",
-            required: true,
-            validation: {
-              minLength: 10,
-              maxLength: 100,
-            },
-          },
+
           {
             name: "meta_keywordsEn",
             label: "Blog Meta Keywords",
-            type: "textarea",
+            type: "keywords",
             tab: "English",
             required: true,
-            validation: {
-              minLength: 10,
-              maxLength: 100,
-            },
           },
           {
-            name: "meta_keywordsAr",
-            label: "Blog Meta Keywords",
-            type: "textarea",
-            tab: "Arabic",
+            name: "tags",
+            label: "Blog Tags",
+            type: "keywords",
+            tab: "English",
             required: true,
-            validation: {
-              minLength: 10,
-              maxLength: 100,
-            },
           },
         ]}
         onCreate={async (data, lang) => {
@@ -195,6 +205,10 @@ const CreateBlog = ({ flag, setFlag }: CreateButtonProps) => {
               }
             }
           });
+          // Handle select fields (like department_id)
+          if (data.department_id?.id) {
+            formData.append("departmentId", data.department_id.id);
+          }
           return await CreateBlogs(formData, lang);
         }}
         setFlag={setFlag}

@@ -11,7 +11,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Icon } from "@iconify/react";
 import BreadcrumbComponent from "../(user-mangement)/shared/BreadcrumbComponent";
 import TableDataUser from "./TableDataUser";
-import TableDataCareer from "./TableDataCareer";
 import TableDataOffer from "./TableDataOffer";
 import { useTranslate } from "@/config/useTranslation";
 import { Auth } from "@/components/auth/Auth";

@@ -261,11 +261,7 @@ export const StructuredDataInput = ({
         ))}
       </div>
 
-      <p className="text-xs text-gray-500 mt-2">
-        {t(
-          "Structured data helps search engines understand your content better."
-        )}
-      </p>
+      <p className="text-xs text-gray-500 mt-2">{t("Structured data")}</p>
     </div>
   );
 };
