@@ -86,52 +86,54 @@ const TableData = ({ flag, setFlag }: TableDataProps) => {
     }
   }, [debouncedSearch, page, flag]);
 
-  const handleDelete = async (index: number) => {
-    console.log(index);
-    // try {
-    //   const res = await DeletePartner(index, lang);
+  const handleDelete = async (paginatedIndex: number) => {
+    try {
+      // Calculate the actual index in the full dataset
+      const actualIndex = (page - 1) * pageSize + paginatedIndex;
 
-    //   if (res?.message) {
-    //     const successMessage =
-    //       typeof res.message === "string"
-    //         ? res.message
-    //         : lang === "en"
-    //         ? res.message.english
-    //         : res.message.arabic;
+      const res = await DeletePartner(actualIndex, lang);
 
-    //     reToast.success(successMessage);
-    //   } else {
-    //     reToast.success(t("Partner removed successfully")); // Changed from "deleted" to "removed"
-    //   }
+      if (res?.message) {
+        const successMessage =
+          typeof res.message === "string"
+            ? res.message
+            : lang === "en"
+            ? res.message.english
+            : res.message.arabic;
 
-    //   await getData();
-    //   return true;
-    // } catch (error) {
-    //   const axiosError = error as AxiosError<{
-    //     message?: string | { english?: string; arabic?: string };
-    //     error?: string;
-    //   }>;
+        reToast.success(successMessage);
+      } else {
+        reToast.success(t("Partner removed successfully"));
+      }
 
-    //   let errorMessage = t("Removal failed"); // Changed from "Deletion failed"
+      await getData();
+      return true;
+    } catch (error) {
+      const axiosError = error as AxiosError<{
+        message?: string | { english?: string; arabic?: string };
+        error?: string;
+      }>;
 
-    //   if (axiosError.response?.data) {
-    //     const responseData = axiosError.response.data;
+      let errorMessage = t("Removal failed");
 
-    //     if (typeof responseData.message === "string") {
-    //       errorMessage = responseData.message;
-    //     } else if (typeof responseData.message === "object") {
-    //       errorMessage =
-    //         lang === "en"
-    //           ? responseData.message.english || errorMessage
-    //           : responseData.message.arabic || errorMessage;
-    //     } else if (responseData.error) {
-    //       errorMessage = responseData.error;
-    //     }
-    //   }
+      if (axiosError.response?.data) {
+        const responseData = axiosError.response.data;
 
-    //   reToast.error(errorMessage);
-    //   return false;
-    // }
+        if (typeof responseData.message === "string") {
+          errorMessage = responseData.message;
+        } else if (typeof responseData.message === "object") {
+          errorMessage =
+            lang === "en"
+              ? responseData.message.english || errorMessage
+              : responseData.message.arabic || errorMessage;
+        } else if (responseData.error) {
+          errorMessage = responseData.error;
+        }
+      }
+
+      reToast.error(errorMessage);
+      return false;
+    }
   };
   const columns: ColumnDef<Task>[] = [
     {
