@@ -1,6 +1,9 @@
 import React from "react";
 import CreateButton from "../(user-mangement)/shared/CreateButton";
-import { CreatePartners } from "@/services/partner/partner";
+import { CreateMedia } from "@/services/auth/auth";
+import { toast as reToast } from "react-hot-toast";
+import { useTranslate } from "@/config/useTranslation";
+import { apis } from "@/services/axios";
 
 interface CreateButtonProps {
   setFlag: (flag: boolean) => void;
@@ -8,15 +11,14 @@ interface CreateButtonProps {
 }
 
 const CreatePartner = ({ flag, setFlag }: CreateButtonProps) => {
+  const { t } = useTranslate();
+
   return (
     <div>
       <CreateButton
         entityName="Partner"
         initialData={{
-          nameEn: "",
-          nameAr: "",
           logo_alt: "",
-          website_url: "",
           file: null,
         }}
         fields={[
@@ -32,64 +34,61 @@ const CreatePartner = ({ flag, setFlag }: CreateButtonProps) => {
           },
           {
             name: "logo_alt",
-            label: "Logo Alternative Text",
-            type: "alt_text",
-            tab: "English",
-            required: true,
-            validation: {
-              minLength: 3,
-              maxLength: 100,
-              message: "Alt text must be between 3-100 characters",
-            },
-          },
-          {
-            name: "nameEn",
-            label: "Partner Name",
+            label: "Image Alt Text",
             type: "text",
             tab: "English",
             required: true,
-            validation: {
-              minLength: 2,
-              maxLength: 50,
-            },
-          },
-          {
-            name: "nameAr",
-            label: "Partner Name",
-            type: "text",
-            tab: "Arabic",
-            required: true,
-            validation: {
-              minLength: 2,
-              maxLength: 50,
-            },
-          },
-          {
-            name: "website_url",
-            label: "Website URL",
-            type: "alt_text",
-            tab: "English",
-            validation: {
-              url: true,
-              message: "Please enter a valid URL",
-            },
           },
         ]}
         onCreate={async (data, lang) => {
-          const formData = new FormData();
-          Object.entries(data).forEach(([key, value]) => {
-            if (value !== null) {
-              const match = key.match(/^(.*)(En|Ar)$/); // Check if key ends in En or Ar
-              if (match) {
-                const base = match[1]; // e.g., "description", "bio", "meta_title"
-                const lang = match[2].toLowerCase(); // "en" or "ar"
-                formData.append(`${base}[${lang}]`, value as string | Blob);
-              } else {
-                formData.append(key, value as string | Blob);
+          try {
+            // 1. Upload the image first
+            const formData = new FormData();
+            formData.append("files", data.file);
+            formData.append("alt[0]", data.logo_alt || "");
+
+            const imageResponse = await CreateMedia(formData, lang);
+            const newImage = imageResponse[0];
+
+            // 2. Get current partners list
+            const currentPage = await apis.get(`api/v1/pages/home-page`, {
+              headers: { "Accept-Language": lang },
+            });
+
+            const sec3 = currentPage.data.sections.find(
+              (s: any) => s.id === "sec3"
+            );
+            const currentList = sec3?.list || [];
+
+            // 3. Create new partner object
+            const newPartner = {
+              alt: data.logo_alt,
+              url: newImage.url, // Assuming CreateMedia returns the uploaded image info
+            };
+
+            // 4. Update the section with the new list
+            const updatedList = [...currentList, newPartner];
+
+            const res = await apis.put(
+              `api/v1/pages/45/sections/sec3`,
+              {
+                list: updatedList,
+              },
+              {
+                headers: {
+                  "Accept-Language": lang,
+                  "content-type": "application/json",
+                },
               }
-            }
-          });
-          return await CreatePartners(formData, lang);
+            );
+
+            setFlag(!flag);
+            return res.data;
+          } catch (error) {
+            console.error("Error creating partner:", error);
+            reToast.error(t("Failed to add partner"));
+            throw error;
+          }
         }}
         setFlag={setFlag}
         flag={flag}

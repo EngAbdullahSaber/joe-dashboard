@@ -3,7 +3,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { ColumnDef } from "@tanstack/react-table";
 import { DataTableColumnHeader } from "../tables/advanced/components/data-table-column-header";
 import { DataTable } from "../tables/advanced/components/data-table";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useParams } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useTranslate } from "@/config/useTranslation";
@@ -38,22 +38,23 @@ const TableData = ({ flag, setFlag }: TableDataProps) => {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState<string>("");
   const [page, setPage] = useState<number>(1);
+  const [pageSize, setPageSize] = useState(10); // Add page size state
+
   const { lang } = useParams();
   const [open, setOpen] = useState(false);
   const { t } = useTranslate();
   const debouncedSearch = useDebounce(search, 1000); // 300ms debounce time
-  const searchPalsceholder = "Search By Partner Name ";
+  const searchPalsceholder = "";
 
   const getData = async () => {
     setLoading(true);
 
     try {
-      const res =
-        page === 1
-          ? await getPartner(lang)
-          : await getPartnerPanigation(page, lang);
+      const res = await getPartner(lang);
 
-      setData(res?.data || []);
+      setData(
+        res?.sections?.find((section: any) => section.id == "sec3").list || []
+      );
       setLoading(false);
     } catch (error) {
       console.error("Error fetching data", error);
@@ -73,7 +74,10 @@ const TableData = ({ flag, setFlag }: TableDataProps) => {
       setLoading(false);
     }
   };
-
+  const paginatedData = useMemo(() => {
+    const startIndex = (page - 1) * pageSize;
+    return data.slice(startIndex, startIndex + pageSize);
+  }, [data, page, pageSize]);
   useEffect(() => {
     if (debouncedSearch) {
       SearchData();
@@ -81,55 +85,54 @@ const TableData = ({ flag, setFlag }: TableDataProps) => {
       getData();
     }
   }, [debouncedSearch, page, flag]);
-  const handleDelete = async (id: any) => {
-    try {
-      const res = await DeletePartner(id, lang);
 
-      // Check if response exists and has message property
-      if (res?.message) {
-        const successMessage =
-          typeof res.message === "string"
-            ? res.message
-            : lang === "en"
-            ? res.message.english
-            : res.message.arabic;
+  const handleDelete = async (index: number) => {
+    console.log(index);
+    // try {
+    //   const res = await DeletePartner(index, lang);
 
-        reToast.success(successMessage);
-      } else {
-        reToast.success(t("Partner deleted successfully"));
-      }
+    //   if (res?.message) {
+    //     const successMessage =
+    //       typeof res.message === "string"
+    //         ? res.message
+    //         : lang === "en"
+    //         ? res.message.english
+    //         : res.message.arabic;
 
-      await getData(); // Refresh data after successful deletion
-      return true; // Indicate success
-    } catch (error) {
-      const axiosError = error as AxiosError<{
-        message?: string | { english?: string; arabic?: string };
-        error?: string;
-      }>;
+    //     reToast.success(successMessage);
+    //   } else {
+    //     reToast.success(t("Partner removed successfully")); // Changed from "deleted" to "removed"
+    //   }
 
-      let errorMessage = t("Deletion failed");
+    //   await getData();
+    //   return true;
+    // } catch (error) {
+    //   const axiosError = error as AxiosError<{
+    //     message?: string | { english?: string; arabic?: string };
+    //     error?: string;
+    //   }>;
 
-      // Handle different error response formats
-      if (axiosError.response?.data) {
-        const responseData = axiosError.response.data;
+    //   let errorMessage = t("Removal failed"); // Changed from "Deletion failed"
 
-        if (typeof responseData.message === "string") {
-          errorMessage = responseData.message;
-        } else if (typeof responseData.message === "object") {
-          errorMessage =
-            lang === "en"
-              ? responseData.message.english || errorMessage
-              : responseData.message.arabic || errorMessage;
-        } else if (responseData.error) {
-          errorMessage = responseData.error;
-        }
-      }
+    //   if (axiosError.response?.data) {
+    //     const responseData = axiosError.response.data;
 
-      reToast.error(errorMessage);
-      return false; // Indicate failure
-    }
+    //     if (typeof responseData.message === "string") {
+    //       errorMessage = responseData.message;
+    //     } else if (typeof responseData.message === "object") {
+    //       errorMessage =
+    //         lang === "en"
+    //           ? responseData.message.english || errorMessage
+    //           : responseData.message.arabic || errorMessage;
+    //     } else if (responseData.error) {
+    //       errorMessage = responseData.error;
+    //     }
+    //   }
+
+    //   reToast.error(errorMessage);
+    //   return false;
+    // }
   };
-
   const columns: ColumnDef<Task>[] = [
     {
       id: "select",
@@ -160,49 +163,18 @@ const TableData = ({ flag, setFlag }: TableDataProps) => {
       cell: ({ row }) => (
         <div className="flex flex-row gap-2 items-center justify-center">
           <DeleteConfirmationDialog
-            title="Deleting Partner"
-            description="Are You Sure For Delete This Partner?"
-            handleDelete={handleDelete}
-            id={row.original.id} // Pass the id directly
-          />{" "}
-          <UpdatePartnerButton
+            title={"Removing Partner"}
+            description={"Are you sure you want to remove this partner?"}
+            handleDelete={() => handleDelete(row.index)} // Pass the row index instead of id
+            id={row.index.toString()}
+          />
+          {/* <UpdatePartnerButton
             flag={flag}
             setFlag={setFlag}
             partner={row.original}
-          />
+          /> */}
         </div>
       ),
-    },
-    {
-      accessorKey: "id",
-      header: ({ column }) => (
-        <DataTableColumnHeader column={column} title={"id"} />
-      ),
-      cell: ({ row }) => (
-        <div className="flex  items-center justify-center gap-2 mx-auto">
-          {row.original.id}
-        </div>
-      ),
-      enableSorting: false,
-      enableHiding: false,
-    },
-    {
-      accessorKey: "name",
-      header: ({ column }) => (
-        <DataTableColumnHeader column={column} title={"name"} />
-      ),
-      cell: ({ row }) => {
-        return (
-          <div className="flex  items-center justify-center gap-2 mx-auto">
-            <span className="max-w-[500px] truncate font-medium">
-              {lang == "en" ? row.original?.name.en : row.original?.name.ar}
-            </span>
-          </div>
-        );
-      },
-      filterFn: (row, id, value) => {
-        return value.includes(row.getValue(id));
-      },
     },
 
     {
@@ -214,7 +186,7 @@ const TableData = ({ flag, setFlag }: TableDataProps) => {
         return (
           <div className="flex  items-center justify-center gap-2 mx-auto">
             <Avatar>
-              <AvatarImage src={`${ImageUrl}${row.original.logo_url}`} />
+              <AvatarImage src={`${ImageUrl}${row.original.url}`} />
               <AvatarFallback>image</AvatarFallback>
             </Avatar>
           </div>
@@ -236,67 +208,23 @@ const TableData = ({ flag, setFlag }: TableDataProps) => {
         return (
           <div className="flex  items-center justify-center gap-2 mx-auto">
             <span className="max-w-[500px] truncate font-medium">
-              {row.original?.logo_alt}
+              {row.original?.alt}
             </span>
           </div>
         );
       },
       filterFn: (row, id, value) => {
         return value.includes(row.getValue(id));
-      },
-    },
-    {
-      accessorKey: "Partner Url",
-      header: ({ column }) => (
-        <DataTableColumnHeader column={column} title={"Partner Url"} />
-      ),
-      cell: ({ row }) => {
-        return (
-          <div className="flex  items-center justify-center gap-2 mx-auto">
-            <a
-              href={row.original?.website_url}
-              className="max-w-[500px] truncate text-blue-900 font-medium"
-            >
-              {t("Show Website")}
-            </a>
-          </div>
-        );
-      },
-      filterFn: (row, id, value) => {
-        return value.includes(row.getValue(id));
-      },
-    },
-    {
-      accessorKey: "Created At",
-      header: ({ column }) => (
-        <DataTableColumnHeader column={column} title={"Created At"} />
-      ),
-      cell: ({ row }) => {
-        const createdAt = row.original.created_at;
-
-        // Check if created_at is valid before formatting the date
-        const formattedDate = createdAt
-          ? new Date(createdAt).toLocaleDateString("en-GB")
-          : "N/A";
-
-        return (
-          <div className="flex items-center justify-center gap-2 mx-auto">
-            <span className="max-w-[500px] truncate font-medium">
-              {formattedDate}
-            </span>
-          </div>
-        );
       },
     },
   ];
-  const isPaginationDisabled = data.length < 10 || data.length === 0;
 
   return (
     <div>
       {/* Render your data table here using the fetched tasks */}
       {/* Assuming you have a table component that takes columns and data */}
       <DataTable
-        data={data}
+        data={paginatedData} // Pass paginated data instead of full data
         setPage={setPage}
         setSearch={setSearch}
         searchPalsceholder={searchPalsceholder}
@@ -305,7 +233,7 @@ const TableData = ({ flag, setFlag }: TableDataProps) => {
         setOpen={setOpen}
         search={search}
         columns={columns}
-        isPaginationDisabled={isPaginationDisabled}
+        isPaginationDisabled={data.length <= pageSize} // Disable if data fits on one page
       />{" "}
     </div>
   );
