@@ -102,15 +102,15 @@ const HeroSection = React.forwardRef<HeroSectionRef, HeroSectionProps>(
       resolver: zodResolver(heroSectionSchema),
       defaultValues: {
         serviceName: {
-          en: service.serviceName?.en || "",
-          ar: service.serviceName?.ar || "",
+          en: service?.serviceName?.en || "",
+          ar: service?.serviceName?.ar || "",
         },
         title: {
-          en: service.title?.en || "",
-          ar: service.title?.ar || "",
+          en: service?.title?.en || "",
+          ar: service?.title?.ar || "",
         },
-        images: service.images || [],
-        attr: service.attr || [],
+        images: service?.images || [],
+        attr: service?.attr || [],
       },
       mode: "onChange",
     });
@@ -127,15 +127,15 @@ const HeroSection = React.forwardRef<HeroSectionRef, HeroSectionProps>(
     useEffect(() => {
       reset({
         serviceName: {
-          en: service.serviceName?.en || "",
-          ar: service.serviceName?.ar || "",
+          en: service?.serviceName?.en || "",
+          ar: service?.serviceName?.ar || "",
         },
         title: {
-          en: service.title?.en || "",
-          ar: service.title?.ar || "",
+          en: service?.title?.en || "",
+          ar: service?.title?.ar || "",
         },
-        images: service.images || [],
-        attr: service.attr || [],
+        images: service?.images || [],
+        attr: service?.attr || [],
       });
     }, [service, reset]);
 
