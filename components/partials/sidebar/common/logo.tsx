@@ -1,15 +1,22 @@
 import { websiteName } from "@/config/constants";
 import { useSidebar } from "@/store";
 import React from "react";
-import { SiteLogo } from "@/components/svg";
+import { LogoBlack, LogoWhite, SiteLogo } from "@/components/svg";
+import { useTheme } from "next-themes";
 
 const SidebarLogo = ({ hovered }: { hovered?: boolean }) => {
   const { sidebarType, setCollapsed, collapsed } = useSidebar();
+  const { theme } = useTheme();
+
   return (
     <div className="px-4 py-4 ">
       <div className=" flex items-center">
         <div className="flex flex-1 items-center gap-x-3  ">
-          <SiteLogo className="text-primary " />
+          {theme === "dark" ? (
+            <LogoWhite className="h-[70px] w-[140px]" />
+          ) : (
+            <LogoBlack className="h-[70px] w-[140px]" />
+          )}
           {/* {(!collapsed || hovered) && (
             // <div className="flex-1 block  text-xl text-primary  font-semibold">
             //   {websiteName}

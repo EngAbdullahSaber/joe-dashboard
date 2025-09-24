@@ -4,10 +4,11 @@ import { useSidebar, useThemeStore } from "@/store";
 import { cn } from "@/lib/utils";
 import { Icon } from "@iconify/react";
 import { Search } from "lucide-react";
-import { SiteLogo } from "@/components/svg";
+import { LogoBlack, LogoWhite, SiteLogo } from "@/components/svg";
 import Link from "next/link";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { useTranslate } from "@/config/useTranslation";
+import { useTheme } from "next-themes";
 
 const MenuBar = ({
   collapsed,
@@ -78,10 +79,15 @@ const VerticalHeader: React.FC<VerticalHeaderProps> = ({
   let menuBarContent = null;
   let searchButtonContent = null;
   const { t, loading, error } = useTranslate();
+  const { theme } = useTheme();
 
   const MainLogo = (
     <Link href="/dashboard" className=" text-primary ">
-      <SiteLogo className="h-7 w-7" />
+      {theme === "dark" ? (
+        <LogoWhite className="h-[50px] w-[100px]" />
+      ) : (
+        <LogoBlack className="h-[50px] w-[100px]" />
+      )}{" "}
     </Link>
   );
   const SearchButton = (

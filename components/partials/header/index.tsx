@@ -27,7 +27,7 @@ const NavTools = ({
 }) => {
   return (
     <div className="nav-tools flex items-center  gap-2">
-      {isDesktop && <Language />}
+      <Language />
       {isDesktop && <FullScreen />}
 
       <ThemeButton />
