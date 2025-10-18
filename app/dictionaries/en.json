@@ -8,6 +8,16 @@
   "department": "department",
   "Images Alternative": "Images Alternative",
   "Images": "Images",
+  "Download Resume": "Download Resume",
+  "Career Information": "Career Information",
+  "System Information": "System Information",
+  "Expected Salary": "Expected Salary",
+  "Resume": "Resume",
+  "General Contact Inquiry": "General Contact Inquiry",
+  "Contact Typ": "Contact Typ",
+  "Message Details": "Message Details",
+  "Date Received": "Date Received",
+  "Contact Information": "Contact Information",
   "Image URL is required": "Image URL is required",
   "subTitle must be less than 150 characters": "subTitle must be less than 150 characters",
   "Arabic subTitle is required": "Arabic subTitle is required",
@@ -125,7 +135,7 @@
   "offers name": "offers name",
   "career file": "career file",
   "Deleting Contact Us Message": "Deleting Contact Us Message",
-  "Are You Sure For Delete This Contact Us Message?": "Are You Sure For Delete This Contact Us Message?",  
+  "Are You Sure For Delete This Contact Us Message?": "Are You Sure For Delete This Contact Us Message?",
   "Show Website": "Show Website",
   "partner url": "partner url",
   "Create Department": "Create Department",
@@ -531,7 +541,7 @@
   "Projects Page": "Projects Page",
   "Join Us Page": "Join Us Page",
   "About Us Page": "About Us Page",
-  
+
   "ID": "ID",
   "No image uploaded": "No image uploaded",
   "Additional Data": "Additional Data",
@@ -539,7 +549,6 @@
   "Alt": "Alt",
   "List": "List",
   "Content": "Content",
-
 
   "product image": "product image",
   "product title": "product Name",

@@ -24,27 +24,40 @@ const page = () => {
 
   return (
     <Tabs defaultValue="Page Meta">
-      <TabsList className="grid w-full grid-cols-3 h-14 border bg-background">
+      <TabsList className="flex w-full h-14 border bg-background overflow-x-auto">
         <TabsTrigger
           value="Page Meta"
-          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          className="flex-1 flex items-center justify-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-2 sm:px-4 min-w-0"
         >
-          <Icon icon="iconoir:page" className="h-5 w-5 mx-3" />
-          {t("Page Meta")}
+          <Icon
+            icon="iconoir:page"
+            className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0"
+          />
+          <span className="text-xs sm:text-sm truncate">{t("Page Meta")}</span>
         </TabsTrigger>
         <TabsTrigger
           value="ContactUs Section"
-          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          className="flex-1 flex items-center justify-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-2 sm:px-4 min-w-0"
         >
-          <Icon icon="tdesign:data" className="h-5 w-5 mx-3" />
-          {t("ContactUs Section")}
-        </TabsTrigger>{" "}
+          <Icon
+            icon="tdesign:data"
+            className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0"
+          />
+          <span className="text-xs sm:text-sm truncate">
+            {t("ContactUs Section")}
+          </span>
+        </TabsTrigger>
         <TabsTrigger
           value="ContactUs Details"
-          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          className="flex-1 flex items-center justify-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-2 sm:px-4 min-w-0"
         >
-          <Icon icon="ix:details" className="h-5 w-5 mx-3" />
-          {t("ContactUs Details")}
+          <Icon
+            icon="ix:details"
+            className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0"
+          />
+          <span className="text-xs sm:text-sm truncate">
+            {t("ContactUs Details")}
+          </span>
         </TabsTrigger>
       </TabsList>{" "}
       <TabsContent value="Page Meta">

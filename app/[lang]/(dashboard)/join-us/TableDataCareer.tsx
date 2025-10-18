@@ -8,7 +8,7 @@ import { useParams } from "next/navigation";
 import { useTranslate } from "@/config/useTranslation";
 import useDebounce from "../shared/useDebounce";
 import DeleteConfirmationDialog from "../(user-mangement)/shared/DeleteButton";
-import ViewMore from "../contact-us/View";
+import ViewMore from "./View";
 
 import { toast as reToast } from "react-hot-toast";
 import { AxiosError } from "axios";
@@ -26,7 +26,6 @@ interface Task {
   email?: any;
   address?: any;
   phone?: any;
-  message?: any;
   created_at?: string;
 }
 const TableDataCareer = () => {
@@ -243,24 +242,6 @@ const TableDataCareer = () => {
           <div className="flex  items-center justify-center gap-2 mx-auto">
             <span className="max-w-[500px] truncate font-medium">
               {row.original?.phone}
-            </span>
-          </div>
-        );
-      },
-      filterFn: (row, id, value) => {
-        return value.includes(row.getValue(id));
-      },
-    },
-    {
-      accessorKey: "message",
-      header: ({ column }) => (
-        <DataTableColumnHeader column={column} title={"message"} />
-      ),
-      cell: ({ row }) => {
-        return (
-          <div className="flex  items-center justify-center gap-2 mx-auto">
-            <span className="max-w-[500px] truncate font-medium">
-              {row.original?.message}
             </span>
           </div>
         );
