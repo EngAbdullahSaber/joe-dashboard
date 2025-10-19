@@ -90,7 +90,7 @@ const ViewMore: React.FC<ViewUserData> = ({ row }) => {
             <DetailItem label={t("Phone")} value={contactData.phone} />
             <DetailItem label={t("Address")} value={contactData.address} />
             {contactData.message && (
-              <DetailItem label={t("Message")} value={contactData.message} />
+              <DetailItem label={t("NationalId")} value={contactData.message} />
             )}
             <DetailItem
               label={t("Date Of Send Message")}
@@ -112,6 +112,7 @@ const ViewMore: React.FC<ViewUserData> = ({ row }) => {
                   value={contactData.offers_name}
                 />
               )}
+
               {contactData.offers_price && (
                 <DetailItem
                   label={t("Expected Salary")}

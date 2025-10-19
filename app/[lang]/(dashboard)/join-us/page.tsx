@@ -7,12 +7,77 @@ import { Icon } from "@iconify/react";
 import PageMeta from "./PageMeta";
 import BreadcrumbComponent from "../(user-mangement)/shared/BreadcrumbComponent";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { toast } from "react-hot-toast";
+import { Button } from "@/components/ui/button";
 
 import PageSection from "./PageSection";
 import { Auth } from "@/components/auth/Auth";
 import TableDataCareer from "./TableDataCareer";
+import { ExportExcelContactUsCareer } from "@/services/contactUs/contactUs";
+import { useParams } from "next/navigation";
+import { ImageUrl } from "@/services/app.config";
 const page = () => {
   const { t } = useTranslate();
+  const [isExporting, setIsExporting] = useState(false);
+  const { lang } = useParams();
+  const getExcelFileData = async () => {
+    try {
+      toast.loading("جاري تصدير الملف...", { id: "export-loading" });
+
+      const response = await ExportExcelContactUsCareer(lang);
+      console.log("Export result:", response);
+
+      // 🟢 If backend returns JSON with filePath
+      if (response?.success && response?.filePath) {
+        toast.success("تم تصدير الملف بنجاح", { id: "export-loading" });
+
+        // ✅ Fix: prepend API base URL
+        const fileUrl = `${ImageUrl}${response.filePath}`;
+
+        console.log("Downloading from:", fileUrl);
+
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        link.download = `contacts_export_${
+          new Date().toISOString().split("T")[0]
+        }.xlsx`;
+        link.style.display = "none";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        console.log("Download initiated successfully");
+        return;
+      }
+
+      // 🟡 If backend returns file directly (Blob)
+      if (response instanceof Blob) {
+        console.log("Received Excel file blob, starting download...");
+        toast.success("تم تصدير الملف بنجاح", { id: "export-loading" });
+
+        const blobUrl = window.URL.createObjectURL(response);
+        const link = document.createElement("a");
+        link.href = blobUrl;
+        link.download = `contacts_export_${
+          new Date().toISOString().split("T")[0]
+        }.xlsx`;
+        link.style.display = "none";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(blobUrl);
+        console.log("Blob download done");
+        return;
+      }
+
+      // 🔴 Otherwise — export failed
+      console.error("Export failed:", response);
+      toast.error("فشل في تصدير الملف", { id: "export-loading" });
+    } catch (error) {
+      console.error("Error exporting file:", error);
+      toast.error("حدث خطأ أثناء تصدير الملف", { id: "export-loading" });
+    }
+  };
 
   return (
     <Tabs defaultValue="Join Us Page Meta">
@@ -72,6 +137,27 @@ const page = () => {
                 body="Join Us Message"
               />
             </div>
+            <Button
+              variant="outline"
+              onClick={getExcelFileData}
+              disabled={isExporting}
+              className="border-green-200 text-green-700 hover:bg-green-900 hover:border-green-300 transition-all duration-200"
+            >
+              {isExporting ? (
+                <>
+                  <Icon
+                    icon="mdi:loading"
+                    className="h-4 w-4 mr-2 animate-spin"
+                  />
+                  {t("Exporting")}
+                </>
+              ) : (
+                <>
+                  <Icon icon="mdi:file-excel" className="h-4 w-4 mr-2" />
+                  {t("Export Excel")}
+                </>
+              )}
+            </Button>
           </div>
           <Card>
             <CardHeader>
