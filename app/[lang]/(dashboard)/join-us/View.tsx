@@ -140,6 +140,27 @@ const ViewMore: React.FC<ViewUserData> = ({ row }) => {
                   </div>
                 </li>
               )}
+              {contactData.personal_photo && (
+                <li className="flex flex-col sm:flex-row sm:gap-6 sm:items-center py-2 border-b border-gray-200">
+                  <span className="text-sm text-default-900 font-medium sm:w-[40%] mb-1 sm:mb-0">
+                    {t("personal_photo")}:
+                  </span>
+                  <div className="sm:w-[55%]">
+                    <a
+                      href={`${ImageUrl}${contactData.personal_photo}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-sm"
+                    >
+                      <Icon
+                        icon="heroicons:document-arrow-down"
+                        className="h-4 w-4"
+                      />
+                      {t("Download personal_photo")}
+                    </a>
+                  </div>
+                </li>
+              )}
             </ul>
           </div>
         )}

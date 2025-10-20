@@ -55,7 +55,7 @@ const TableDataCareer = () => {
   const [open, setOpen] = useState(false);
   const { t } = useTranslate();
   const debouncedSearch = useDebounce(search, 1000);
-  const searchPalsceholder = "Search by name, email, or position...";
+  const searchPalsceholder = "Search by name";
 
   const [filters, setFilters] = useState<Record<string, any>>({});
   const [totalRecords, setTotalRecords] = useState<number>(0);
@@ -384,19 +384,7 @@ const TableDataCareer = () => {
         </div>
       ),
     },
-    {
-      accessorKey: "email",
-      header: ({ column }) => (
-        <DataTableColumnHeader column={column} title={"Email"} />
-      ),
-      cell: ({ row }) => (
-        <div className="flex items-center justify-center gap-2 mx-auto">
-          <span className="max-w-[250px] truncate font-medium text-blue-600">
-            {row.original?.email || "N/A"}
-          </span>
-        </div>
-      ),
-    },
+
     {
       accessorKey: "offers_name",
       header: ({ column }) => (
