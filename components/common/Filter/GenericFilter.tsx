@@ -46,7 +46,9 @@ const GenericFilter: React.FC<GenericFilterProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [filters, setFilters] = useState<Record<string, any>>(initialFilters);
+  const [searchTerms, setSearchTerms] = useState<Record<string, string>>({});
   const [activeFiltersCount, setActiveFiltersCount] = useState(0);
+  const [openSelects, setOpenSelects] = useState<Record<string, boolean>>({});
 
   // Calculate active filters count
   React.useEffect(() => {
@@ -67,6 +69,13 @@ const GenericFilter: React.FC<GenericFilterProps> = ({
     }));
   };
 
+  const handleSearchTermChange = (fieldName: string, value: string) => {
+    setSearchTerms((prev) => ({
+      ...prev,
+      [fieldName]: value,
+    }));
+  };
+
   const handleApplyFilters = () => {
     onFilter(filters);
     setIsOpen(false);
@@ -79,12 +88,14 @@ const GenericFilter: React.FC<GenericFilterProps> = ({
     }, {} as Record<string, any>);
 
     setFilters(resetFilters);
+    setSearchTerms({});
     onFilter(resetFilters);
     if (onReset) onReset();
   };
 
   const renderFilterField = (field: FilterField) => {
     const value = filters[field.name] || field.defaultValue || "";
+    const searchTerm = searchTerms[field.name] || "";
 
     switch (field.type) {
       case "input":
@@ -142,35 +153,203 @@ const GenericFilter: React.FC<GenericFilterProps> = ({
       case "select":
         return (
           <div key={field.name} className={field.className || "w-full"}>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+            {/* Label */}
+            <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
               {field.label}
+              {field.label && <span className="text-red-500 ml-1">*</span>}
             </label>
+
+            {/* Custom Select Button */}
             <div className="relative">
-              {field.icon && (
-                <Icon
-                  icon={field.icon}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none z-10"
-                />
-              )}
-              <select
-                value={value}
-                onChange={(e) => handleFilterChange(field.name, e.target.value)}
-                className={`w-full ${
-                  field.icon ? "pl-10" : "pl-4"
-                } pr-10 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all appearance-none text-slate-900 dark:text-white cursor-pointer`}
+              <button
+                type="button"
+                onClick={() => {
+                  const newOpenState = !openSelects[field.name];
+                  setOpenSelects({
+                    ...openSelects,
+                    [field.name]: newOpenState,
+                  });
+                }}
+                className={`
+            w-full px-4 py-3.5 
+            bg-slate-50 dark:bg-slate-900 
+            border-2 transition-all duration-300
+            rounded-xl text-left
+            flex items-center justify-between gap-3
+            ${
+              openSelects[field.name]
+                ? "border-blue-500 dark:border-blue-400 ring-4 ring-blue-100 dark:ring-blue-900/30"
+                : "border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600"
+            }
+            ${
+              !value
+                ? "text-slate-400 dark:text-slate-500"
+                : "text-slate-900 dark:text-white"
+            }
+            hover:shadow-md
+          `}
               >
-                <option value="">{field.placeholder || "Select..."}</option>
-                {field.options?.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-              <Icon
-                icon="heroicons:chevron-down"
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none"
-              />
+                <div className="flex items-center gap-3 flex-1 min-w-0">
+                  {field.icon && (
+                    <Icon
+                      icon={field.icon}
+                      className={`w-5 h-5 flex-shrink-0 ${
+                        value
+                          ? "text-blue-500 dark:text-blue-400"
+                          : "text-slate-400"
+                      }`}
+                    />
+                  )}
+                  <span className="truncate font-medium">
+                    {field.options?.find((opt) => opt.value === value)?.label ||
+                      field.placeholder ||
+                      "Select..."}
+                  </span>
+                </div>
+
+                <div className="flex items-center jus gap-2 flex-shrink-0">
+                  {value && (
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleFilterChange(field.name, "");
+                        handleSearchTermChange(field.name, "");
+                      }}
+                      className="p-1 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full transition-colors"
+                    >
+                      <Icon
+                        icon="heroicons:x-mark"
+                        className="w-4 h-4 text-slate-400"
+                      />
+                    </button>
+                  )}
+                  <Icon
+                    icon="heroicons:chevron-down"
+                    className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${
+                      openSelects[field.name] ? "rotate-180" : ""
+                    }`}
+                  />
+                </div>
+              </button>
+
+              {/* Dropdown Menu */}
+              {openSelects[field.name] && (
+                <div className="absolute z-50 w-full mt-2 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl shadow-2xl overflow-hidden animate-slideDown">
+                  {/* Search Input */}
+                  <div className="p-3 border-b-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
+                    <div className="relative">
+                      <Icon
+                        icon="heroicons:magnifying-glass"
+                        className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none"
+                      />
+                      <input
+                        type="text"
+                        placeholder="Search options..."
+                        value={searchTerms[field.name] || ""}
+                        onChange={(e) =>
+                          handleSearchTermChange(field.name, e.target.value)
+                        }
+                        onClick={(e) => e.stopPropagation()}
+                        className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30 text-slate-900 dark:text-white text-sm transition-all"
+                      />
+                      {searchTerms[field.name] && (
+                        <button
+                          type="button"
+                          onClick={() => handleSearchTermChange(field.name, "")}
+                          className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full transition-colors"
+                        >
+                          <Icon
+                            icon="heroicons:x-mark"
+                            className="w-3 h-3 text-slate-400"
+                          />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Options List */}
+                  <div className="max-h-64 overflow-y-auto custom-scrollbar">
+                    {(() => {
+                      const searchTerm = searchTerms[field.name] || "";
+                      const filtered = field.options?.filter(
+                        (option) =>
+                          option.label
+                            .toLowerCase()
+                            .includes(searchTerm.toLowerCase()) ||
+                          option.value
+                            .toString()
+                            .toLowerCase()
+                            .includes(searchTerm.toLowerCase())
+                      );
+
+                      return filtered && filtered.length > 0 ? (
+                        filtered.map((option) => {
+                          const isSelected = value === option.value;
+                          return (
+                            <button
+                              key={option.value}
+                              type="button"
+                              onClick={() => {
+                                handleFilterChange(field.name, option.value);
+                                setOpenSelects({
+                                  ...openSelects,
+                                  [field.name]: false,
+                                });
+                                handleSearchTermChange(field.name, "");
+                              }}
+                              className={`
+                          w-full px-4 py-3 text-left flex items-center justify-between gap-3
+                          transition-all duration-200
+                          border-b border-slate-100 dark:border-slate-700 last:border-b-0
+                          ${
+                            isSelected
+                              ? "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-semibold"
+                              : "text-slate-700 dark:text-slate-300 hover:bg-gradient-to-r hover:from-slate-50 hover:to-blue-50 dark:hover:from-slate-700/50 dark:hover:to-blue-900/20"
+                          }
+                        `}
+                            >
+                              <span className="truncate">{option.label}</span>
+                              {isSelected && (
+                                <div className="flex-shrink-0">
+                                  <div className="w-5 h-5 bg-blue-500 dark:bg-blue-400 rounded-full flex items-center justify-center">
+                                    <Icon
+                                      icon="heroicons:check"
+                                      className="w-3 h-3 text-white"
+                                    />
+                                  </div>
+                                </div>
+                              )}
+                            </button>
+                          );
+                        })
+                      ) : (
+                        <div className="px-4 py-8 text-center">
+                          <div className="text-slate-400 dark:text-slate-500 text-sm font-medium">
+                            No results found
+                          </div>
+                          {searchTerm && (
+                            <div className="text-slate-400 dark:text-slate-500 text-xs mt-1">
+                              Try a different search term
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })()}
+                  </div>
+                </div>
+              )}
             </div>
+
+            {/* Helper Text */}
+            {value && field.options?.find((opt) => opt.value === value) && (
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 flex items-center gap-1.5">
+                <Icon
+                  icon="heroicons:check"
+                  className="w-3 h-3 text-green-500"
+                />
+              </p>
+            )}
           </div>
         );
 
@@ -376,7 +555,6 @@ const GenericFilter: React.FC<GenericFilterProps> = ({
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
           >
             <div className="mt-4 p-6 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl shadow-lg">
               {/* Filter Fields Grid */}
