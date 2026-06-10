@@ -12,6 +12,7 @@ import {
   ContactUs,
   Career,
   Services,
+  Files,
 } from "@/components/svg";
 
 export interface MenuItemProps {
@@ -46,6 +47,7 @@ const adminMenu = [
   { title: "Partner", icon: Partner, href: "/partner" },
   { title: "Settings", icon: Settings, href: "/settings" },
   { title: "Contact Us", icon: ContactUs, href: "/contact-us" },
+  { title: "Uploaded Images", icon: Files, href: "/uploaded-images" },
 ];
 
 // Conditional menu configuration based on the role
