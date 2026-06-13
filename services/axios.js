@@ -10,6 +10,24 @@ export let apis = axios.create({
   headers: getHeaderConfig().headers,
 });
 
+function attachInterceptors(instance) {
+  instance.interceptors.response.use(
+    function (response) {
+      return response;
+    },
+    function (error) {
+      if (error.response?.status == 401) {
+        clearAuthInfo();
+        const lang = window.location.pathname.split("/")[1] || "en";
+        window.location.href = `/${lang}/auth/login`;
+      }
+      return Promise.reject(error);
+    },
+  );
+}
+
+attachInterceptors(apis);
+
 export function updateAxiosHeader() {
   apis = axios.create({
     baseURL: baseUrl,
@@ -17,15 +35,5 @@ export function updateAxiosHeader() {
     headers: getHeaderConfig().headers,
   });
 
-  apis.interceptors.response.use(
-    function (response) {
-      return response;
-    },
-    function (error) {
-      if (error.response.status == 401) {
-        clearAuthInfo();
-        window.location.reload(true);
-      }
-    }
-  );
+  attachInterceptors(apis);
 }
