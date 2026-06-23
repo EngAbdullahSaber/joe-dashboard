@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import { getHeaderConfig, clearAuthInfo } from "./utils";
-import { baseUrl } from "./app.config";
+import { baseUrl, headerConfigKeyName } from "./app.config";
 
 export let apis = axios.create({
   baseURL: baseUrl,
@@ -11,6 +11,16 @@ export let apis = axios.create({
 });
 
 function attachInterceptors(instance) {
+  instance.interceptors.request.use(function (config) {
+    if (typeof localStorage !== "undefined") {
+      const raw = localStorage.getItem(headerConfigKeyName);
+      if (raw) {
+        config.headers["Authorization"] = `Bearer ${JSON.parse(raw)}`;
+      }
+    }
+    return config;
+  });
+
   instance.interceptors.response.use(
     function (response) {
       return response;
