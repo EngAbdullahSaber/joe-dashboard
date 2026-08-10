@@ -57,13 +57,17 @@ const page = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [flag, setFlag] = useState<boolean>(false);
   const { id } = useParams();
+  // Meta fields aren't stored bilingually in one payload — the API returns/accepts
+  // a single-language `meta` object scoped by the Accept-Language header, so the
+  // sheet only ever needs one tab, labeled for whichever locale is currently active.
+  const currentTab: "English" | "Arabic" = lang === "ar" ? "Arabic" : "English";
   // Define the fields configuration
   const fields: FieldConfig[] = [
     {
       name: "slug",
       label: "slug",
       type: "text",
-      tab: "English",
+      tab: currentTab,
       required: true,
     },
 
@@ -71,28 +75,28 @@ const page = () => {
       name: "MetaTitle",
       label: "meta title",
       type: "text",
-      tab: "English",
+      tab: currentTab,
       required: true,
     },
     {
       name: "MetaDescription",
       label: "meta description",
       type: "textarea",
-      tab: "English",
+      tab: currentTab,
       required: true,
     },
     {
       name: "MetaKeywords",
       label: "keywords",
       type: "keywords",
-      tab: "English",
+      tab: currentTab,
       required: true,
     },
     {
       name: "MetaCanonicalUrl",
       label: "canonical URL",
       type: "text",
-      tab: "English",
+      tab: currentTab,
       required: true,
       validation: {
         url: true,
@@ -103,28 +107,28 @@ const page = () => {
       name: "MetaOgTitle",
       label: "og_tags title",
       type: "text",
-      tab: "English",
+      tab: currentTab,
       required: true,
     },
     {
       name: "MetaOgDescription",
       label: "og_tags description",
       type: "textarea",
-      tab: "English",
+      tab: currentTab,
       required: true,
     },
     {
       name: "MetaOgImage",
       label: "og_tags image",
       type: "image",
-      tab: "English",
+      tab: currentTab,
       required: true,
     },
     {
       name: "MetaOgUrl",
       label: "og_tags url",
       type: "text",
-      tab: "English",
+      tab: currentTab,
       required: true,
       validation: {
         url: true,
@@ -135,7 +139,7 @@ const page = () => {
       name: "MetaOgType",
       label: "og_tags type",
       type: "text",
-      tab: "English",
+      tab: currentTab,
       required: true,
     },
     {
@@ -143,20 +147,20 @@ const page = () => {
       label: "structured data",
       type: "record",
       required: true,
-      tab: "English",
+      tab: currentTab,
     },
     {
       name: "MetaHeadScript",
       label: "head script",
       type: "textarea",
-      tab: "English",
+      tab: currentTab,
       required: true,
     },
     {
       name: "MetaBodyScript",
       label: "body script",
       type: "textarea",
-      tab: "English",
+      tab: currentTab,
       required: true,
     },
   ];
@@ -276,6 +280,8 @@ const page = () => {
             itemId={data?.id}
             setFlag={setFlag}
             flag={flag}
+            open={open}
+            setOpen={setOpen}
             triggerText="Update Page Meta"
           />
         </CardHeader>
