@@ -155,9 +155,10 @@ const UpdateButtonSection = <T extends Record<string, any>>({
           break;
         }
         case "record": {
-          // Start with a record validator
-          let validator: z.ZodType<Record<string, string>> = z.record(
-            z.string()
+          // Start with a record validator (structured data values can be
+          // strings, arrays, or nested objects, not just strings)
+          let validator: z.ZodType<Record<string, any>> = z.record(
+            z.any()
           );
 
           // Add required validation if needed
@@ -210,10 +211,11 @@ const UpdateButtonSection = <T extends Record<string, any>>({
 
         case "image":
         case "section_image": {
-          const validator = z.custom<File | string>(
+          const validator = z.custom<File | string | null>(
             (value) =>
               value instanceof File ||
-              (typeof value === "string" && value.trim().length > 0),
+              (typeof value === "string" && value.trim().length > 0) ||
+              (!field.required && (value === null || value === undefined)),
             {
               message:
                 field.validation?.message || `${field.label} is required`,
@@ -784,7 +786,17 @@ const UpdateButtonSection = <T extends Record<string, any>>({
           <form
             onSubmit={(e) => {
               e.preventDefault(); // Explicitly prevent default
-              handleSubmit(onSubmit)(e).catch((err) => {
+              handleSubmit(onSubmit, (formErrors) => {
+                console.error("Form validation errors:", formErrors);
+                const firstError = Object.values(formErrors)[0] as
+                  | { message?: string }
+                  | undefined;
+                reToast.error(
+                  firstError?.message
+                    ? t(String(firstError.message))
+                    : t("Please fix the highlighted fields")
+                );
+              })(e).catch((err) => {
                 console.error("Form submission error:", err);
               });
             }}

@@ -118,7 +118,6 @@ const page = () => {
       label: "og_tags image",
       type: "image",
       tab: "English",
-      required: true,
     },
     {
       name: "MetaOgUrl",
@@ -274,6 +273,8 @@ const page = () => {
               }
             }}
             itemId={data?.id}
+            setOpen={setOpen}
+            open={open}
             setFlag={setFlag}
             flag={flag}
             triggerText="Update Page Meta"
