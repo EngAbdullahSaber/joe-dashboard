@@ -12,21 +12,31 @@ const page = () => {
 
   return (
     <Tabs defaultValue="Home Page Meta">
-      <TabsList className="grid w-full grid-cols-2 h-14 border bg-background">
+      <TabsList className="flex w-full h-14 border bg-background">
         <TabsTrigger
           value="Home Page Meta"
-          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          className="flex-1 flex items-center justify-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-2 sm:px-4 min-w-0"
         >
-          <Icon icon="iconoir:page" className="h-5 w-5 mx-3" />
-          {t("Home Page Meta")}
+          <Icon
+            icon="iconoir:page"
+            className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0"
+          />
+          <span className="text-xs sm:text-sm truncate">
+            {t("Home Page Meta")}
+          </span>
         </TabsTrigger>
         <TabsTrigger
           value="Home Page Section"
-          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+          className="flex-1 flex items-center justify-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-2 sm:px-4 min-w-0"
         >
-          <Icon icon="tdesign:data" className="h-5 w-5 mx-3" />
-          {t("Home Page Section")}
-        </TabsTrigger>{" "}
+          <Icon
+            icon="tdesign:data"
+            className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0"
+          />
+          <span className="text-xs sm:text-sm truncate">
+            {t("Home Page Section")}
+          </span>
+        </TabsTrigger>
       </TabsList>{" "}
       <TabsContent value="Home Page Meta">
         <PageMeta />

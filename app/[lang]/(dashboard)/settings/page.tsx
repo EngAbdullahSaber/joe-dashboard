@@ -13,24 +13,31 @@ const page = () => {
     <div>
       {" "}
       <Tabs defaultValue="Website Setting">
-        <TabsList className="grid w-full grid-cols-2 h-14 border bg-background">
+        <TabsList className="flex w-full h-14 border bg-background">
           <TabsTrigger
             value="Website Setting"
-            className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            className="flex-1 flex items-center justify-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-2 sm:px-4 min-w-0"
           >
             <Icon
               icon="tdesign:component-breadcrumb"
-              className="h-5 w-5 mr-2"
+              className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0"
             />
-            {t("Website Setting")}
+            <span className="text-xs sm:text-sm truncate">
+              {t("Website Setting")}
+            </span>
           </TabsTrigger>
           <TabsTrigger
             value="Social Media"
-            className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            className="flex-1 flex items-center justify-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-2 sm:px-4 min-w-0"
           >
-            <Icon icon="carbon:data-table" className="h-5 w-5 mr-2" />
-            {t("Social Media")}
-          </TabsTrigger>{" "}
+            <Icon
+              icon="carbon:data-table"
+              className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0"
+            />
+            <span className="text-xs sm:text-sm truncate">
+              {t("Social Media")}
+            </span>
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="Website Setting">
           <WebsiteSetting />
