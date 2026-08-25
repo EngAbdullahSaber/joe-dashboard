@@ -23,7 +23,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { baseUrl } from "@/services/app.config";
 import ImageUploader from "../ImageUploader";
-import DeleteConfirmationDialog from "../../(user-mangement)/shared/DeleteButton";
+import DeleteConfirmationDialog from "../../../(user-mangement)/shared/DeleteButton";
 import Link from "next/link";
 
 type Localized = { en: string; ar: string };
