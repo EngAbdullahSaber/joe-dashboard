@@ -206,6 +206,28 @@ const TableData = ({ flag, setFlag }: TableDataProps) => {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
+                <Link href={`services/${row.original.id}/subservices`}>
+                  <Button
+                    size="icon"
+                    variant="outline"
+                    className="h-7 w-7"
+                    color="secondary"
+                  >
+                    {" "}
+                    <Icon icon="heroicons:squares-2x2" className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent color="primary">
+                <p>{t("Update Subservices")}</p>
+                <TooltipArrow className=" fill-primary" />
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
                 <Link href={`services/${row.original.id}/basic-info`}>
                   <Button
                     size="icon"
