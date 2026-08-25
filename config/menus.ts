@@ -26,10 +26,6 @@ export interface MenuItemProps {
   onClick: () => void;
 }
 
-// Fetch role from localStorage
-const role = localStorage.getItem("role");
-console.log("Role:", role);
-
 // Define menu configurations for admin and user roles
 const adminMenu = [
   // { title: "Dashboard", icon: Dashboard, href: "/dashboard" },
@@ -50,13 +46,13 @@ const adminMenu = [
   { title: "Uploaded Images", icon: Files, href: "/uploaded-images" },
 ];
 
-// Conditional menu configuration based on the role
+// Menu configuration (role branching previously crashed SSR via localStorage)
 export const menusConfig = {
   mainNav: [],
 
   sidebarNav: {
-    modern: role === "admin" ? adminMenu : adminMenu, // Admin menu for admin role, user menu otherwise
-    classic: role === "admin" ? adminMenu : adminMenu, // Same logic for classic menu
+    modern: adminMenu,
+    classic: adminMenu,
   },
 };
 
