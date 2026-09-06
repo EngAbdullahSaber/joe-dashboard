@@ -2497,6 +2497,8 @@
   "Failed to delete image": "Failed to delete image",
   "No images uploaded yet": "No images uploaded yet",
   "URL copied to clipboard": "URL copied to clipboard",
+  "Failed to copy URL": "Failed to copy URL",
+  "Retry": "Retry",
   "View Image": "View Image",
   "Download": "Download",
   "Share": "Share",

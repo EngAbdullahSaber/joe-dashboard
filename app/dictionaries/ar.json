@@ -2422,6 +2422,8 @@
   "Failed to delete image": "فشل حذف الصورة",
   "No images uploaded yet": "لا توجد صور مرفوعة بعد",
   "URL copied to clipboard": "تم نسخ الرابط إلى الحافظة",
+  "Failed to copy URL": "فشل نسخ الرابط",
+  "Retry": "إعادة المحاولة",
   "View Image": "عرض الصورة",
   "Download": "تحميل",
   "Share": "مشاركة",

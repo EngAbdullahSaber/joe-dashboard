@@ -58,17 +58,21 @@ const CreatePhoto = ({ flag, setFlag }: CreatePhotoProps) => {
     setLoading(true);
     try {
       const formData = new FormData();
+      formData.append("files", file);
       formData.append("name", name.trim());
-      formData.append("photo", file);
+      formData.append("alt[0]", name.trim());
 
       const res = await CreatePhotoApi(formData, lang);
-      if (res) {
+      const created = Array.isArray(res) ? res[0] : res;
+      if (created) {
         reToast.success(t("Image uploaded successfully"));
         setFlag(!flag);
         setOpen(false);
         setName("");
         setFile(null);
         setPreview(null);
+      } else {
+        reToast.error(t("Failed to upload image"));
       }
     } catch (error) {
       reToast.error(t("Failed to upload image"));

@@ -12,10 +12,20 @@ export let apis = axios.create({
 
 function attachInterceptors(instance) {
   instance.interceptors.request.use(function (config) {
+    if (typeof FormData !== "undefined" && config.data instanceof FormData) {
+      if (config.headers) {
+        delete config.headers["Content-Type"];
+        delete config.headers["content-type"];
+      }
+    }
     if (typeof localStorage !== "undefined") {
       const raw = localStorage.getItem(headerConfigKeyName);
       if (raw) {
-        config.headers["Authorization"] = `Bearer ${JSON.parse(raw)}`;
+        try {
+          config.headers["Authorization"] = `Bearer ${JSON.parse(raw)}`;
+        } catch {
+          // ignore malformed stored token
+        }
       }
     }
     return config;

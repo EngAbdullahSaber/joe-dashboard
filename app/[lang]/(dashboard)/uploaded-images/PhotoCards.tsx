@@ -22,6 +22,7 @@ interface Photo {
   id: number;
   name: string;
   photo_url: string;
+  alt?: string;
   created_at: string;
 }
 
@@ -32,8 +33,12 @@ interface PhotoCardsProps {
 
 const getFullUrl = (photoUrl: string) => {
   if (!photoUrl) return "";
-  if (photoUrl.startsWith("http")) return photoUrl;
-  return `${ImageUrl}${photoUrl}`;
+  if (photoUrl.startsWith("http://") || photoUrl.startsWith("https://")) {
+    return encodeURI(photoUrl);
+  }
+  const origin = String(ImageUrl || "").replace(/\/$/, "");
+  const full = `${origin}${photoUrl.startsWith("/") ? "" : "/"}${photoUrl}`;
+  return encodeURI(full);
 };
 
 const formatDate = (dateStr: string) => {
@@ -49,6 +54,7 @@ const PhotoCards = ({ flag, setFlag }: PhotoCardsProps) => {
   const { t } = useTranslate();
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const [totalPages, setTotalPages] = useState(1);
@@ -56,28 +62,39 @@ const PhotoCards = ({ flag, setFlag }: PhotoCardsProps) => {
 
   const fetchPhotos = async (p: number) => {
     setLoading(true);
+    setLoadError(false);
     try {
       const res = await getPhotosPagination(p, lang);
       const items: Photo[] = Array.isArray(res) ? res : res?.data || [];
       setPhotos(items);
       const meta = res?.meta || res?.pagination;
       if (meta) {
-        setTotalPages(meta.total_pages || meta.last_page || Math.ceil(meta.total / PER_PAGE) || 1);
-        setHasMore(p < (meta.total_pages || meta.last_page || 1));
+        const last =
+          meta.total_pages ||
+          meta.last_page ||
+          Math.ceil((meta.total || items.length) / PER_PAGE) ||
+          1;
+        setTotalPages(last);
+        setHasMore(p < last);
       } else {
         setHasMore(items.length >= PER_PAGE);
         setTotalPages(items.length >= PER_PAGE ? p + 1 : p);
       }
     } catch (err) {
-      reToast.error(t("Failed to load images"));
+      setPhotos([]);
+      setLoadError(true);
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
+    setPage(1);
+  }, [flag]);
+
+  useEffect(() => {
     fetchPhotos(page);
-  }, [page, flag]);
+  }, [page, flag, lang]);
 
   const handleDelete = async (id: number) => {
     try {
@@ -89,7 +106,11 @@ const PhotoCards = ({ flag, setFlag }: PhotoCardsProps) => {
           ? res?.message?.english
           : res?.message?.arabic;
       reToast.success(msg || t("Image deleted successfully"));
-      fetchPhotos(page);
+      if (photos.length === 1 && page > 1) {
+        setPage((current) => Math.max(1, current - 1));
+      } else {
+        fetchPhotos(page);
+      }
       return true;
     } catch (error) {
       const axiosError = error as AxiosError<{
@@ -129,11 +150,23 @@ const PhotoCards = ({ flag, setFlag }: PhotoCardsProps) => {
     }
   };
 
-  const handleCopyUrl = (photoUrl: string) => {
+  const handleCopyUrl = async (photoUrl: string) => {
     const url = getFullUrl(photoUrl);
-    navigator.clipboard.writeText(url).then(() => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(url);
+      } else {
+        const input = document.createElement("input");
+        input.value = url;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand("copy");
+        document.body.removeChild(input);
+      }
       reToast.success(t("URL copied to clipboard"));
-    });
+    } catch {
+      reToast.error(t("Failed to copy URL"));
+    }
   };
 
   const handleShare = (photo: Photo) => {
@@ -154,6 +187,18 @@ const PhotoCards = ({ flag, setFlag }: PhotoCardsProps) => {
             className="rounded-xl bg-default-100 animate-pulse h-64"
           />
         ))}
+      </div>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <div className="flex flex-col items-center justify-center py-24 text-default-400">
+        <Icon icon="heroicons:exclamation-circle" className="w-16 h-16 mb-4 opacity-30" />
+        <p className="text-lg mb-4">{t("Failed to load images")}</p>
+        <Button variant="outline" onClick={() => fetchPhotos(page)}>
+          {t("Retry")}
+        </Button>
       </div>
     );
   }
@@ -202,6 +247,14 @@ const PhotoCards = ({ flag, setFlag }: PhotoCardsProps) => {
               >
                 {photo.name}
               </p>
+              <button
+                type="button"
+                className="text-[11px] text-default-400 mb-1 truncate w-full text-left hover:text-primary"
+                title={t("Copy URL")}
+                onClick={() => handleCopyUrl(photo.photo_url)}
+              >
+                {getFullUrl(photo.photo_url)}
+              </button>
               <p className="text-xs text-default-400 mb-3">
                 {formatDate(photo.created_at)}
               </p>
@@ -278,30 +331,31 @@ const PhotoCards = ({ flag, setFlag }: PhotoCardsProps) => {
         ))}
       </div>
 
-      {/* Pagination */}
-      <div className="flex items-center justify-center gap-2 pt-4">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => setPage((p) => Math.max(1, p - 1))}
-          disabled={page === 1 || loading}
-        >
-          <Icon icon="heroicons:chevron-left" className="w-4 h-4" />
-          {t("Previous")}
-        </Button>
-        <span className="text-sm text-default-600 px-3">
-          {t("Page")} {page}
-        </span>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => setPage((p) => p + 1)}
-          disabled={!hasMore || loading}
-        >
-          {t("Next")}
-          <Icon icon="heroicons:chevron-right" className="w-4 h-4" />
-        </Button>
-      </div>
+      {totalPages > 1 ? (
+        <div className="flex items-center justify-center gap-2 pt-4">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setPage((p) => Math.max(1, p - 1))}
+            disabled={page === 1 || loading}
+          >
+            <Icon icon="heroicons:chevron-left" className="w-4 h-4" />
+            {t("Previous")}
+          </Button>
+          <span className="text-sm text-default-600 px-3">
+            {t("Page")} {page} / {totalPages}
+          </span>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setPage((p) => p + 1)}
+            disabled={!hasMore || loading}
+          >
+            {t("Next")}
+            <Icon icon="heroicons:chevron-right" className="w-4 h-4" />
+          </Button>
+        </div>
+      ) : null}
     </div>
   );
 };

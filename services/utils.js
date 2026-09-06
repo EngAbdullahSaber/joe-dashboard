@@ -3,33 +3,24 @@
 import { headerConfigKeyName } from "./app.config";
 
 export function getHeaderConfig() {
-  if (
-    typeof localStorage !== "undefined" &&
-    localStorage.getItem(headerConfigKeyName)
-  ) {
-    return {
-      headers: {
-        "Content-Type": "multipart/form-data",
-        Accept: "application/json",
-        "Accept-Language": "ar",
-        Authorization: ` Bearer ${JSON.parse(
-          localStorage.getItem(headerConfigKeyName)
-        )}`,
-      },
-    };
-    //  JSON.parse(localStorage.getItem(headerConfigKeyName));
-  } else {
-    return {
-      headers: {
-        "Content-Type": "multipart/form-data",
-        Accept: "application/json",
-        "Accept-Language": "en",
-        Authorization: ` Bearer ${JSON.parse(
-          localStorage.getItem(headerConfigKeyName)
-        )}`,
-      },
-    };
+  const hasStorage = typeof localStorage !== "undefined";
+  const raw = hasStorage ? localStorage.getItem(headerConfigKeyName) : null;
+  let token = null;
+  if (raw) {
+    try {
+      token = JSON.parse(raw);
+    } catch {
+      token = null;
+    }
   }
+
+  return {
+    headers: {
+      Accept: "application/json",
+      "Accept-Language": "en",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+  };
 }
 
 export const storeTokenInLocalStorage = (token) => {
